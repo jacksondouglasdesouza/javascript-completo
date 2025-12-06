@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Classroom 04 - Variáveis </title>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                text-align: center;
+                background-color: #1a1a1a;
+                color: #ccc;
+                margin: 0;
+                padding: 0;
+            }
+
+            header {
+                color: #d1d1d1;
+                width: 100%;
+                background-color: rgb(15, 15, 15);
+                margin: 0;
+                padding: 0;
+            }
+            
+            header h1 {
+                margin: 0;
+                padding: 30px 0;
+            }
+
+            main {
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 20px;
+            }
+
+            section h2 {
+                color: #75b8fa;
+                margin: 30px 0;
+            }
+
+            article {
+                background-color: #2a2a2a;
+                padding: 30px;
+                border-radius: 10px;
+                margin: 20px 0;
+            }
+
+            figure {
+                margin: 20px 0;
+            }
+
+            figcaption {
+                margin-top: 10px;
+                font-style: italic;
+                color: #999;
+            }
+
+            article p {
+                text-align: left;
+                line-height: 1.8;
+                margin: 20px 0;
+            }
+
+            pre {
+                text-align: left;
+                margin: 20px 0;
+                border-radius: 6px;
+                overflow-x: auto;
+            }
+
+            pre[class*="language-"] {
+                padding: 1.5em;
+                margin: 1em 0;
+            }
+
+            code[class*="language-"] {
+                font-size: 14px;
+                line-height: 1.6;
+            }
+
+            footer {
+                color: #d1d1d1;
+                width: 100%;
+                background-color: rgb(15, 15, 15);
+                margin-top: 100px;
+                padding: 20px 0;
+            }
+
+            footer a {
+                color: #75b8fa;
+                text-decoration: none;
+            }
+
+            footer a:hover {
+                text-decoration: none;
+                font-weight: bold;
+            }
+        </style>
+    </head>
+
+    <body>
+        <header>
+            <h1>Classroom 04 - Variáveis </h1>
+        </header>
+
+        <!-- -->
+
+        <main>
+            <section>
+                <h2>Variáveis em JavaScript</h2>
+            </section>
+            
+            <!-- -->
+            
+            <article>
+                <figure>
+                    <img src="./imgs/variaveis.png" alt="Variáveis em JavaScript" width="600">
+                    <figcaption>Variáveis em JavaScript</figcaption>
+                </figure>
+                
+                <!-- -->
+                <p><strong>Variáveis em JavaScript</strong> são como contêineres que armazenam informações que podem ser utilizadas e manipuladas ao longo do seu código. Elas são fundamentais para a programação, pois permitem guardar dados temporariamente na memória do computador. Em JavaScript, podemos declarar variáveis usando três palavras-chave diferentes: <strong>let</strong>, <strong>const</strong> e <strong>var</strong>. A escolha entre elas depende de como você pretende usar a variável no seu programa. O <strong>let</strong> é usado para variáveis que podem ter seu valor alterado, o <strong>const</strong> para valores constantes que não mudam, e o <strong>var</strong> é a forma antiga de declarar variáveis, hoje menos recomendada devido a questões de escopo.</p>
+
+                <pre><code class="language-javascript">// VARIÁVEIS EM JAVASCRIPT
+
+let nome = "Felipe de Souza"; // String
+let dataNascimento = "15/08/1990"; // String
+let idade = 33; // Number
+let altura = 1.75; // Number
+let peso = 70.5; // Number
+let isEstudante = true; // Boolean
+let cidade = "São Paulo"; // String
+let estado = "SP"; // String
+let pais = "Brasil"; // String
+let profissao = "Desenvolvedor Web"; // String
+let salarioMensal = 4500.00; // Number
+let experienciaAnos = 5; // Number
+let idiomas = ["Português", "Inglês", "Espanhol"]; // Array
+let habilidades = ["JavaScript", "HTML", "CSS", "React"]; // Array
+let contatoEmail = "felipeDev@proton.me"; // String
+let contatoTelefone = "(11) 98765-4321"; // String
+
+let endereco = {
+    rua: "Av. Paulista",
+    numero: 1000,
+    bairro: "Bela Vista",
+    cidade: "São Paulo",
+    estado: "SP",
+    cep: "01310-100"
+}; // Object
+
+let linkedin = "linkedin.com/in/felipesouza"; // String
+let github = "github.com/felipesouza"; // String
+let portfolio = "www.felipesouza.dev"; // String
+let disponibilidadeTrabalho = true; // Boolean
+let expectativaSalario = 6000.00; // Number
+
+//--
+
+console.log(
+    `O nome do candidato a vage é ${nome};
+Ele nasceu em ${dataNascimento} e tem ${idade} anos.
+Mede ${altura}m de altura e pesa ${peso}kg.
+Atualmente mora em ${cidade}, ${estado}, ${pais}.
+Trabalha como ${profissao} com um salário mensal de R$${salarioMensal}.
+Possui ${experienciaAnos} anos de experiência na área.
+Fala os seguintes idiomas: ${idiomas.join(", ")}.
+Suas principais habilidades são: ${habilidades.join(", ")}.
+Pode ser contatado pelo email: ${contatoEmail} ou pelo telefone: ${contatoTelefone}.
+Seu endereço é: ${endereco.rua}, ${endereco.numero}, ${endereco.bairro}, ${endereco.cidade} - ${endereco.estado}, CEP: ${endereco.cep}.
+LinkedIn: ${linkedin};
+GitHub: ${github};
+Portfólio: ${portfolio}.
+Disponibilidade para trabalho: ${disponibilidadeTrabalho ? "Sim" : "Não"}.
+Expectativa salarial: R$${expectativaSalario}.
+    `
+)
+
+// let é usado para declarar variáveis que podem mudar de valor, mais não podem ser redeclaradas no mesmo escopo.
+// const é usado para declarar constantes, ou seja, valores que não podem ser alterados após a atribuição inicial.
+// var é uma forma mais antiga de declarar variáveis, mas seu uso não é recomendado devido a questões de escopo e hoisting.
+
+let nula = null; // Null
+// let indefinida = indefined; // Undefined vai gerar um erro se descomentado!
+let simbolo = Symbol("id"); // Symbol
+const constantePi = 3.14159; // Constante
+let variavelGlobal = "Estou disponível globalmente"; // Variavel global
+
+/**
+ * Variáveis não podem ser redeclaradas com let ou const no mesmo escopo.
+ * Nomes de variáveis são case-sensitive (diferenciam maiúsculas de minúsculas).
+ * Nomes de variáveis devem começar com uma letra, underscore (_) ou cifrão ($).
+ * Nomes de variáveis não podem conter espaços ou caracteres especiais (exceto _ e $).
+ * Nomes de variáveis não podem ser palavras reservadas do JavaScript. Ex: let, const, var, if, else, function, return, etc.
+ * Boa prática: usar nomes descritivos e em camelCase para variáveis.
+ * Comentários podem ser feitos com // para uma linha ou para multiplas linhas
+ */
+
+// Fim das variáveis em JavaScript</code></pre>
+            </article>
+        </main>
+
+        <!-- -->
+
+        <footer>
+            <p>Desenvolvido por
+                <a href="https://www.linkedin.com/in/jacksondouglasdsouza/" target="_blank" rel="noopener noreferrer">
+                    Jackson Douglas
+                </a>
+            </p>
+        </footer>
+
+        <!-- -->
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
+        <script src="main.js"></script>
+    </body>
+</html>

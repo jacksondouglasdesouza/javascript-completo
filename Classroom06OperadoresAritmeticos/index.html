@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Classroom 06 - Operadores Aritméticos </title>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                text-align: center;
+                background-color: #1a1a1a;
+                color: #ccc;
+                margin: 0;
+                padding: 0;
+            }
+
+            header {
+                color: #d1d1d1;
+                width: 100%;
+                background-color: rgb(15, 15, 15);
+                margin: 0;
+                padding: 0;
+            }
+            
+            header h1 {
+                margin: 0;
+                padding: 30px 0;
+            }
+
+            main {
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 20px;
+            }
+
+            section h2 {
+                color: #75b8fa;
+                margin: 30px 0;
+            }
+
+            article {
+                background-color: #2a2a2a;
+                padding: 30px;
+                border-radius: 10px;
+                margin: 20px 0;
+            }
+
+            figure {
+                margin: 20px 0;
+            }
+
+            figcaption {
+                margin-top: 10px;
+                font-style: italic;
+                color: #999;
+            }
+
+            article p {
+                text-align: left;
+                line-height: 1.8;
+                margin: 20px 0;
+            }
+
+            pre {
+                text-align: left;
+                margin: 20px 0;
+                border-radius: 6px;
+                overflow-x: auto;
+            }
+
+            pre[class*="language-"] {
+                padding: 1.5em;
+                margin: 1em 0;
+            }
+
+            code[class*="language-"] {
+                font-size: 14px;
+                line-height: 1.6;
+            }
+
+            footer {
+                color: #d1d1d1;
+                width: 100%;
+                background-color: rgb(15, 15, 15);
+                margin-top: 100px;
+                padding: 20px 0;
+            }
+
+            footer a {
+                color: #75b8fa;
+                text-decoration: none;
+            }
+
+            footer a:hover {
+                text-decoration: none;
+                font-weight: bold;
+            }
+        </style>
+    </head>
+
+    <body>
+        <header>
+            <h1>Classroom 06 - Operadores Aritméticos </h1>
+        </header>
+
+        <!-- -->
+
+        <main>
+            <section>
+                <h2>Operadores Aritméticos</h2>
+            </section>
+            
+            <!-- -->
+            
+            <article>
+                <figure>
+                    <img src="./imgs/Operadores Aritméticos.webp" alt="Operadores Aritméticos em JavaScript" width="600">
+                    <figcaption>Operadores Aritméticos em JavaScript</figcaption>
+                </figure>
+                
+                <!-- -->
+                <p><strong>Operadores Aritméticos em JavaScript</strong> </p>
+
+                <pre><code class="language-javascript"> // OPERADORES ARITMÉTICOS EM JAVASCRIPT
+
+// Adição (+)
+let a = 10;
+let b = 5;
+let soma = a + b; // 15
+console.log("Soma:", soma);
+
+// Subtração (-)
+let subtracao = a - b; // 5
+console.log("Subtração:", subtracao);
+
+// Multiplicação (*)
+let multiplicacao = a * b; // 50
+console.log("Multiplicação:", multiplicacao);
+
+// Divisão (/)
+let divisao = a / b; // 2
+console.log("Divisão:", divisao);
+
+// Módulo (%)
+let modulo = a % b; // 0
+console.log("Módulo:", modulo);
+
+// Incremento (++)
+let incremento = a;
+incremento++; // 11
+console.log("Incremento:", incremento);
+
+// Decremento (--)
+let decremento = b;
+decremento--; // 4
+console.log("Decremento:", decremento);
+
+// Exponenciação (**)
+let exponenciacao = a ** 2; // 100
+console.log("Exponenciação:", exponenciacao);
+
+// Operadores combinados
+
+let c = 20;
+c += 5; // c = c + 5 -> 25
+console.log("c após += 5:", c);
+c -= 10; // c = c - 10 -> 15
+console.log("c após -= 10:", c);
+c *= 2; // c = c * 2 -> 30
+console.log("c após *= 2:", c);
+c /= 3; // c = c / 3 -> 10
+console.log("c após /= 3:", c);
+c %= 4; // c = c % 4 -> 2
+console.log("c após %= 4:", c);
+c **= 3; // c = c ** 3 -> 8
+console.log("c após **= 3:", c);
+
+// Precedência dos operadores
+
+let resultado = 10 + 5 * 2; // Multiplicação primeiro: 10 + (5 * 2) = 20
+console.log("Resultado sem parênteses:", resultado);
+resultado = (10 + 5) * 2; // Parênteses primeiro: (10 + 5) * 2 = 30
+console.log("Resultado com parênteses:", resultado);
+
+// Fim dos exemplos de operadores aritméticos em JavaScript
+</code></pre>
+            </article>
+        </main>
+
+        <!-- -->
+
+        <footer>
+            <p>Desenvolvido por
+                <a href="https://www.linkedin.com/in/jacksondouglasdsouza/" target="_blank" rel="noopener noreferrer">
+                    Jackson Douglas
+                </a>
+            </p>
+        </footer>
+
+        <!-- -->
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
+        <script src="main.js"></script>
+    </body>
+</html>

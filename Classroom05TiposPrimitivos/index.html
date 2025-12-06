@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Classroom 05 - Tipos Primitivos </title>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                text-align: center;
+                background-color: #1a1a1a;
+                color: #ccc;
+                margin: 0;
+                padding: 0;
+            }
+
+            header {
+                color: #d1d1d1;
+                width: 100%;
+                background-color: rgb(15, 15, 15);
+                margin: 0;
+                padding: 0;
+            }
+            
+            header h1 {
+                margin: 0;
+                padding: 30px 0;
+            }
+
+            main {
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 20px;
+            }
+
+            section h2 {
+                color: #75b8fa;
+                margin: 30px 0;
+            }
+
+            article {
+                background-color: #2a2a2a;
+                padding: 30px;
+                border-radius: 10px;
+                margin: 20px 0;
+            }
+
+            figure {
+                margin: 20px 0;
+            }
+
+            figcaption {
+                margin-top: 10px;
+                font-style: italic;
+                color: #999;
+            }
+
+            article p {
+                text-align: left;
+                line-height: 1.8;
+                margin: 20px 0;
+            }
+
+            pre {
+                text-align: left;
+                margin: 20px 0;
+                border-radius: 6px;
+                overflow-x: auto;
+            }
+
+            pre[class*="language-"] {
+                padding: 1.5em;
+                margin: 1em 0;
+            }
+
+            code[class*="language-"] {
+                font-size: 14px;
+                line-height: 1.6;
+            }
+
+            footer {
+                color: #d1d1d1;
+                width: 100%;
+                background-color: rgb(15, 15, 15);
+                margin-top: 100px;
+                padding: 20px 0;
+            }
+
+            footer a {
+                color: #75b8fa;
+                text-decoration: none;
+            }
+
+            footer a:hover {
+                text-decoration: none;
+                font-weight: bold;
+            }
+        </style>
+    </head>
+
+    <body>
+        <header>
+            <h1>Classroom 05 - Tipos Primitivos </h1>
+        </header>
+
+        <!-- -->
+
+        <main>
+            <section>
+                <h2>Tipos Primitivos em JavaScript</h2>
+            </section>
+            
+            <!-- -->
+            
+            <article>
+                <figure>
+                    <img src="./imgs/Tipos Primitivos em JavaScript.jpg" alt="VTipos Primitivos em JavaScript" width="600">
+                    <figcaption>Tipos Primitivos em JavaScript</figcaption>
+                </figure>
+                
+                <!-- -->
+                <p><strong>Tipos Primitivos em JavaScript</strong> </p>
+
+                <pre><code class="language-javascript">
+
+// TIPOS PRIMITIVOS  EM JAVASCRIPT
+
+// String
+// Uma string é uma sequência de caracteres usada para representar texto.
+// Exemplo:
+let nome = "João";
+let nomeCompleto = 'João da Silva';
+let mensagem = `Olá, ${nome}! Bem-vindo ao JavaScript.`;
+console.log(typeof nome + " - Meu nome é " + nomeCompleto); // "string"
+
+// Number
+// O tipo Number é usado para representar tanto números inteiros quanto números de ponto flutuante.
+// Exemplo:
+
+let idade = 25; // número inteiro
+let altura = 1.75; // número de ponto flutuante
+let peso = 70.5; // número de ponto flutuante
+console.log(typeof idade + " - Idade: " + idade); // "number"
+
+// Undefined
+// O tipo Undefined indica que uma variável foi declarada, mas ainda não foi atribuída a um valor.
+let endereco;
+console.log(typeof endereco + " - Endereço: " + endereco); // "undefined"   
+
+// Null
+// O tipo Null representa a ausência intencional de qualquer valor de objeto.
+let telefone = null;
+console.log(typeof telefone + " - Telefone: " + telefone); // "object" (isso é um comportamento conhecido em JavaScript)
+
+// Boolean
+// O tipo Boolean representa um valor lógico que pode ser verdadeiro (true) ou falso (false).
+let isEstudante = true;
+let isTrabalhando = false;
+console.log(typeof isEstudante + " - É estudante? " + isEstudante); // "boolean"
+console.log(typeof isTrabalhando + " - Está trabalhando? " + isTrabalhando); // "boolean"
+
+// Symbol
+// O tipo Symbol é usado para criar identificadores únicos para propriedades de objetos.
+let id = Symbol("id");
+let outroId = Symbol("id");
+console.log(typeof id + " - ID: " + id.toString()); // "symbol"
+console.log(id === outroId); // false, pois cada Symbol é único
+
+// BigInt
+// O tipo BigInt é usado para representar números inteiros muito grandes que excedem o limite do tipo Number.
+let bigNumber = BigInt(9007199254741991);
+let outroBigNumber = 9007199254741991n;
+console.log(typeof bigNumber + " - BigInt: " + bigNumber); // "bigint"
+console.log(bigNumber === outroBigNumber); // true
+console.log("Maior número seguro em JavaScript: " + Number.MAX_SAFE_INTEGER);
+console.log("Maior BigInt: " + (BigInt(Number.MAX_SAFE_INTEGER) + 1n));
+
+// Esses são os principais tipos primitivos em JavaScript. Cada um deles tem suas próprias características e usos específicos no desenvolvimento de aplicações.
+
+
+// Fim dos Tipos Primitivos em JavaScript</code></pre>
+            </article>
+        </main>
+
+        <!-- -->
+
+        <footer>
+            <p>Desenvolvido por
+                <a href="https://www.linkedin.com/in/jacksondouglasdsouza/" target="_blank" rel="noopener noreferrer">
+                    Jackson Douglas
+                </a>
+            </p>
+        </footer>
+
+        <!-- -->
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
+        <script src="main.js"></script>
+    </body>
+</html>
