@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Classroom 05 - Tipos Primitivos </title>
+        <title>Classroom 07 - Alert, confirm e prompt (Navegador) </title>
         <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
         <style>
             body {
@@ -103,6 +103,13 @@
                 margin: 20px 0;
             }
 
+            figure img {
+                max-width: 100%;
+                height: auto;
+                border-radius: 8px;
+                margin: 10px 0;
+            }
+
             figcaption {
                 margin-top: 10px;
                 font-style: italic;
@@ -153,7 +160,6 @@
     </head>
 
     <body>
-
         <div class="voltar">
             <a href="/index.html" class="btn-voltar">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -162,89 +168,53 @@
                 Voltar para Home
             </a>
         </div>
-
         <header>
-            <h1>Classroom 05 - Tipos Primitivos </h1>
+            <h1>Classroom 07 - Alert, confirm e prompt (Navegador)</h1>
         </header>
 
         <!-- -->
 
         <main>
             <section>
-                <h2>Tipos Primitivos em JavaScript</h2>
+                <h2>Alert, confirm e prompt (Navegador)</h2>
             </section>
             
             <!-- -->
             
             <article>
                 <figure>
-                    <img src="./imgs/Tipos Primitivos em JavaScript.jpg" alt="VTipos Primitivos em JavaScript" width="600">
-                    <figcaption>Tipos Primitivos em JavaScript</figcaption>
+                    <img src="./imgs/01.png" alt="Alert, confirm e prompt (Navegador)em JavaScript" width="800">
+                    <img src="./imgs/02.png" alt="Alert, confirm e prompt (Navegador)em JavaScript" width="800">
+                    <img src="./imgs/03.png" alt="Alert, confirm e prompt (Navegador)em JavaScript" width="800">
+                    <img src="./imgs/04.png" alt="Alert, confirm e prompt (Navegador)em JavaScript" width="800">
+                    <img src="./imgs/05.png" alt="Alert, confirm e prompt (Navegador)em JavaScript" width="800">
+                    <img src="./imgs/07.png" alt="Alert, confirm e prompt (Navegador)em JavaScript" width="800">
+                    <img src="./imgs/08.png" alt="Alert, confirm e prompt (Navegador)em JavaScript" width="800">
+                    <img src="./imgs/09.png" alt="Alert, confirm e prompt (Navegador)em JavaScript" width="800">
+                    <img src="./imgs/10.png" alt="Alert, confirm e prompt (Navegador)em JavaScript" width="800">
+                    <img src="./imgs/11.png" alt="Alert, confirm e prompt (Navegador)em JavaScript" width="800">
+                    <img src="./imgs/12.png" alt="Alert, confirm e prompt (Navegador)em JavaScript" width="800">
+                    <img src="./imgs/13.png" alt="Alert, confirm e prompt (Navegador)em JavaScript" width="800">
+                    <img src="./imgs/14.png" alt="Alert, confirm e prompt (Navegador)em JavaScript" width="800">
+                    <img src="./imgs/15.png" alt="Alert, confirm e prompt (Navegador)em JavaScript" width="800">
+                    <img src="./imgs/16.png" alt="Alert, confirm e prompt (Navegador)em JavaScript" width="800">
+
+                    <figcaption>Alert, confirm e prompt (Navegador) em JavaScript</figcaption>
                 </figure>
                 
                 <!-- -->
-                <p><strong>Tipos Primitivos em JavaScript</strong> - Os tipos primitivos são os tipos de dados mais básicos e fundamentais em JavaScript. Eles representam valores simples e imutáveis na linguagem.
-JavaScript possui sete tipos primitivos: Number (números), String (texto), Boolean (verdadeiro/falso), Undefined (indefinido), Null (nulo), Symbol (identificador único) e BigInt (números inteiros muito grandes).
-Entender os tipos primitivos é essencial para programar em JavaScript, pois cada tipo tem características e comportamentos específicos. Saber quando usar cada tipo ajuda a escrever código mais eficiente e evitar erros comuns. Você pode verificar o tipo de um valor usando o operador typeof, que retorna uma string indicando o tipo do dado.</p>
+                <p><strong>Alert, confirm e prompt (Navegador)em JavaScript</strong> </p>
 
-                <pre><code class="language-javascript">
+                <pre><code class="language-javascript"> // Alert, confirm e prompt (Navegador)
+//alert('This is an alert message!');
+console.log("Hello, welcome to the Classroom07 Alert, Confirm, Prompt, and Navigator example!");
 
-// TIPOS PRIMITIVOS  EM JAVASCRIPT
+let a, b, c;
+a = 10, b = 20, c = 30;
+[a, b, c] = [b, c, a]; // Swap values
+console.log(`After swapping: b = ${a}, c = ${b}, a = ${c}`);
 
-// String
-// Uma string é uma sequência de caracteres usada para representar texto.
-// Exemplo:
-let nome = "João";
-let nomeCompleto = 'João da Silva';
-let mensagem = `Olá, ${nome}! Bem-vindo ao JavaScript.`;
-console.log(typeof nome + " - Meu nome é " + nomeCompleto); // "string"
-
-// Number
-// O tipo Number é usado para representar tanto números inteiros quanto números de ponto flutuante.
-// Exemplo:
-
-let idade = 25; // número inteiro
-let altura = 1.75; // número de ponto flutuante
-let peso = 70.5; // número de ponto flutuante
-console.log(typeof idade + " - Idade: " + idade); // "number"
-
-// Undefined
-// O tipo Undefined indica que uma variável foi declarada, mas ainda não foi atribuída a um valor.
-let endereco;
-console.log(typeof endereco + " - Endereço: " + endereco); // "undefined"   
-
-// Null
-// O tipo Null representa a ausência intencional de qualquer valor de objeto.
-let telefone = null;
-console.log(typeof telefone + " - Telefone: " + telefone); // "object" (isso é um comportamento conhecido em JavaScript)
-
-// Boolean
-// O tipo Boolean representa um valor lógico que pode ser verdadeiro (true) ou falso (false).
-let isEstudante = true;
-let isTrabalhando = false;
-console.log(typeof isEstudante + " - É estudante? " + isEstudante); // "boolean"
-console.log(typeof isTrabalhando + " - Está trabalhando? " + isTrabalhando); // "boolean"
-
-// Symbol
-// O tipo Symbol é usado para criar identificadores únicos para propriedades de objetos.
-let id = Symbol("id");
-let outroId = Symbol("id");
-console.log(typeof id + " - ID: " + id.toString()); // "symbol"
-console.log(id === outroId); // false, pois cada Symbol é único
-
-// BigInt
-// O tipo BigInt é usado para representar números inteiros muito grandes que excedem o limite do tipo Number.
-let bigNumber = BigInt(9007199254741991);
-let outroBigNumber = 9007199254741991n;
-console.log(typeof bigNumber + " - BigInt: " + bigNumber); // "bigint"
-console.log(bigNumber === outroBigNumber); // true
-console.log("Maior número seguro em JavaScript: " + Number.MAX_SAFE_INTEGER);
-console.log("Maior BigInt: " + (BigInt(Number.MAX_SAFE_INTEGER) + 1n));
-
-// Esses são os principais tipos primitivos em JavaScript. Cada um deles tem suas próprias características e usos específicos no desenvolvimento de aplicações.
-
-
-// Fim dos Tipos Primitivos em JavaScript</code></pre>
+</code></pre>
             </article>
         </main>
 
