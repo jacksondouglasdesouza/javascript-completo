@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>Aula 02 - Comentários</title>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+    </head>
+
+    <body>
+        <header>
+            <h1>Aula 02 - Comentários</h1>
+        </header>
+
+        <main>
+            <a href="../index.html" class="btn-voltar">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M19 12H5M12 19l-7-7 7-7"/>
+                </svg>
+                Voltar para Home
+            </a>
+
+            <section class="section-title">
+                <h2>Comentários em JavaScript</h2>
+            </section>
+
+            <div class="video-container">
+                <h3>🎥 Vídeo Aula - Comentários</h3>
+                <div class="video-wrapper">
+                    <iframe 
+                        src="https://www.youtube.com/embed/1RJbhJuxCNc?si=EXJC2E5Nz6_gWI_s"
+                        title="Aula sobre Comentários em JS"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+                <div class="video-credits">
+                    <strong>📌 Créditos do Vídeo:</strong><br>
+                    Todos os direitos reservados ao autor original do vídeo.<br>
+                    Canal: <a href="https://www.youtube.com/@GlauciaLemos" target="_blank" rel="noopener noreferrer">@GlauciaLemos</a><br>
+                    Este material é utilizado exclusivamente para fins educacionais.
+                </div>
+            </div>
+            
+            <article>
+                <figure>
+                    <img src="./img/comentarios.jpg" alt="Comentários em JavaScript" width="600">
+                    <figcaption>Boas práticas de documentação</figcaption>
+                </figure>
+                
+                <p><strong>Comentários em JavaScript</strong> - Comentários são trechos de texto inseridos no código que são ignorados pelo motor do JavaScript durante a execução. Eles são fundamentais para a legibilidade e manutenção do software. Utilizamos comentários para explicar a lógica de partes complexas, documentar funções e variáveis (como no padrão JSDoc), ou para desativar temporariamente linhas de código durante testes e depuração. Em JavaScript, podemos criar comentários de <strong>linha única</strong> usando duas barras (//) ou comentários de <strong>múltiplas linhas</strong> (bloco) iniciando com barra-asterisco (/*) e terminando com asterisco-barra (*/).</p>
+
+                <pre><code class="language-javascript">// Comentários em JavaScript
+
+// ESCREVENDO UM COMENTÁRIO NO EDITOR DE CÓDIGO
+
+console.log("Olá, mundo!"); // Esta linha exibe uma mensagem no console
+// Fim do código
+
+// Este é um comentário de linha única
+
+//-- 
+
+/*
+    Este é um comentário
+    de múltiplas linhas
+    que pode se estender por
+    várias linhas.
+
+    --
+
+    LOREM IPSUM
+    dolor sit amet, consectetur adipiscing elit,
+    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+*/
+
+
+console.log("Comentários em JavaScript são úteis!"); // Exibindo mensagem no console
+console.log("Comentários em JavaScript são úteis!"); // Exibindo mensagem no console
+console.log("Comentários em JavaScript são úteis!"); // Exibindo mensagem no console
+console.log("Comentários em JavaScript são úteis!"); // Exibindo mensagem no console
+
+    /**
+     * Este é um comentário de múltiplas linhas (Estilo JSDoc)
+     * que utiliza a sintaxe de barra e asterisco.
+     * Ele é frequentemente usado para documentação oficial.
+     * Pode conter várias linhas de texto
+     * ----------------------------------------
+     * Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+     * sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+     * ----------------------------------------
+     */
+
+
+
+    /* console.log("Este código está comentado e não será executado.");
+    console.log("Este código está comentado e não será executado.");
+    console.log("Este código está comentado e não será executado.");
+    console.log("Este código está comentado e não será executado.");
+    console.log("Este código está comentado e não será executado.");
+
+
+    */
+
+    //--
+
+    // Ignorando a próxima linha de código 
+    // console.log("Fim dos exemplos de comentários.");
+
+
+// FIM DO CÓDIGO</code></pre>
+            </article>
+        </main>
+
+        <footer>
+            <p>Desenvolvido com ❤️ por
+                <a href="https://www.linkedin.com/in/jacksondouglasdsouza/" target="_blank" rel="noopener noreferrer">
+                    Jackson Douglas de Souza
+                </a>
+            </p>
+            <p>Siga-me nas redes sociais</p>
+            <p>
+                <a href="https://www.linkedin.com/in/jacksondouglasdsouza/" target="_blank" rel="noopener noreferrer">LinkedIn</a> |
+                <a href="https://github.com/jacksondouglasdesouza" target="_blank" rel="noopener noreferrer">Github</a>
+            </p>
+        </footer>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
+        <script src="consoleLog02.js"></script>
+    </body>
+</html>

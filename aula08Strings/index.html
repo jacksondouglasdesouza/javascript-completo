@@ -3,178 +3,78 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Classroom 08 - Strings em JavaScript </title>
+        <link rel="stylesheet" href="style.css">
+        <title>Aula 08 - Strings em JavaScript</title>
         <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
-        <style>
-            body {
-                font-family: Arial, sans-serif;
-                text-align: center;
-                background-color: #1a1a1a;
-                color: #ccc;
-                margin: 0;
-                padding: 0;
-            }
 
-            .voltar {
-                text-align: left;
-                width: 100%;
-                background-color: rgb(15, 15, 15);
-                margin: 0;
-                padding: 0;
-                background-color: rgb(15, 15, 15);
-        }
-        
-            /* BOTÃO  */
-
-            .btn-voltar {
-                display: inline-flex;
-                align-items: left;
-                gap: 8px;
-                padding: 12px 24px;
-                background-color: #2c2c2c;
-                color: #ffffff;
-                text-decoration: none;
-                border: 2px solid #3a3a3a;
-                border-radius: 8px;
-                font-family: Arial, sans-serif;
-                font-size: 16px;
-                font-weight: 600;
-                cursor: pointer;
-                transition: all 0.3s ease;
-                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-                margin-top: 20px;
-                margin-left: 20px;
-            }
-
-            .btn-voltar:hover {
-                background-color: #3a3a3a;
-                border-color: #4a4a4a;
-                transform: translateY(-2px);
-                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
-            }
-
-            .btn-voltar:active {
-                transform: translateY(0);
-                box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
-            }
-
-            .btn-voltar svg {
-                width: 20px;
-                height: 20px;
-                transition: transform 0.3s ease;
-            }
-
-            .btn-voltar:hover svg {
-                transform: translateX(-3px);
-            }
-
-            header {
-                color: #d1d1d1;
-                width: 100%;
-                background-color: rgb(15, 15, 15);
-                margin: 0;
-                padding: 0;
-            }
-            
-            header h1 {
-                margin: 0;
-                padding: 30px 0;
-            }
-
-            main {
-                max-width: 1300px;
-                margin: 0 auto;
-                padding: 20px;
-            }
-
-            section h2 {
-                color: #75b8fa;
-                margin: 30px 0;
-            }
-
-            article {
-                background-color: #2a2a2a;
-                padding: 30px;
-                border-radius: 10px;
-                margin: 20px 0;
-            }
-
-            figure {
-                margin: 20px 0;
-            }
-
-            figcaption {
-                margin-top: 10px;
-                font-style: italic;
-                color: #999;
-            }
-
-            article p {
-                text-align: left;
-                line-height: 1.8;
-                margin: 20px 0;
-            }
-
-            pre {
-                text-align: left;
-                margin: 20px 0;
-                border-radius: 6px;
-                overflow-x: auto;
-            }
-
-            pre[class*="language-"] {
-                padding: 1.5em;
-                margin: 1em 0;
-            }
-
-            code[class*="language-"] {
-                font-size: 16px;
-                line-height: 1.6;
-            }
-
-            footer {
-                color: #d1d1d1;
-                width: 100%;
-                background-color: rgb(15, 15, 15);
-                margin-top: 100px;
-                padding: 20px 0;
-            }
-
-            footer a {
-                color: #75b8fa;
-                text-decoration: none;
-            }
-
-            footer a:hover {
-                text-decoration: none;
-                font-weight: bold;
-            }
-        </style>
     </head>
 
     <body>
+        <header>
+            <h1>Aula 08 - Strings em JavaScript</h1>
+        </header>
 
-        <div class="voltar">
+        <main>
             <a href="../index.html" class="btn-voltar">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M19 12H5M12 19l-7-7 7-7"/>
+                    <path d="M19 12H5M12 19l-7-7 7-7"/>
                 </svg>
                 Voltar para Home
             </a>
-        </div>
 
-        <header>
-            <h1>Classroom 08 - Strings em JavaScript </h1>
-        </header>
-
-        <!-- -->
-
-        <main>
-            <section>
+            <section class="section-title">
                 <h2>Strings em JavaScript</h2>
             </section>
-            
-            <!-- -->
+
+            <!-- VÍDEOS AULAS -->
+            <div class="videos-section">
+                <!-- Vídeo 1 -->
+                <div class="video-container">
+                    <h3>🎥 Vídeo Aula 1 - Introdução às Strings</h3>
+                    <div class="video-wrapper">
+                        <iframe 
+                            src="https://www.youtube.com/embed/lv4hFkirhps?si=Gm1hD_btdHlDPvPj"
+                            title="Aula sobre Strings - Parte 1"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+
+                <!-- Vídeo 2 -->
+                <div class="video-container">
+                    <h3>🎥 Vídeo Aula 2 - Strings Intermediário</h3>
+                    <div class="video-wrapper">
+                        <iframe 
+                            src="https://www.youtube.com/embed/lufkL0FnJy0?si=zhu0NeXGaK4bw3zP" 
+                            title="Aula sobre Strings - Parte 2"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+
+                <!-- Vídeo 3 -->
+                <div class="video-container">
+                    <h3>🎥 Vídeo Aula 3 - Manipulação Avançada de Strings</h3>
+                    <div class="video-wrapper">
+                        <iframe 
+                            src="https://www.youtube.com/embed/j9-iadUDGkI?si=MUJlbh36UsloxVDx" 
+                            title="Aula sobre Strings - Parte 3"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+
+                <!-- Créditos Únicos para todos os vídeos -->
+                <div class="video-credits">
+                    <strong>📌 Créditos dos Vídeos:</strong><br>
+                    Todos os direitos reservados ao autor original dos vídeos.<br>
+                    Canal: <a href="https://www.youtube.com/@cfbcursos" target="_blank" rel="noopener noreferrer">@cfbcursos</a><br>
+                    Este material é utilizado exclusivamente para fins educacionais.
+                </div>
+            </div>
             
             <article>
                 <figure>
@@ -182,13 +82,9 @@
                     <figcaption>Strings em JavaScript</figcaption>
                 </figure>
                 
-                <!-- -->
-                <p><strong>Strings em JavaScript</strong> - Strings são um dos tipos de dados mais fundamentais em JavaScript. De forma simples, uma string é uma sequência de caracteres usada para representar texto.
-Em JavaScript, você pode criar strings usando aspas duplas, aspas simples ou crases (template literals). Elas podem conter letras, números, símbolos e espaços.
-Praticamente qualquer aplicação precisa trabalhar com texto: exibir mensagens, manipular nomes, processar formulários e muito mais. JavaScript oferece diversos métodos para trabalhar com strings, como toUpperCase(), toLowerCase(), replace(), trim(), entre outros, facilitando a manipulação de texto no seu código.</p>
+                <p><strong>Strings em JavaScript</strong> - Strings são um dos tipos de dados mais fundamentais em JavaScript. De forma simples, uma string é uma sequência de caracteres usada para representar texto. Em JavaScript, você pode criar strings usando <strong>aspas duplas</strong>, <strong>aspas simples</strong> ou <strong>crases</strong> (template literals). Elas podem conter letras, números, símbolos e espaços. Praticamente qualquer aplicação precisa trabalhar com texto: exibir mensagens, manipular nomes, processar formulários e muito mais. JavaScript oferece diversos métodos para trabalhar com strings, como <strong>toUpperCase()</strong>, <strong>toLowerCase()</strong>, <strong>replace()</strong>, <strong>trim()</strong>, entre outros, facilitando a manipulação de texto no seu código.</p>
 
-                <pre><code class="language-javascript"> // Strings em JavaScript
-// STRINGS
+                <pre><code class="language-javascript">// Strings em JavaScript
 
 let umaString = "Olá, mundo!";
 
@@ -292,22 +188,22 @@ console.log(stringComEspacos.trimEnd()); // remove espaços em branco do fim
 //-- DOCUMENTAÇÃO DA MDN COM TODAS AS FUNÇÕES DE STRINGS
 // https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String
 
-// FIM DO CÓDIGO
-</code></pre>
+// FIM DO CÓDIGO</code></pre>
             </article>
         </main>
 
-        <!-- -->
-
         <footer>
-            <p>Desenvolvido por
+            <p>Desenvolvido com ❤️ por
                 <a href="https://www.linkedin.com/in/jacksondouglasdsouza/" target="_blank" rel="noopener noreferrer">
-                    Jackson Douglas
+                    Jackson Douglas de Souza
                 </a>
             </p>
+            <p>Siga-me nas redes sociais</p>
+            <p>
+                <a href="https://www.linkedin.com/in/jacksondouglasdsouza/" target="_blank" rel="noopener noreferrer">LinkedIn</a> |
+                <a href="https://github.com/jacksondouglasdesouza" target="_blank" rel="noopener noreferrer">Github</a>
+            </p>
         </footer>
-
-        <!-- -->
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>

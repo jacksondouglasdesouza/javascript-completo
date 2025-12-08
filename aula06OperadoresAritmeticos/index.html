@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>Aula 06 - Operadores Aritméticos</title>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+    </head>
+
+    <body>
+        <header>
+            <h1>Aula 06 - Operadores Aritméticos</h1>
+        </header>
+
+        <main>
+            <a href="../index.html" class="btn-voltar">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M19 12H5M12 19l-7-7 7-7"/>
+                </svg>
+                Voltar para Home
+            </a>
+
+            <section class="section-title">
+                <h2>Operadores Aritméticos</h2>
+            </section>
+
+            <!-- VÍDEO AULA -->
+            <div class="video-container">
+                <h3>🎥 Vídeo Aula - Operadores Aritméticos em JavaScript</h3>
+                <div class="video-wrapper">
+                    <iframe 
+                        src="https://www.youtube.com/embed/_G7iFtyPKaQ?si=qaNwuLYjvb5NNavL"  
+                        title="Aula sobre Operadores Aritméticos"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+                <div class="video-credits">
+                    <strong>📌 Créditos do Vídeo:</strong><br>
+                    Todos os direitos reservados ao autor original do vídeo.<br>
+                    Canal: <a href="https://www.youtube.com/@CursoemVideoCortes" target="_blank" rel="noopener noreferrer">@CursoemVideoCortes</a><br>
+                    Este material é utilizado exclusivamente para fins educacionais.
+                </div>
+            </div>
+            
+            <article>
+                <figure>
+                    <img src="./imgs/Operadores Aritméticos.webp" alt="Operadores Aritméticos em JavaScript" width="600">
+                    <figcaption>Operadores Aritméticos em JavaScript</figcaption>
+                </figure>
+                
+                <p><strong>Operadores Aritméticos em JavaScript</strong> - Os operadores aritméticos são fundamentais em JavaScript e permitem realizar operações matemáticas básicas com números. JavaScript oferece os operadores principais: <strong>adição (+)</strong>, <strong>subtração (-)</strong>, <strong>multiplicação (*)</strong>, <strong>divisão (/)</strong>, <strong>resto da divisão (%)</strong> e <strong>exponenciação (**)</strong>. Eles funcionam de forma similar à matemática tradicional. Esses operadores são essenciais para cálculos, contadores, manipulação de valores numéricos e lógica de programação. Você pode combiná-los em expressões mais complexas, respeitando a ordem de precedência matemática (multiplicação e divisão antes de adição e subtração), ou usar parênteses para controlar a ordem das operações.</p>
+
+                <pre><code class="language-javascript">// OPERADORES ARITMÉTICOS EM JAVASCRIPT
+
+// Adição (+)
+let a = 10;
+let b = 5;
+let soma = a + b; // 15
+console.log("Soma:", soma);
+
+// Subtração (-)
+let subtracao = a - b; // 5
+console.log("Subtração:", subtracao);
+
+// Multiplicação (*)
+let multiplicacao = a * b; // 50
+console.log("Multiplicação:", multiplicacao);
+
+// Divisão (/)
+let divisao = a / b; // 2
+console.log("Divisão:", divisao);
+
+// Módulo (%)
+let modulo = a % b; // 0
+console.log("Módulo:", modulo);
+
+// Incremento (++)
+let incremento = a;
+incremento++; // 11
+console.log("Incremento:", incremento);
+
+// Decremento (--)
+let decremento = b;
+decremento--; // 4
+console.log("Decremento:", decremento);
+
+// Exponenciação (**)
+let exponenciacao = a ** 2; // 100
+console.log("Exponenciação:", exponenciacao);
+
+// Operadores combinados
+
+let c = 20;
+c += 5; // c = c + 5 -> 25
+console.log("c após += 5:", c);
+c -= 10; // c = c - 10 -> 15
+console.log("c após -= 10:", c);
+c *= 2; // c = c * 2 -> 30
+console.log("c após *= 2:", c);
+c /= 3; // c = c / 3 -> 10
+console.log("c após /= 3:", c);
+c %= 4; // c = c % 4 -> 2
+console.log("c após %= 4:", c);
+c **= 3; // c = c ** 3 -> 8
+console.log("c após **= 3:", c);
+
+// Precedência dos operadores
+
+let resultado = 10 + 5 * 2; // Multiplicação primeiro: 10 + (5 * 2) = 20
+console.log("Resultado sem parênteses:", resultado);
+resultado = (10 + 5) * 2; // Parênteses primeiro: (10 + 5) * 2 = 30
+console.log("Resultado com parênteses:", resultado);
+
+// Fim dos exemplos de operadores aritméticos em JavaScript</code></pre>
+            </article>
+        </main>
+
+        <footer>
+            <p>Desenvolvido com ❤️ por
+                <a href="https://www.linkedin.com/in/jacksondouglasdsouza/" target="_blank" rel="noopener noreferrer">
+                    Jackson Douglas de Souza
+                </a>
+            </p>
+            <p>Siga-me nas redes sociais</p>
+            <p>
+                <a href="https://www.linkedin.com/in/jacksondouglasdsouza/" target="_blank" rel="noopener noreferrer">LinkedIn</a> |
+                <a href="https://github.com/jacksondouglasdesouza" target="_blank" rel="noopener noreferrer">Github</a>
+            </p>
+        </footer>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
+        <script src="main.js"></script>
+    </body>
+</html>

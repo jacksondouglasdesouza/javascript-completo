@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>Aula 03 - Node VS Navegador</title>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+
+    </head>
+
+    <body>
+        <header>
+            <h1>Aula 03 - Node VS Navegador</h1>
+        </header>
+
+        <main>
+            <a href="../index.html" class="btn-voltar">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M19 12H5M12 19l-7-7 7-7"/>
+                </svg>
+                Voltar para Home
+            </a>
+
+            <section class="section-title">
+                <h2>Node.js vs Navegador: Entendendo os Ambientes</h2>
+            </section>
+
+            <div class="video-container">
+                <h3>🎥 Vídeo Aula 01 - console do Navegador</h3>
+                <div class="video-wrapper">
+                    <iframe 
+                        src="https://www.youtube.com/embed/rvBdC3Ziwg8?si=17C6hk3c-1htsfcO&amp;start=110"
+                        title="Aula sobre Node vs Navegador"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+                <div class="video-credits">
+                    <strong>📌 Créditos do Vídeo:</strong><br>
+                    Todos os direitos reservados ao autor original do vídeo.<br>
+                    Canal: <a href="https://www.youtube.com/@rafaellaballerini" target="_blank" rel="noopener noreferrer">@rafaellaballerini</a><br>
+                    Este material é utilizado exclusivamente para fins educacionais.
+                </div>
+            </div>
+
+                        <div class="video-container">
+                <h3>🎥 Vídeo Aula 02 - Node.js</h3>
+                <div class="video-wrapper">
+                    <iframe 
+                        src="https://www.youtube.com/embed/T_PWhYPsiGQ?si=IBvKZ6ajAhmSzMg9&amp;start=300" 
+                        title="Aula sobre Node vs Navegador"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+                <div class="video-credits">
+                    <strong>📌 Créditos do Vídeo:</strong><br>
+                    Todos os direitos reservados ao autor original do vídeo.<br>
+                    Canal: <a href="https://www.youtube.com/@prof.tiagotas" target="_blank" rel="noopener noreferrer">@prof.tiagotas</a><br>
+                    Este material é utilizado exclusivamente para fins educacionais.
+                </div>
+            </div>
+            
+            <article>
+                                <p><strong>JavaScript em Ambientes Diferentes</strong> - Uma das primeiras coisas que precisamos entender é que o JavaScript pode rodar em lugares diferentes, e isso muda o que ele pode fazer. No <strong>Navegador</strong> (Chrome, Firefox), o JavaScript interage com a página web através do DOM (Document Object Model) e do objeto <strong>window</strong>. Já no <strong>Node.js</strong>, o JavaScript roda no servidor (ou no seu computador) e não tem acesso ao DOM ou janelas. Em vez disso, o Node usa o objeto <strong>global</strong> e tem acesso direto ao sistema de arquivos do computador e ao sistema operacional. Embora a sintaxe da linguagem (variáveis, funções, loops) seja a mesma, as ferramentas disponíveis ao redor dela mudam dependendo de onde o código está sendo executado.</p>
+                <div class="image-gallery">
+                    <img src="./imgs/01.png" alt="Print da Aula 01" width="1000">
+                    <img src="./imgs/02.png" alt="Print da Aula 02" width="1000">
+                    <img src="./imgs/03.png" alt="Print da Aula 03" width="1000">
+                </div>
+                
+
+                <pre><code class="language-javascript">// DIFERENÇAS ENTRE NODE E NAVEGADOR
+
+console.log("Olá! Este comando funciona nos dois ambientes.");
+
+// ---------------------------------------------------------
+// NO NAVEGADOR (Browser)
+// ---------------------------------------------------------
+
+// O objeto global principal é o 'window'
+// console.log(window); // Funciona no navegador, ERRO no Node.js
+
+// Temos acesso ao DOM para manipular HTML
+// document.querySelector('h1').style.color = 'blue'; // Funciona no navegador, ERRO no Node.js
+
+// Podemos usar 'alert' para popups
+// alert("Olá Mundo"); // Funciona no navegador, ERRO no Node.js
+
+
+// ---------------------------------------------------------
+// NO NODE.JS (Servidor/Computador)
+// ---------------------------------------------------------
+
+// O objeto global principal é o 'global'
+// console.log(global); // Funciona no Node.js, ERRO no navegador
+
+// Temos acesso a informações do processo rodando no computador
+// console.log(process.version); // Mostra a versão do Node (ex: v18.16.0)
+
+// Temos acesso ao sistema de arquivos (módulo 'fs')
+// const fs = require('fs'); // Comum no Node.js para ler/criar arquivos
+
+// ---------------------------------------------------------
+// CONCLUSÃO
+// ---------------------------------------------------------
+// A linguagem é a mesma (JavaScript), mas o "ecossistema" muda.
+// Navegador = Interface visual, HTML, Interação com usuário.
+// Node.js = Servidor, Banco de dados, Arquivos, Sistema Operacional.</code></pre>
+            </article>
+        </main>
+
+        <footer>
+            <p>Desenvolvido com ❤️ por
+                <a href="https://www.linkedin.com/in/jacksondouglasdsouza/" target="_blank" rel="noopener noreferrer">
+                    Jackson Douglas de Souza
+                </a>
+            </p>
+            <p>Siga-me nas redes sociais</p>
+            <p>
+                <a href="https://www.linkedin.com/in/jacksondouglasdsouza/" target="_blank" rel="noopener noreferrer">LinkedIn</a> |
+                <a href="https://github.com/jacksondouglasdesouza" target="_blank" rel="noopener noreferrer">Github</a>
+            </p>
+        </footer>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
+        <script src="main.js"></script>
+    </body>
+</html>

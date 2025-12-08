@@ -3,145 +3,82 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Curso de JavaScript </title>
-<style>
-    html {
-        height: 100%;
-    }
-
-    body {
-        font-family: Arial, sans-serif;
-        text-align: center;
-        background-color: #1a1a1a;
-        color: #ccc;
-        margin: 0;
-        padding: 0;
-        min-height: 100vh;
-        display: flex;
-        flex-direction: column;
-    }
-
-    header {
-        color: #d1d1d1;
-        width: 100%;
-        background-color: rgb(15, 15, 15);
-        margin: 0;
-        padding: 0;
-    }
-    
-    header h1 {
-        margin: 0;
-        padding: 30px 0;
-    }
-
-    main {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 20px;
-        flex: 1;
-        width: 100%;
-    }
-
-    section h2 {
-        color: #75b8fa;
-        margin: 30px 0;
-    }
-
-    article {
-        background-color: #2a2a2a;
-        padding: 30px;
-        border-radius: 10px;
-        margin: 20px 0;
-    }
-
-    article ul {
-        list-style-type: none;
-        padding: 0;
-    }
-
-    article ul li {
-        margin: 10px 0;
-        text-align: left;
-        justify-content: left;
-    }
-
-    article ul li a {
-        color: #75b8fa;
-        text-decoration: none;
-    }
-
-    figure {
-        margin: 20px 0;
-        text-align: left;
-    }
-
-    figcaption {
-        margin-top: 10px;
-        font-style: italic;
-        color: #999;
-    }
-
-    article p {
-        text-align: left;
-        line-height: 1.8;
-        margin: 20px 0;
-    }
-
-    footer {
-        color: #d1d1d1;
-        width: 100%;
-        background-color: rgb(15, 15, 15);
-        margin-top: auto;
-        padding: 20px 0;
-    }
-
-    footer a {
-        color: #75b8fa;
-        text-decoration: none;
-    }
-
-    footer a:hover {
-        text-decoration: none;
-        font-weight: bold;
-    }
-</style>
+        <link rel="stylesheet" href="index.css">
+        <title>Curso de JavaScript Completo</title>
     </head>
-
+    <!-- -->
     <body>
         <header>
-            <h1>Curso Completo de JavaScript </h1>
+            <h1>Curso Completo de JavaScript</h1>
         </header>
 
-        <!-- -->
-
         <main>
-            
-            <article>
-                <figure>
-                    <img src="logoJacascript.png" alt="Curso Completo de JavaScript" width="100" height="100">
-                </figure>
-                
-                <!-- -->
-                <p><strong>Curso de JavaScript</strong></p>
-                <ul>
-                    <li><a href="Classroom03NodeVsNavegador/index.html">Aula 03 - Node Vs Navegador</a></li>
-                    <li><a href="Classroom04Variaveis/index.html">Aula 04 - Variáveis</a></li>
-                    <li><a href="Classroom05TiposPrimitivos/index.html">Aula 05 - Tipos Primitivos</a></li>
-                    <li><a href="Classroom06OperadoresAritmeticos/index.html">Aula 06 - Operadores Aritméticos</a></li>
-                    <li><a href="Classroom07AlertConfirmPromptandNavegador/index.html">Aula 07 - Alert - Confirm - Prompt e Navegador</a></li>
-                    <li><a href="Classroom08Strings/index.html">Aula 08 - Strings</a></li>
+            <div class="cards-container">
+                <!-- Card: JavaScript Básico -->
+                <section class="card">
+                    <div class="card-header">
+                        <img src="logoJavascript.png" alt="JavaScript Logo">
+                        <h2>Curso de JavaScript Básico</h2>
+                    </div>
+                    <ul>
+                        <li><a href="aula01PreparacaoAmbiente/index.html">Aula 01 - Preparação do Ambiente e primeiro código</a></li>
+                        <li><a href="aula02Comentarios/index.html">Aula 02 - Comentários</a></li>
+                        <li><a href="aula03NodeVsNavegador/index.html">Aula 03 - Node Vs Navegador</a></li>
+                        <li><a href="aula04Variaveis/index.html">Aula 04 - Variáveis</a></li>
+                        <li><a href="aula05TiposPrimitivos/index.html">Aula 05 - Tipos Primitivos</a></li>
+                        <li><a href="aula06OperadoresAritmeticos/index.html">Aula 06 - Operadores Aritméticos</a></li>
+                        <li><a href="aula07AlertConfirmPromptandNavegador/index.html">Aula 07 - Alert - Confirm - Prompt e Navegador</a></li>
+                        <li><a href="aula08Strings/index.html">Aula 08 - Strings</a></li>
+                        <li><a href="aula09Numbers/index.html">Aula 09 - Numbers</a></li>
+                        <li><a href="aula10ObjetoMath/index.html">Aula 10 - Objeto Math</a></li>
+                    </ul>
+                </section>
 
-                </ul>
-            </article>
+                <!-- Card: JavaScript Intermediário -->
+                <section class="card">
+                    <div class="card-header">
+                        <img src="logoJavascript.png" alt="JavaScript Logo">
+                        <h2>Curso de JavaScript Intermediário</h2>
+                    </div>
+                    <ul>
+                        <li><a href="#">Em breve...</a></li>
+                    </ul>
+                </section>
+
+                <!-- Card: JavaScript Avançado -->
+                <section class="card">
+                    <div class="card-header">
+                        <img src="logoJavascript.png" alt="JavaScript Logo">
+                        <h2>Curso de JavaScript Avançado</h2>
+                    </div>
+                    <ul>
+                        <li><a href="#">Em breve...</a></li>
+                    </ul>
+                </section>
+
+                <!-- Card: Projetos Práticos -->
+                <section class="card">
+                    <div class="card-header">
+                        <img src="logoJavascript.png" alt="JavaScript Logo">
+                        <h2>Projetos Práticos</h2>
+                    </div>
+                    <ul>
+                        <li><a href="#">Em breve...</a></li>
+                    </ul>
+                </section>
+            </div>
         </main>
 
-        <!-- -->
-
         <footer>
-            <p>Desenvolvido por
+            <p>Desenvolvido com ❤️ por
                 <a href="https://www.linkedin.com/in/jacksondouglasdsouza/" target="_blank" rel="noopener noreferrer">
-                    Jackson Douglas
+                    Jackson Douglas de Souza
                 </a>
+            </p>
+            <p>Siga-me nas redes sociais</p>
+            <p>
+                <a href="https://www.linkedin.com/in/jacksondouglasdsouza/" target="_blank" rel="noopener noreferrer">LinkedIn</a> |
+                <a href="https://github.com/jacksondouglasdesouza" target="_blank" rel="noopener noreferrer">Github</a>
             </p>
         </footer>
     </body>

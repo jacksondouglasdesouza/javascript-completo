@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>Aula 09 - Numbers em JavaScript</title>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+
+    </head>
+
+    <body>
+        <header>
+            <h1>Aula 09 - Numbers em JavaScript</h1>
+        </header>
+
+        <main>
+            <a href="../index.html" class="btn-voltar">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M19 12H5M12 19l-7-7 7-7"/>
+                </svg>
+                Voltar para Home
+            </a>
+
+            <section class="section-title">
+                <h2>Numbers em JavaScript</h2>
+            </section>
+
+            <!-- VÍDEO AULA -->
+            <div class="video-container">
+                <h3>🎥 Vídeo Aula - Numbers em JavaScript</h3>
+                <div class="video-wrapper">
+                    <iframe 
+                        src="https://www.youtube.com/embed/m1jCDQ1wMGo?si=44inS6U2tBexPq0q"
+                        title="Aula sobre Numbers em JavaScript"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+                <div class="video-credits">
+                    <strong>📌 Créditos do Vídeo:</strong><br>
+                    Todos os direitos reservados ao autor original do vídeo.<br>
+                    Canal: <a href="https://www.youtube.com/c/ManualdoC%C3%B3digo" target="_blank" rel="noopener noreferrer">@Manualdocodigo</a><br>
+                    Este material é utilizado exclusivamente para fins educacionais.
+                </div>
+            </div>
+            
+            <article>
+                <figure>
+                    <img src="./imgs/Numbers em JavaScript.png" alt="Numbers em JavaScript" width="600">
+                    <figcaption>Numbers em JavaScript</figcaption>
+                </figure>
+                
+                <p><strong>Numbers em JavaScript</strong> - Numbers (números) são um tipo primitivo essencial em JavaScript usado para representar valores numéricos, sejam eles inteiros ou decimais. Em JavaScript, diferente de outras linguagens, existe apenas um tipo para números. Você pode trabalhar com <strong>inteiros</strong> (1, 100, -50), <strong>decimais</strong> (3.14, -0.5) e até <strong>notação científica</strong> (1e6). O JavaScript também possui valores especiais como <strong>Infinity</strong>, <strong>-Infinity</strong> e <strong>NaN</strong> (Not a Number). Numbers são fundamentais para cálculos, contagens, medições e operações matemáticas. JavaScript oferece o objeto <strong>Math</strong> com diversos métodos úteis como <strong>Math.round()</strong>, <strong>Math.floor()</strong>, <strong>Math.random()</strong>, entre outros, que facilitam operações matemáticas mais complexas no seu código.</p>
+
+                <pre><code class="language-javascript">// Numbers em JavaScript
+
+let numero1 = 10;
+let numero2 = 3.14;
+let numero3 = -5;
+let numero4 = 0;
+let numero5 = 2.5e3; // Notação científica (2500)
+let numero6 = NaN; // Not a Number
+let numero7 = Infinity; // Infinito positivo
+let numero8 = -Infinity; // Infinito negativo
+let numero9 = 0b1010; // Binário (10 em decimal)
+let numero10 = 0o12; // Octal (10 em decimal)
+let numero11 = 0xA; // Hexadecimal (10 em decimal)
+let numero12 = Number("42"); // Conversão de string para número
+let numero13 = parseInt("42px"); // Conversão de string para inteiro
+let numero14 = parseFloat("3.14abc"); // Conversão de string para float
+let numero15 = Number.isInteger(numero1); // Verifica se é inteiro
+let numero16 = Number.isNaN(numero6); // Verifica se é NaN
+let numero17 = numero2.toFixed(2); // Formata número com 2 casas decimais
+let numero18 = numero1.toString(); // Converte número para string
+let numero19 = Math.sqrt(16); // Raiz quadrada
+let numero20 = Math.pow(2, 3); // Potência (2 elevado a 3)
+let numero21 = Math.random(); // Número aleatório entre 0 e 1
+let numero22 = Math.max(5, 10, 15); // Maior número
+let numero23 = Math.min(5, 10, 15); // Menor número
+let numero24 = Math.round(4.7); // Arredonda para o inteiro mais próximo
+let numero25 = Math.floor(4.7); // Arredonda para baixo
+let numero26 = Math.ceil(4.3); // Arredonda para cima
+let numeroBinarioToString = numero5.toString(2); // Converte número para string binária
+let numeroHexToString = numero5.toString(16); // Converte número para string hexadecimal
+let numeroOctalToString = numero5.toString(8); // Converte número para string octal
+let numeroExponencialToString = numero5.toExponential(2); // Converte número para notação exponencial com 2 casas decimais
+
+
+console.log("Números em JavaScript:");
+console.log(numero1, numero2, numero3, numero4, numero5);
+console.log(numero6, numero7, numero8);
+console.log(numero9, numero10, numero11);
+console.log(numero12, numero13, numero14);
+console.log(numero15, numero16);
+console.log(numero17, numero18);
+console.log(numero19, numero20);
+console.log(numero21);
+console.log(numero22, numero23);
+console.log(numero24, numero25, numero26);
+console.log(numeroBinarioToString);
+console.log(numeroHexToString);
+console.log(numeroOctalToString);
+console.log(numeroExponencialToString);
+
+//-- Correção de imprecisão em operações com números decimais
+
+let nun1 = 0.1;
+let nun2 = 0.2;
+let soma = nun1 + nun2;
+console.log("Soma de 0.1 + 0.2 =", soma); // Resultado esperado: 0.30000000000000004
+
+nun1 = 0.1 * 100;
+nun2 = 0.2 * 100;
+soma = (nun1 + nun2) / 100;
+console.log("Soma corrigida de 0.1 + 0.2 =", soma); // Resultado esperado: 0.3
+
+//-- Documentação MDN Sobre Number
+// https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Number
+
+// FIM DO CÓDIGO</code></pre>
+            </article>
+        </main>
+
+        <footer>
+            <p>Desenvolvido com ❤️ por
+                <a href="https://www.linkedin.com/in/jacksondouglasdsouza/" target="_blank" rel="noopener noreferrer">
+                    Jackson Douglas de Souza
+                </a>
+            </p>
+            <p>Siga-me nas redes sociais</p>
+            <p>
+                <a href="https://www.linkedin.com/in/jacksondouglasdsouza/" target="_blank" rel="noopener noreferrer">LinkedIn</a> |
+                <a href="https://github.com/jacksondouglasdesouza" target="_blank" rel="noopener noreferrer">Github</a>
+            </p>
+        </footer>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
+        <script src="main.js"></script>
+    </body>
+</html>
