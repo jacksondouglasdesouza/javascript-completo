@@ -56,3 +56,18 @@ console.log("Comentários em JavaScript são úteis!"); // Exibindo mensagem no 
     //Ingnorando a próxima linha de código 
     // console.log("Fim dos exemplos de comentários.");
 
+
+    
+function copiarEndereco(element, endereco) {
+    // Copia o endereço para a área de transferência
+    navigator.clipboard.writeText(endereco).then(() => {
+        // Adiciona classe para mostrar o tooltip
+        element.classList.add('copied');
+        // Remove a classe após 2 segundos
+        setTimeout(() => {
+            element.classList.remove('copied');
+        }, 2000);
+    }).catch(err => {
+        console.error('Erro ao copiar:', err);
+    });
+}

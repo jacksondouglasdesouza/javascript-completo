@@ -64,3 +64,19 @@ console.log("Soma corrigida de 0.1 + 0.2 =", soma); // Resultado esperado: 0.3
 // https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Number
 
 //-- FIM 
+
+
+function copiarEndereco(element, endereco) {
+    // Copia o endereço para a área de transferência
+    navigator.clipboard.writeText(endereco).then(() => {
+        // Adiciona classe para mostrar o tooltip
+        element.classList.add('copied');
+        
+        // Remove a classe após 2 segundos
+        setTimeout(() => {
+            element.classList.remove('copied');
+        }, 2000);
+    }).catch(err => {
+        console.error('Erro ao copiar:', err);
+    });
+}

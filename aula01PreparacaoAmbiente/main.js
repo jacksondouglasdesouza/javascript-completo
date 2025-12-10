@@ -1,19 +1,9 @@
-//alert('This is an alert message!');
-console.log("Hello, welcome to the Classroom07 Alert, Confirm, Prompt, and Navigator example!");
-
-let a, b, c;
-a = 10, b = 20, c = 30;
-[a, b, c] = [b, c, a]; // Swap values
-console.log(`After swapping: b = ${a}, c = ${b}, a = ${c}`);
-
-
 
 function copiarEndereco(element, endereco) {
     // Copia o endereço para a área de transferência
     navigator.clipboard.writeText(endereco).then(() => {
         // Adiciona classe para mostrar o tooltip
         element.classList.add('copied');
-        
         // Remove a classe após 2 segundos
         setTimeout(() => {
             element.classList.remove('copied');

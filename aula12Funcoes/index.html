@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>Aula 12 - Funções</title>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+
+    </head>
+
+    <body>
+        <header>
+            <h1>Aula 12 - Funções</h1>
+        </header>
+
+        <main>
+            <a href="../index.html" class="btn-voltar">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M19 12H5M12 19l-7-7 7-7"/>
+                </svg>
+                Voltar para Home
+            </a>
+
+            <section class="section-title">
+                <h2>Funções</h2>
+            </section>
+
+            <!-- VÍDEO AULA -->
+            <div class="video-container">
+                <h3>🎥 Vídeo Aula - Funções em JavaScript</h3>
+                <div class="video-wrapper">
+                    <iframe 
+                        src="https://www.youtube.com/embed/RTfMHMQp2e4?si=MfLaYH-5fR4gh3f2" 
+                        title="Aula sobre Funções"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+                <div class="video-credits">
+                    <strong>📌 Créditos do Vídeo:</strong><br>
+                    Todos os direitos reservados ao autor original do vídeo.<br>
+                    Canal: <a href="https://www.youtube.com/@canaldevclub" target="_blank" rel="noopener noreferrer">@canaldevclub</a><br>
+                    Este material é utilizado exclusivamente para fins educacionais.
+                </div>
+            </div>
+            
+            <article>
+                <figure>
+                    <img src="./imgs/funcoes.webp" alt="Funções em JavaScript" width="600">
+                    <figcaption>Funções</figcaption>
+                </figure>
+                
+                <p><strong>Funções</strong> - Funções são blocos de código reutilizáveis que realizam tarefas específicas e são fundamentais no JavaScript. Diferente de escrever o mesmo código várias vezes, você define uma função uma vez e pode usá-la quantas vezes quiser. As funções podem receber dados chamados de <strong>parâmetros</strong> e retornar resultados usando a palavra-chave <strong>return</strong>. Existem três formas principais de criar funções em JavaScript: <strong>função tradicional</strong> (usando function), <strong>função anônima</strong> (armazenada em variável), e <strong>arrow function</strong> (usando a sintaxe =>). Os métodos mais comuns incluem <strong>function()</strong> (declaração tradicional), <strong>function expression</strong> (funções armazenadas em variáveis), <strong>arrow function</strong> (forma moderna e concisa), além de conceitos como <strong>parâmetros</strong>, <strong>return</strong> (retornar valores), e <strong>valores padrão</strong>, entre outros que facilitam a organização, reutilização e limpeza do código no desenvolvimento.</p>
+
+                <pre><code class="language-javascript">//Funções
+// ============================================
+// FUNÇÕES EM JAVASCRIPT - GUIA BÁSICO
+// ============================================
+
+// O que é uma Função?
+// Uma função é um bloco de código reutilizável que realiza uma tarefa específica
+// Você define a função uma vez e pode usá-la várias vezes
+// As funções podem receber dados (parâmetros) e retornar resultados (return)
+
+// ------ 1. FUNÇÃO TRADICIONAL (function) ------
+
+// Sintaxe básica
+function add(a, b){
+    return a + b;
+}
+
+// Explicação:
+// - function: palavra-chave para declarar
+// - add: nome da função
+// - (a, b): parâmetros que a função recebe
+// - return: retorna um valor
+
+// Chamando a função
+console.log(add(15, 30));
+// Resultado: 45
+
+// Outro exemplo de função tradicional
+function prt(value){
+    console.log(value);
+}
+
+prt('Bom dia amigão');
+// Resultado: Bom dia amigão (exibido no console)
+
+// Função que retorna texto
+function saudacao(nomeUsuario){
+    return `Bom dia senhor(a) ${nomeUsuario}`;
+}
+
+const nome = "Jackson Douglas de Souza";
+console.log(saudacao(nome));
+// Resultado: Bom dia senhor(a) Jackson Douglas de Souza
+
+// ------ 2. FUNÇÃO ANÔNIMA (function expression) ------
+
+// Uma função anônima é uma função sem nome
+// Ela é armazenada em uma variável
+// Sintaxe: const nomeVariavel = function(parâmetros) { código }
+
+const subtracao = function(a, b){
+    return a - b;
+};
+
+console.log(subtracao(10, 9));
+// Resultado: 1
+
+// Outro exemplo
+const somar = function(x, y){
+    return x + y;
+};
+
+console.log(somar(5, 3));
+// Resultado: 8
+
+// ------ 3. ARROW FUNCTION (função flecha =>) ------
+
+// Arrow function é a forma mais moderna e concisa
+// Sintaxe: const nome = (parâmetros) => resultado
+// Se houver apenas uma linha, pode omitir as chaves {}
+
+const multiplicacao = (a, b) => a * b;
+
+console.log(multiplicacao(10, 5));
+// Resultado: 50
+
+// Outro exemplo
+const divisao = (a, b) => a / b;
+
+console.log(divisao(20, 4));
+// Resultado: 5
+
+// Arrow function com múltiplas linhas
+const potencia = (a, b) => {
+    const resultado = a ** b;
+    return resultado;
+};
+
+console.log(potencia(2, 3));
+// Resultado: 8
+
+// Arrow function sem parâmetros
+const bemVindo = () => "Bem-vindo ao JavaScript!";
+
+console.log(bemVindo());
+// Resultado: Bem-vindo ao JavaScript!
+
+// Arrow function com um único parâmetro (parênteses opcionais)
+const dobro = x => x * 2;
+
+console.log(dobro(7));
+// Resultado: 14
+
+// ------ 4. FUNÇÕES COM MÚLTIPLOS PARÂMETROS ------
+
+function calcularMedia(nota1, nota2, nota3){
+    return (nota1 + nota2 + nota3) / 3;
+}
+
+console.log(calcularMedia(7, 8, 9));
+// Resultado: 8
+
+// ------ 5. FUNÇÕES SEM RETORNO ------
+
+function exibirMensagem(msg){
+    console.log("Mensagem: " + msg);
+    // Não tem return, apenas executa a ação
+}
+
+exibirMensagem("Olá, mundo!");
+// Resultado: Mensagem: Olá, mundo!
+
+// ------ 6. FUNÇÕES COM VALORES PADRÃO ------
+
+function cumprimento(nome = "Visitante"){
+    return `Olá, ${nome}!`;
+}
+
+console.log(cumprimento());
+// Resultado: Olá, Visitante!
+
+console.log(cumprimento("Maria"));
+// Resultado: Olá, Maria!
+
+// ------ 7. EXEMPLOS EXTRAS PARA PRATICAR ------
+
+// Função que verifica se um número é par
+const ehPar = (numero) => numero % 2 === 0;
+
+console.log(ehPar(4));    // true
+console.log(ehPar(7));    // false
+
+// Função que concatena strings
+const concatenar = (str1, str2) => str1 + " " + str2;
+
+console.log(concatenar("JavaScript", "é legal!"));
+// Resultado: JavaScript é legal!
+
+// Função que calcula o quadrado
+function quadrado(num){
+    return num * num;
+}
+
+console.log(quadrado(5));
+// Resultado: 25
+
+// Função que inverte um texto
+const inverter = (texto) => texto.split('').reverse().join('');
+
+console.log(inverter("JavaScript"));
+// Resultado: tpircSavaJ
+
+// ============================================
+// RESUMO DOS 3 TIPOS DE FUNÇÕES
+// ============================================
+// 1. FUNÇÃO TRADICIONAL
+//    function nome(parâmetros) { código }
+//    - Mais legível
+//    - Pode ter muitas linhas
+//
+// 2. FUNÇÃO ANÔNIMA (Function Expression)
+//    const nome = function(parâmetros) { código }
+//    - Armazenada em variável
+//    - Útil para callbacks
+//
+// 3. ARROW FUNCTION
+//    const nome = (parâmetros) => código
+//    - Mais moderna e concisa
+//    - Ideal para operações simples
+//    - Não tem this próprio
+// ============================================
+
+// DICAS IMPORTANTES:
+// - Use return para enviar um valor de volta
+// - Parâmetros são dados que a função recebe
+// - Você pode chamar uma função quantas vezes quiser
+// - Arrow functions são ótimas para código limpo
+// ============================================
+
+// FIM DO CÓDIGO</code></pre>
+            </article>
+        </main>
+
+        <!-- -->
+
+        <!-- Seção de Doação -->
+        <section class="donation-section">
+            <div class="donation-container">
+                <h2>Obrigado pelo seu apoio! 💙</h2>
+                <p>Se este curso foi útil para você, considere fazer uma doação para ajudar no desenvolvimento de mais conteúdo de qualidade.</p>
+                
+                <div class="donation-methods">
+                    <!-- PayPal -->
+                    <div class="donation-card">
+                        <div class="donation-icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M20.067 8.478c.492.88.556 2.014.3 3.327-.74 3.806-3.276 5.12-6.514 5.12h-.5a.805.805 0 00-.794.68l-.04.22-.63 4.003-.028.15a.806.806 0 01-.795.68h-2.41a.595.595 0 01-.586-.72l1.27-8.054h.004c.06-.377.39-.656.78-.656h.5c2.28 0 4.06-.914 4.576-3.546.2-1.032.19-1.886-.24-2.53z"/>
+                            </svg>
+                        </div>
+                        <h3>PayPal</h3>
+                        <a href="https://www.paypal.com/donate/?hosted_button_id=8XYHYQNR2E27J" class="donation-link">Clique Aqui</a>
+                    </div>
+
+                    <!-- Coinbase -->
+                    <div class="donation-card">
+                        <div class="donation-icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" fill="none"/>
+                                <path d="M12 7v10M7 12h10" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <h3>Coinbase</h3>
+                        <a href="https://commerce.coinbase.com/checkout/959b8db0-848e-4e3b-8620-3a24dab24baf" class="donation-link">Clique Aqui</a>
+                    </div>
+
+                    <!-- Bitcoin -->
+                    <div class="donation-card">
+                        <div class="donation-icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <circle cx="12" cy="12" r="10"/>
+                                <text x="12" y="16" text-anchor="middle" fill="white" font-weight="bold" font-size="14">₿</text>
+                            </svg>
+                        </div>
+                        <h3>Bitcoin</h3>
+                        <div class="copy-container" onclick="copiarEndereco(this, 'bc1q3zu0nng6765ptpmr86jcfn68h6e62sda7382e3')">
+                            <code class="crypto-address">bc1q3zu0nng6765ptpmr86jcfn68h6e62sda7382e3</code>
+                            <span class="copy-tooltip">Copiado!</span>
+                        </div>
+                    </div>
+
+                    <!-- Ethereum -->
+                    <div class="donation-card">
+                        <div class="donation-icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <polygon points="12,2 6,8 6,16 12,22 18,16 18,8"/>
+                            </svg>
+                        </div>
+                        <h3>Ethereum</h3>
+                        <div class="copy-container" onclick="copiarEndereco(this, '0xF7Eb1D45cDD527b11BC49416DDfA51AD38e26ca1')">
+                            <code class="crypto-address">0xF7Eb1D45cDD527b11BC49416DDfA51AD38e26ca1</code>
+                            <span class="copy-tooltip">Copiado!</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- -->
+
+        <footer>
+            <p>Desenvolvido com ❤️ por
+                <a href="https://www.linkedin.com/in/jacksondouglasdsouza/" target="_blank" rel="noopener noreferrer">
+                    Jackson Douglas de Souza
+                </a>
+            </p>
+            <p>Siga-me nas redes sociais</p>
+            <p>
+                <a href="https://www.linkedin.com/in/jacksondouglasdsouza/" target="_blank" rel="noopener noreferrer">LinkedIn</a> |
+                <a href="https://github.com/jacksondouglasdesouza" target="_blank" rel="noopener noreferrer">Github</a>
+            </p>
+        </footer>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
+        <script src="main.js"></script>
+    </body>
+</html>

@@ -51,3 +51,18 @@ console.log("Maior número seguro em JavaScript: " + Number.MAX_SAFE_INTEGER);
 console.log("Maior BigInt: " + (BigInt(Number.MAX_SAFE_INTEGER) + 1n));
 
 // Esses são os principais tipos primitivos em JavaScript. Cada um deles tem suas próprias características e usos específicos no desenvolvimento de aplicações.
+
+function copiarEndereco(element, endereco) {
+    // Copia o endereço para a área de transferência
+    navigator.clipboard.writeText(endereco).then(() => {
+        // Adiciona classe para mostrar o tooltip
+        element.classList.add('copied');
+        
+        // Remove a classe após 2 segundos
+        setTimeout(() => {
+            element.classList.remove('copied');
+        }, 2000);
+    }).catch(err => {
+        console.error('Erro ao copiar:', err);
+    });
+}
