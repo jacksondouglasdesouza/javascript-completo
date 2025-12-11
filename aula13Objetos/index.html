@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="stylesheet" href="style.css" />
+      <title>Aula 13 - Objetos</title>
+      <link
+         href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css"
+         rel="stylesheet"
+      />
+   </head>
+
+   <body>
+      <header>
+         <h1>Aula 13 - Objetos</h1>
+      </header>
+
+      <main>
+         <a href="../index.html" class="btn-voltar">
+            <svg
+               xmlns="http://www.w3.org/2000/svg"
+               viewBox="0 0 24 24"
+               fill="none"
+               stroke="currentColor"
+               stroke-width="2"
+               stroke-linecap="round"
+               stroke-linejoin="round"
+            >
+               <path d="M19 12H5M12 19l-7-7 7-7" />
+            </svg>
+            Voltar para Home
+         </a>
+
+         <section class="section-title">
+            <h2>Objetos em JavaScript</h2>
+         </section>
+
+         <!-- VÍDEO AULA -->
+         <div class="video-container">
+            <h3>🎥 Vídeo Aula - Objetos em JavaScript</h3>
+            <div class="video-wrapper">
+               <iframe
+                  src="https://www.youtube.com/embed/yFrd7712G3I?si=A7OJGGxLWkP-o6aT"
+                  title="Aula sobre Objetos em JavaScript"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+               >
+               </iframe>
+            </div>
+            <div class="video-credits">
+               <strong>📌 Créditos do Vídeo:</strong><br />
+               Todos os direitos reservados ao autor original do vídeo.<br />
+               Canal:
+               <a
+                  href="https://www.youtube.com/@ProfessorEdsonMaia"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >@ProfessorEdsonMaia</a
+               ><br />
+               Este material é utilizado exclusivamente para fins educacionais.
+            </div>
+         </div>
+
+         <article>
+            <figure>
+               <img
+                  src="./imgs/objetos.jpg"
+                  alt="Objetos em JavaScript"
+                  width="600"
+               />
+               <figcaption>Objetos em JavaScript</figcaption>
+            </figure>
+
+            <p>
+               <strong>Objetos</strong> - Objetos são coleções de pares
+               chave-valor que armazenam dados relacionados de forma organizada
+               em JavaScript. Diferente de arrays que são listas acessadas por
+               posição (índice), objetos organizam dados por propriedades
+               nomeadas, sendo muito úteis para representar entidades do mundo
+               real como pessoas, produtos ou carros. Um objeto literal é criado
+               com chaves {} contendo propriedades e valores. As propriedades
+               podem ser acessadas de duas formas: usando ponto
+               (objeto.propriedade) ou colchetes (objeto["propriedade"]).
+               Objetos também podem conter outros objetos dentro deles
+               (aninhados), arrays como propriedades, e
+               <strong>métodos</strong> que são funções definidas dentro do
+               objeto. O <strong>this</strong> é uma palavra-chave especial que
+               se refere ao próprio objeto e permite acessar suas propriedades
+               dentro dos métodos. Uma <strong>Factory Function</strong> é uma
+               função que cria e retorna objetos, permitindo criar múltiplas
+               instâncias com a mesma estrutura. Os conceitos principais incluem
+               <strong>propriedades</strong> (dados do objeto),
+               <strong>métodos</strong> (funções dentro do objeto),
+               <strong>this</strong> (referência ao objeto), e
+               <strong>acesso às propriedades</strong>, entre outros que
+               facilitam a organização e manipulação de dados estruturados no
+               desenvolvimento.
+            </p>
+
+            <pre><code class="language-javascript">//Objetos
+
+// ============================================
+// OBJETOS EM JAVASCRIPT - GUIA BÁSICO
+// ============================================
+
+// O que é um Objeto?
+// Um objeto é uma coleção de pares chave-valor que armazena dados relacionados
+// Diferente de arrays que são listas, objetos organizam dados por propriedades nomeadas
+
+// ------ 1. ARRAYS vs OBJETOS ------
+
+// Array - acessa por índice (posição)
+const array = [10, 20, 30, 40, 50];
+console.log("Array:", array);
+// Resultado: [10, 20, 30, 40, 50]
+
+console.log(array[0]);  // 10 (acessado por posição)
+console.log(array[2]);  // 30 (acessado por posição)
+
+// ------ 2. OBJETO LITERAL BÁSICO ------
+
+// Criando um objeto com propriedades
+const userData1 = {
+   idUser: 1,
+   name: "Joaquim",
+   lastName: "Silva",
+   age: 35,
+   isAdmin: false,
+};
+
+console.log("Objeto literal:", userData1);
+// Resultado: { idUser: 1, name: "Joaquim", lastName: "Silva", age: 35, isAdmin: false }
+
+// Acessando propriedades do objeto
+console.log(userData1.name);        // Joaquim (usando ponto)
+console.log(userData1["lastName"]); // Silva (usando colchetes)
+
+// ------ 3. OBJETOS ANINHADOS ------
+
+// Um objeto dentro de outro
+const userData2 = {
+   idUser: 2,
+   name: "Maria",
+   lastName: "Santos",
+   age: 28,
+   address: {
+      street: "Rua 1",
+      number: 10,
+      city: "São Paulo",
+      state: "SP",
+   },
+};
+
+console.log("Objeto aninhado:", userData2);
+console.log(userData2.address.street);  // Rua 1
+console.log(userData2.address.city);    // São Paulo
+
+// ------ 4. OBJETOS COM ARRAYS ------
+
+// Um objeto que contém arrays como propriedades
+const userData3 = {
+   idUser: 3,
+   name: "Carlos",
+   lastName: "Oliveira",
+   age: 40,
+   friends: ["João", "Maria", "Pedro"],
+};
+
+console.log("Objeto com array:", userData3);
+console.log(userData3.friends[0]);  // João
+console.log(userData3.friends.length);  // 3
+
+// ------ 5. CRIANDO OBJETOS COM FUNÇÕES ------
+
+// Factory Function - uma função que cria objetos
+function criarUsuario(nome, sobrenome, idade) {
+   return {
+      nome,      // Shorthand: nome: nome
+      sobrenome, // Shorthand: sobrenome: sobrenome
+      idade,     // Shorthand: idade: idade
+   };
+}
+
+// Criando múltiplos objetos com a função
+const pessoa1 = criarUsuario("Joaquim da Silva", "Cardoso Aguiar", 38);
+const pessoa2 = criarUsuario("Maria da Silva", "Cardoso Aguiar", 39);
+const pessoa3 = criarUsuario("Claudio da Silva", "Cardoso Aguiar", 58);
+const pessoa4 = criarUsuario("Marcos da Silva", "Cardoso Aguiar", 52);
+const pessoa5 = criarUsuario("Manoela da Silva", "Cardoso Aguiar", 88);
+const pessoa6 = criarUsuario("Vanessa da Silva", "Cardoso Aguiar", 98);
+
+console.log("Pessoa 1:", pessoa1);
+console.log("Pessoa 2:", pessoa2);
+console.log("Pessoa 3:", pessoa3);
+console.log("Pessoa 4:", pessoa4);
+console.log("Pessoa 5:", pessoa5);
+console.log("Pessoa 6:", pessoa6);
+
+// ------ 6. MÉTODOS EM OBJETOS ------
+
+// Métodos são funções dentro de objetos
+const pessoa = {
+   nome: pessoa1.nome,
+   sobrenome: pessoa1.sobrenome,
+   idade: pessoa1.idade,
+
+   // Método: função dentro do objeto
+   fala() {
+      console.log(
+         `Olá, meu nome completo é ${this.nome + this.sobrenome} e minha idade é ${this.idade}`
+      );
+   },
+
+   // Método que modifica a idade
+   incrementarIdade() {
+      this.idade++;
+   },
+};
+
+console.log("Objeto com métodos:", pessoa);
+pessoa.fala();  // Executa o método fala
+pessoa.incrementarIdade();  // Aumenta a idade em 1
+pessoa.fala();  // Executa novamente para mostrar a mudança
+
+// ------ 7. EXEMPLOS EXTRAS PARA PRATICAR ------
+
+// Objeto simples
+const carro = {
+   marca: "Toyota",
+   modelo: "Corolla",
+   ano: 2023,
+};
+
+console.log("Carro:", carro);
+console.log(carro.marca);
+console.log(carro.modelo);
+
+// Objeto com método simples
+const calculadora = {
+   numero1: 10,
+   numero2: 5,
+
+   somar() {
+      return this.numero1 + this.numero2;
+   },
+
+   subtrair() {
+      return this.numero1 - this.numero2;
+   },
+};
+
+console.log("Calculadora:", calculadora);
+console.log("Soma:", calculadora.somar());
+console.log("Subtração:", calculadora.subtrair());
+
+// ============================================
+// RESUMO DOS CONCEITOS PRINCIPAIS
+// ============================================
+// OBJETO: Coleção de pares chave-valor
+// PROPRIEDADE: Dados armazenados no objeto
+// MÉTODO: Função dentro de um objeto
+// THIS: Referência ao próprio objeto
+// ACESSAR: objeto.propriedade ou objeto["propriedade"]
+// FACTORY FUNCTION: Função que cria objetos
+// ============================================
+// FIM DO CÓDIGO</code></pre>
+         </article>
+      </main>
+
+      <!-- -->
+
+      <!-- Seção de Doação -->
+      <section class="donation-section">
+         <div class="donation-container">
+            <h2>Obrigado pelo seu apoio! 💙</h2>
+            <p>
+               Se este curso foi útil para você, considere fazer uma doação para
+               ajudar no desenvolvimento de mais conteúdo de qualidade.
+            </p>
+
+            <div class="donation-methods">
+               <!-- PayPal -->
+               <div class="donation-card">
+                  <div class="donation-icon">
+                     <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                           d="M20.067 8.478c.492.88.556 2.014.3 3.327-.74 3.806-3.276 5.12-6.514 5.12h-.5a.805.805 0 00-.794.68l-.04.22-.63 4.003-.028.15a.806.806 0 01-.795.68h-2.41a.595.595 0 01-.586-.72l1.27-8.054h.004c.06-.377.39-.656.78-.656h.5c2.28 0 4.06-.914 4.576-3.546.2-1.032.19-1.886-.24-2.53z"
+                        />
+                     </svg>
+                  </div>
+                  <h3>PayPal</h3>
+                  <a
+                     href="https://www.paypal.com/donate/?hosted_button_id=8XYHYQNR2E27J"
+                     class="donation-link"
+                     >Clique Aqui</a
+                  >
+               </div>
+
+               <!-- Coinbase -->
+               <div class="donation-card">
+                  <div class="donation-icon">
+                     <svg viewBox="0 0 24 24" fill="currentColor">
+                        <circle
+                           cx="12"
+                           cy="12"
+                           r="10"
+                           stroke="currentColor"
+                           stroke-width="2"
+                           fill="none"
+                        />
+                        <path
+                           d="M12 7v10M7 12h10"
+                           stroke="currentColor"
+                           stroke-width="2"
+                        />
+                     </svg>
+                  </div>
+                  <h3>Coinbase</h3>
+                  <a
+                     href="https://commerce.coinbase.com/checkout/959b8db0-848e-4e3b-8620-3a24dab24baf"
+                     class="donation-link"
+                     >Clique Aqui</a
+                  >
+               </div>
+
+               <!-- Bitcoin -->
+               <div class="donation-card">
+                  <div class="donation-icon">
+                     <svg viewBox="0 0 24 24" fill="currentColor">
+                        <circle cx="12" cy="12" r="10" />
+                        <text
+                           x="12"
+                           y="16"
+                           text-anchor="middle"
+                           fill="white"
+                           font-weight="bold"
+                           font-size="14"
+                        >
+                           ₿
+                        </text>
+                     </svg>
+                  </div>
+                  <h3>Bitcoin</h3>
+                  <div
+                     class="copy-container"
+                     onclick="copiarEndereco(this, 'bc1q3zu0nng6765ptpmr86jcfn68h6e62sda7382e3')"
+                  >
+                     <code class="crypto-address"
+                        >bc1q3zu0nng6765ptpmr86jcfn68h6e62sda7382e3</code
+                     >
+                     <span class="copy-tooltip">Copiado!</span>
+                  </div>
+               </div>
+
+               <!-- Ethereum -->
+               <div class="donation-card">
+                  <div class="donation-icon">
+                     <svg viewBox="0 0 24 24" fill="currentColor">
+                        <polygon points="12,2 6,8 6,16 12,22 18,16 18,8" />
+                     </svg>
+                  </div>
+                  <h3>Ethereum</h3>
+                  <div
+                     class="copy-container"
+                     onclick="copiarEndereco(this, '0xF7Eb1D45cDD527b11BC49416DDfA51AD38e26ca1')"
+                  >
+                     <code class="crypto-address"
+                        >0xF7Eb1D45cDD527b11BC49416DDfA51AD38e26ca1</code
+                     >
+                     <span class="copy-tooltip">Copiado!</span>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- -->
+
+      <footer>
+         <p>
+            Desenvolvido com ❤️ por
+            <a
+               href="https://www.linkedin.com/in/jacksondouglasdsouza/"
+               target="_blank"
+               rel="noopener noreferrer"
+            >
+               Jackson Douglas de Souza
+            </a>
+         </p>
+         <p>Siga-me nas redes sociais</p>
+         <p>
+            <a
+               href="https://www.linkedin.com/in/jacksondouglasdsouza/"
+               target="_blank"
+               rel="noopener noreferrer"
+               >LinkedIn</a
+            >
+            |
+            <a
+               href="https://github.com/jacksondouglasdesouza"
+               target="_blank"
+               rel="noopener noreferrer"
+               >Github</a
+            >
+         </p>
+      </footer>
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
+      <script src="main.js"></script>
+   </body>
+</html>

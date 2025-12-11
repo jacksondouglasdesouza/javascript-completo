@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Exercício Aula 14</title>
+
+      <style>
+         html {
+            color: #ffffff;
+         }
+
+         body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            width: 100%;
+            background-color: #aaa8a8;
+         }
+
+         a {
+            color: #ffffff;
+            text-decoration: none;
+         }
+
+         a:hover {
+            color: #0a2744;
+         }
+         .container-formulario {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+         }
+
+         #formulario {
+            display: flex;
+            flex-direction: column;
+            align-items: left;
+            justify-content: left;
+            text-align: left;
+            gap: 10px;
+            padding: 30px;
+            border: 1px solid #ffffff;
+            border-radius: 20px;
+         }
+
+         .enviar {
+            margin-top: 10px;
+            padding: 10px;
+         }
+
+         .container-resultado {
+            display: flex;
+            flex-direction: column;
+            align-items: left;
+            justify-content: left;
+            gap: 5px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            padding: 20px;
+            border: 1px solid #ffffff;
+            border-radius: 20px;
+         }
+      </style>
+   </head>
+   <!-- -->
+   <body>
+      <header>
+         <h1>Exercício Aula 14</h1>
+      </header>
+      <!-- -->
+      <main>
+         <div class="container-formulario">
+            <form id="formulario" action="" method="">
+               <label for="primeiro-nome">Nome: </label>
+               <input
+                  type="text"
+                  name="primeiro-nome"
+                  id="primeiro-nome"
+                  class="primeiro-nome"
+                  placeholder="Digite seu nome"
+               />
+               <!-- -->
+               <label for="sobrenome">Sobrenome: </label>
+               <input
+                  type="text"
+                  name="sobrenome"
+                  id="sobrenome"
+                  class="sobrenome"
+                  placeholder="Digite seu sobrenome"
+               />
+               <!-- -->
+               <label for="peso">Peso: </label>
+               <input
+                  type="number"
+                  name="peso"
+                  id="peso"
+                  class="peso"
+                  placeholder="Qual seu peso"
+               />
+               <!-- -->
+               <label for="altura">Altura: </label>
+               <input
+                  type="number"
+                  name="altura"
+                  id="altura"
+                  class="altura"
+                  placeholder="Qual sua altura"
+               />
+               <button type="submit" class="enviar">Enviar</button>
+            </form>
+         </div>
+
+         <!-- -->
+
+         <div class="container-resultado">
+            <p>Nome: <span id="nomeUsuario"></span></p>
+            <p>Sobrenome: <span id="sobrenomeUsuario"></span></p>
+            <p>Peso: <span id="pesoUsuario"></span></p>
+            <p>Altura: <span id="alturaUsuario"></span></p>
+         </div>
+      </main>
+      <!-- -->
+      <footer>
+         <p>
+            Desenvolvido com ❤️ por
+            <a
+               href="https://www.linkedin.com/in/jacksondouglasdsouza/"
+               target="_blank"
+               rel="noopener noreferrer"
+            >
+               Jackson Douglas de Souza
+            </a>
+         </p>
+      </footer>
+      <script src="index.js"></script>
+   </body>
+</html>

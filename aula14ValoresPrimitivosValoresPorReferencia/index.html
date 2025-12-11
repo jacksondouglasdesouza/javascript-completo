@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="stylesheet" href="style.css" />
+      <title>Aula 14 - Valores Primitivos e Valores por Referência</title>
+      <link
+         href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css"
+         rel="stylesheet"
+      />
+   </head>
+
+   <body>
+      <header>
+         <h1>Aula 14 - Valores Primitivos e Valores por Referência</h1>
+      </header>
+
+      <main>
+         <a href="../index.html" class="btn-voltar">
+            <svg
+               xmlns="http://www.w3.org/2000/svg"
+               viewBox="0 0 24 24"
+               fill="none"
+               stroke="currentColor"
+               stroke-width="2"
+               stroke-linecap="round"
+               stroke-linejoin="round"
+            >
+               <path d="M19 12H5M12 19l-7-7 7-7" />
+            </svg>
+            Voltar para Home
+         </a>
+
+         <section class="section-title">
+            <h2>Valores Primitivos e Valores por Referência</h2>
+         </section>
+
+         <!-- VÍDEO AULA -->
+         <div class="video-container">
+            <h3>
+               🎥 Vídeo Aula - Valores Primitivos e Valores por Referência em
+               JavaScript
+            </h3>
+            <div class="video-wrapper">
+               <iframe
+                  src="https://www.youtube.com/embed/qOIR5wYt5TM?si=BReeFDLfx7-dIW9m"
+                  title="Aula sobre Valores Primitivos e Valores por Referência"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+               >
+               </iframe>
+            </div>
+            <div class="video-credits">
+               <strong>📌 Créditos do Vídeo:</strong><br />
+               Todos os direitos reservados ao autor original do vídeo.<br />
+               Canal:
+               <a
+                  href="https://www.youtube.com/@web3escola"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >@web3escola</a
+               ><br />
+               Este material é utilizado exclusivamente para fins educacionais.
+            </div>
+         </div>
+
+         <article>
+            <figure>
+               <img
+                  src="./imgs/valorReferencia.jpg"
+                  alt="Valores Primitivos e Valores por Referência em JavaScript"
+                  width="600"
+               />
+               <figcaption>
+                  Valores Primitivos e Valores por Referência
+               </figcaption>
+            </figure>
+
+            <p>
+               <strong>Valores Primitivos e Valores por Referência</strong> - Em
+               JavaScript, existem dois tipos de dados com comportamentos
+               completamente diferentes: valores primitivos e valores por
+               referência. <strong>Valores primitivos</strong> são imutáveis
+               (não podem ser alterados) e incluem String, Number, Boolean,
+               Null, Undefined, BigInt e Symbol. Quando você copia um valor
+               primitivo, uma NOVA cópia independente é criada, permitindo que
+               as duas variáveis funcionem de forma completamente separada.
+               <strong>Valores por referência</strong> são mutáveis (podem ser
+               alterados) e incluem Array, Object e Function. Quando você copia
+               um valor por referência, ambas as variáveis apontam para o MESMO
+               local na memória, fazendo com que qualquer modificação em uma
+               afete a outra também. Para criar uma cópia independente de um
+               array ou objeto, usa-se o <strong>spread operator (...)</strong>,
+               que cria uma nova cópia e quebra a ligação entre as variáveis.
+               Entender essa diferença é fundamental no JavaScript pois afeta
+               como os dados são manipulados, copiados e compartilhados entre
+               variáveis. Os conceitos principais incluem
+               <strong>imutabilidade</strong> de primitivos,
+               <strong>mutabilidade</strong> de referências,
+               <strong>endereço de memória</strong>,
+               <strong>cópias independentes</strong>, e o
+               <strong>spread operator</strong>, entre outros que são essenciais
+               para o desenvolvimento correto de aplicações.
+            </p>
+
+            <pre><code class="language-javascript">//Valores Primitivos e Valores por Referência
+// ============================================
+// VALORES PRIMITIVOS vs VALORES POR REFERÊNCIA
+// ============================================
+
+// O que são Valores Primitivos?
+// Valores primitivos são imutáveis (não podem ser alterados)
+// São: String, Number, Boolean, Null, Undefined, BigInt, Symbol
+// Quando você copia um valor primitivo, cria uma NOVA cópia independente
+
+// O que são Valores por Referência?
+// Valores por referência são mutáveis (podem ser alterados)
+// São: Array, Object, Function
+// Quando você copia um valor por referência, ambos apontam para o MESMO local na memória
+
+// ============================================
+// PARTE 1: VALORES PRIMITIVOS
+// ============================================
+
+// ------ 1. STRINGS - VALORES PRIMITIVOS ------
+
+let nome1 = "Felipe";
+let nome2 = "Manu";
+console.log(nome1, nome2);
+// Resultado: Felipe Manu
+
+// Acessando caracteres (posição)
+console.log(nome1[0]);  // F
+console.log(nome2[0]);  // M
+
+// Tentando alterar um caractere - NÃO FUNCIONA (imutável)
+nome1[0] = "J";  // Tentativa ignorada
+nome2[0] = "K";  // Tentativa ignorada
+console.log(nome1, nome2);
+// Resultado: Felipe Manu (não mudou!)
+
+// ------ 2. NÚMEROS - VALORES PRIMITIVOS ------
+
+let A = 153;
+let B = A;  // Copia o valor de A para B (cópia independente)
+console.log(A, B);
+// Resultado: 153 153
+
+// Alterando A
+A = 200;  // Somente A muda, B continua 153
+console.log(A, B);
+// Resultado: 200 153
+
+// ------ 3. OUTROS VALORES PRIMITIVOS ------
+
+let booleano1 = true;
+let booleano2 = booleano1;
+booleano1 = false;
+console.log(booleano1, booleano2);
+// Resultado: false true (são independentes)
+
+let numero1 = 42;
+let numero2 = numero1;
+numero1 = 100;
+console.log(numero1, numero2);
+// Resultado: 100 42 (são independentes)
+
+// ============================================
+// PARTE 2: VALORES POR REFERÊNCIA (ARRAYS)
+// ============================================
+
+// ------ 1. ARRAYS - VALORES POR REFERÊNCIA ------
+
+let arrayA = [10, 20, 30, 40];
+let arrayB = arrayA;  // Ambos apontam para o MESMO local na memória
+console.log(arrayA, arrayB);
+// Resultado: [ 10, 20, 30, 40 ] [ 10, 20, 30, 40 ]
+
+// Modificando arrayB
+arrayB.push(50);  // Adiciona ao arrayB
+console.log(arrayA, arrayB);
+// Resultado: [ 10, 20, 30, 40, 50 ] [ 10, 20, 30, 40, 50 ]
+// AMBOS mudaram! Pois apontam para a mesma memória
+
+// Modificando arrayA
+arrayA.push(60);  // Adiciona ao arrayA
+console.log(arrayA, arrayB);
+// Resultado: [ 10, 20, 30, 40, 50, 60 ] [ 10, 20, 30, 40, 50, 60 ]
+// AMBOS mudaram novamente!
+
+// ------ 2. CADEIA DE REFERÊNCIA ------
+
+let arrayC = arrayB;  // arrayC aponta para arrayB, que aponta para arrayA
+console.log(arrayA, arrayB, arrayC);
+// Resultado: [ 10, 20, 30, 40, 50, 60 ] [ 10, 20, 30, 40, 50, 60 ] [ 10, 20, 30, 40, 50, 60 ]
+
+// Modificando arrayC
+arrayC.push("Novo elemento");
+console.log("arrayA:", arrayA);
+console.log("arrayB:", arrayB);
+console.log("arrayC:", arrayC);
+// Resultado: TODOS foram modificados!
+
+// ============================================
+// PARTE 3: TORNANDO ARRAYS INDEPENDENTES
+// ============================================
+
+// ------ 1. USANDO SPREAD OPERATOR (...) ------
+
+let array01 = [1, 2, 3];
+let array02 = [...array01];  // Cria uma NOVA cópia independente
+console.log(array01, array02);
+// Resultado: [ 1, 2, 3 ] [ 1, 2, 3 ]
+
+// Modificando array01
+array01.push("Novo em A");
+console.log(array01, array02);
+// Resultado: [ 1, 2, 3, 'Novo em A' ] [ 1, 2, 3 ]
+// Apenas array01 mudou!
+
+// Modificando array02
+array02.push("Novo em B");
+console.log(array01, array02);
+// Resultado: [ 1, 2, 3, 'Novo em A' ] [ 1, 2, 3, 'Novo em B' ]
+// Apenas array02 mudou!
+
+// ------ 2. ARRAYS INDEPENDENTES COM CHAIN ------
+
+let array03 = [5, 6, 7];
+let array04 = array03;
+array04.push("Elemento 1");
+
+let array05 = [...array04];  // Cria cópia independente de array04
+array05.push("Elemento 2");
+
+console.log("array03:", array03);
+console.log("array04:", array04);
+console.log("array05:", array05);
+// array03 e array04 mudaram juntos
+// array05 é independente
+
+// ============================================
+// PARTE 4: VALORES POR REFERÊNCIA (OBJETOS)
+// ============================================
+
+// ------ 1. OBJETOS - VALORES POR REFERÊNCIA ------
+
+const pessoa01 = {
+   nome: "Jackson",
+   sobrenome: "Souza",
+   idade: 38,
+};
+
+let pessoa02 = pessoa01;  // Ambos apontam para o MESMO objeto
+console.log(pessoa01, pessoa02);
+// Resultado: { nome: 'Jackson', sobrenome: 'Souza', idade: 38 }
+
+// Modificando pessoa02
+pessoa02.idade = 59;
+console.log(pessoa01, pessoa02);
+// Resultado: AMBOS têm idade 59!
+
+// ------ 2. TORNANDO OBJETOS INDEPENDENTES ------
+
+pessoa02 = { ...pessoa01 };  // Cria uma NOVA cópia independente
+console.log(pessoa01, pessoa02);
+// Resultado: Agora são independentes
+
+// Modificando pessoa02
+pessoa02.nome = "Novo nome";
+pessoa02.sobrenome = "Novo sobrenome";
+pessoa02.idade = 25;
+
+console.log("pessoa01:", pessoa01);
+// Resultado: { nome: 'Jackson', sobrenome: 'Souza', idade: 59 }
+
+console.log("pessoa02:", pessoa02);
+// Resultado: { nome: 'Novo nome', sobrenome: 'Novo sobrenome', idade: 25 }
+
+// Apenas pessoa02 foi modificado!
+
+// ============================================
+// RESUMO DOS CONCEITOS
+// ============================================
+// VALORES PRIMITIVOS:
+//  - String, Number, Boolean, Null, Undefined, BigInt, Symbol
+//  - Imutáveis (não podem ser alterados)
+//  - Cópia = cria novo valor independente
+//
+// VALORES POR REFERÊNCIA:
+//  - Array, Object, Function
+//  - Mutáveis (podem ser alterados)
+//  - Cópia = ambos apontam para o mesmo local na memória
+//  - Usar spread operator (...) para criar cópia independente
+// ============================================
+
+// FIM DO CÓDIGO</code></pre>
+         </article>
+      </main>
+
+      <!-- -->
+
+      <!-- Seção de Doação -->
+      <section class="donation-section">
+         <div class="donation-container">
+            <h2>Obrigado pelo seu apoio! 💙</h2>
+            <p>
+               Se este curso foi útil para você, considere fazer uma doação para
+               ajudar no desenvolvimento de mais conteúdo de qualidade.
+            </p>
+
+            <div class="donation-methods">
+               <!-- PayPal -->
+               <div class="donation-card">
+                  <div class="donation-icon">
+                     <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                           d="M20.067 8.478c.492.88.556 2.014.3 3.327-.74 3.806-3.276 5.12-6.514 5.12h-.5a.805.805 0 00-.794.68l-.04.22-.63 4.003-.028.15a.806.806 0 01-.795.68h-2.41a.595.595 0 01-.586-.72l1.27-8.054h.004c.06-.377.39-.656.78-.656h.5c2.28 0 4.06-.914 4.576-3.546.2-1.032.19-1.886-.24-2.53z"
+                        />
+                     </svg>
+                  </div>
+                  <h3>PayPal</h3>
+                  <a
+                     href="https://www.paypal.com/donate/?hosted_button_id=8XYHYQNR2E27J"
+                     class="donation-link"
+                     >Clique Aqui</a
+                  >
+               </div>
+
+               <!-- Coinbase -->
+               <div class="donation-card">
+                  <div class="donation-icon">
+                     <svg viewBox="0 0 24 24" fill="currentColor">
+                        <circle
+                           cx="12"
+                           cy="12"
+                           r="10"
+                           stroke="currentColor"
+                           stroke-width="2"
+                           fill="none"
+                        />
+                        <path
+                           d="M12 7v10M7 12h10"
+                           stroke="currentColor"
+                           stroke-width="2"
+                        />
+                     </svg>
+                  </div>
+                  <h3>Coinbase</h3>
+                  <a
+                     href="https://commerce.coinbase.com/checkout/959b8db0-848e-4e3b-8620-3a24dab24baf"
+                     class="donation-link"
+                     >Clique Aqui</a
+                  >
+               </div>
+
+               <!-- Bitcoin -->
+               <div class="donation-card">
+                  <div class="donation-icon">
+                     <svg viewBox="0 0 24 24" fill="currentColor">
+                        <circle cx="12" cy="12" r="10" />
+                        <text
+                           x="12"
+                           y="16"
+                           text-anchor="middle"
+                           fill="white"
+                           font-weight="bold"
+                           font-size="14"
+                        >
+                           ₿
+                        </text>
+                     </svg>
+                  </div>
+                  <h3>Bitcoin</h3>
+                  <div
+                     class="copy-container"
+                     onclick="copiarEndereco(this, 'bc1q3zu0nng6765ptpmr86jcfn68h6e62sda7382e3')"
+                  >
+                     <code class="crypto-address"
+                        >bc1q3zu0nng6765ptpmr86jcfn68h6e62sda7382e3</code
+                     >
+                     <span class="copy-tooltip">Copiado!</span>
+                  </div>
+               </div>
+
+               <!-- Ethereum -->
+               <div class="donation-card">
+                  <div class="donation-icon">
+                     <svg viewBox="0 0 24 24" fill="currentColor">
+                        <polygon points="12,2 6,8 6,16 12,22 18,16 18,8" />
+                     </svg>
+                  </div>
+                  <h3>Ethereum</h3>
+                  <div
+                     class="copy-container"
+                     onclick="copiarEndereco(this, '0xF7Eb1D45cDD527b11BC49416DDfA51AD38e26ca1')"
+                  >
+                     <code class="crypto-address"
+                        >0xF7Eb1D45cDD527b11BC49416DDfA51AD38e26ca1</code
+                     >
+                     <span class="copy-tooltip">Copiado!</span>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- -->
+
+      <footer>
+         <p>
+            Desenvolvido com ❤️ por
+            <a
+               href="https://www.linkedin.com/in/jacksondouglasdsouza/"
+               target="_blank"
+               rel="noopener noreferrer"
+            >
+               Jackson Douglas de Souza
+            </a>
+         </p>
+         <p>Siga-me nas redes sociais</p>
+         <p>
+            <a
+               href="https://www.linkedin.com/in/jacksondouglasdsouza/"
+               target="_blank"
+               rel="noopener noreferrer"
+               >LinkedIn</a
+            >
+            |
+            <a
+               href="https://github.com/jacksondouglasdesouza"
+               target="_blank"
+               rel="noopener noreferrer"
+               >Github</a
+            >
+         </p>
+      </footer>
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
+      <script src="main.js"></script>
+   </body>
+</html>
