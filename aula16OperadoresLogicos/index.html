@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="stylesheet" href="style.css" />
+      <title>Aula 16 - Operadores Lógicos em JavaScript</title>
+      <link
+         href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css"
+         rel="stylesheet"
+      />
+   </head>
+
+   <body>
+      <header>
+         <h1>Aula 16 - Operadores Lógicos em JavaScript</h1>
+      </header>
+
+      <main>
+         <a href="../" class="btn-voltar">
+            <svg
+               xmlns="http://www.w3.org/2000/svg"
+               viewBox="0 0 24 24"
+               fill="none"
+               stroke="currentColor"
+               stroke-width="2"
+               stroke-linecap="round"
+               stroke-linejoin="round"
+            >
+               <path d="M19 12H5M12 19l-7-7 7-7" />
+            </svg>
+            Voltar para Home
+         </a>
+
+         <section class="section-title">
+            <h2>Operadores Lógicos</h2>
+         </section>
+
+         <!-- VÍDEO AULA 01 -->
+         <div class="video-container">
+            <h3>🎥 Vídeo Aula 01 - Operadores Lógicos em JavaScript</h3>
+            <div class="video-wrapper">
+               <iframe
+                  src="https://www.youtube.com/embed/0-dgk6u9WBE?si=HAfSAziP1cHliqY_"
+                  title="Aula sobre Operadores Lógicos"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+               >
+               </iframe>
+            </div>
+            <div class="video-credits">
+               <strong>📌 Créditos do Vídeo:</strong><br />
+               Todos os direitos reservados ao autor original do vídeo.<br />
+               Canal:
+               <a
+                  href="https://www.youtube.com/@cfbcursos"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >@cfbcursos</a
+               ><br />
+               Este material é utilizado exclusivamente para fins educacionais.
+            </div>
+         </div>
+
+         <!-- -->
+
+         <!-- VÍDEO AULA 02 -->
+         <div class="video-container">
+            <h3>
+               🎥 Vídeo Aula 02 - SHORT CIRCUIT | Curto-circuito em operadores
+               lógicos JavaScript
+            </h3>
+            <div class="video-wrapper">
+               <iframe
+                  src="https://www.youtube.com/embed/v284UANltaU?si=Ix93DRwzmYhih2ZL"
+                  title="Aula sobre Operadores Lógicos"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+               >
+               </iframe>
+            </div>
+            <div class="video-credits">
+               <strong>📌 Créditos do Vídeo:</strong><br />
+               Todos os direitos reservados ao autor original do vídeo.<br />
+               Canal:
+               <a
+                  href="https://www.youtube.com/@MarcoBrunoDev"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >@MarcoBrunoDev</a
+               ><br />
+               Este material é utilizado exclusivamente para fins educacionais.
+            </div>
+         </div>
+
+         <article>
+            <figure>
+               <img
+                  src="./imgs/OperadoresLógicosJavaScript.jpg"
+                  alt="Operadores Lógicos em JavaScript"
+                  width="600"
+               />
+               <figcaption>Operadores Lógicos</figcaption>
+            </figure>
+
+            <p>
+               <strong>Operadores Lógicos</strong> - Operadores lógicos são
+               recursos essenciais em JavaScript que permitem combinar ou
+               inverter valores booleanos para criar verificações mais
+               complexas. Existem três operadores principais:
+               <strong>&&</strong> (AND - E lógico), <strong>||</strong> (OR -
+               OU lógico) e <strong>!</strong> (NOT - Negação lógica). O
+               operador <strong>&&</strong> retorna verdadeiro apenas se todas
+               as condições analisadas forem verdadeiras, enquanto o
+               <strong>||</strong> retorna verdadeiro se pelo menos uma das
+               condições for satisfeita. Já o operador <strong>!</strong> é
+               unário e simplesmente inverte o valor booleano (transforma true
+               em false e vice-versa). Uma característica crucial desses
+               operadores é a avaliação de curto-circuito (short-circuit), onde
+               o JavaScript interrompe a leitura da expressão assim que o
+               resultado final já puder ser determinado (por exemplo, no OR, se
+               o primeiro valor for true, ele nem verifica o segundo). Esses
+               operadores são vitais para validações múltiplas, sistemas de
+               login e definição de valores padrão. Os conceitos principais
+               incluem <strong>tabela verdade</strong>,
+               <strong>curto-circuito</strong>,
+               <strong>álgebra booleana</strong>,
+               <strong>valores truthy/falsy</strong>, e
+               <strong>condicionais compostas</strong>, entre outros que
+               sustentam a lógica de decisões no código.
+            </p>
+
+            <pre><code class="language-javascript">//Operadores Lógicos
+
+// ============================================
+// OPERADORES LÓGICOS - GUIA BÁSICO
+// ============================================
+
+// O que são Operadores Lógicos?
+// São operadores que trabalham com valores booleanos (true/false)
+// Usados para combinar ou inverter condições
+
+// OS 3 OPERADORES LÓGICOS:
+// && (AND) - E - TRUE se TODAS as condições forem verdadeiras
+// || (OR) - OU - TRUE se PELO MENOS UMA condição for verdadeira
+// ! (NOT) - NÃO - Inverte o valor booleano
+
+// ============================================
+// PARTE 1: OPERADOR AND (&&)
+// ============================================
+
+// AND retorna TRUE apenas se TODAS as condições forem verdadeiras
+
+// TABELA VERDADE &&:
+// Verdadeiro && Verdadeiro = Verdadeiro
+// Verdadeiro && Falso = Falso
+// Falso && Verdadeiro = Falso
+// Falso && Falso = Falso
+
+console.log("--- OPERADOR AND (&&) ---");
+console.log(true && true);    // Resultado: true
+console.log(true && false);   // Resultado: false
+console.log(false && true);   // Resultado: false
+console.log(false && false);  // Resultado: false
+
+// Exemplo com variáveis
+let temDinheiro = true;
+let temCarro = false;
+let fazSol = true;
+
+console.log(temDinheiro && fazSol);  // Resultado: true (ambas são true)
+console.log(temCarro && temDinheiro);  // Resultado: false (uma é false)
+
+// ============================================
+// PARTE 2: OPERADOR OR (||)
+// ============================================
+
+// OR retorna TRUE se PELO MENOS UMA condição for verdadeira
+
+// TABELA VERDADE ||:
+// Verdadeiro || Verdadeiro = Verdadeiro
+// Verdadeiro || Falso = Verdadeiro
+// Falso || Verdadeiro = Verdadeiro
+// Falso || Falso = Falso
+
+console.log("\n--- OPERADOR OR (||) ---");
+console.log(true || true);    // Resultado: true
+console.log(true || false);   // Resultado: true
+console.log(false || true);   // Resultado: true
+console.log(false || false);  // Resultado: false
+
+// Exemplo com variáveis
+console.log(temDinheiro || fazSol);  // Resultado: true (ambas são true)
+console.log(temCarro || temDinheiro);  // Resultado: true (uma é true)
+
+// ============================================
+// PARTE 3: OPERADOR NOT (!)
+// ============================================
+
+// NOT inverte o valor booleano
+
+// TABELA VERDADE !:
+// !Verdadeiro = Falso
+// !Falso = Verdadeiro
+
+console.log("\n--- OPERADOR NOT (!) ---");
+console.log(!true);   // Resultado: false
+console.log(!false);  // Resultado: true
+
+// Exemplo com variáveis
+console.log(!temDinheiro);  // Resultado: false (era true)
+console.log(!temCarro);     // Resultado: true (era false)
+
+// ============================================
+// PARTE 4: COMBINANDO OPERADORES LÓGICOS
+// ============================================
+
+console.log("\n--- COMBINANDO OPERADORES ---");
+
+// AND com múltiplas condições
+console.log(temDinheiro && temCarro && fazSol);  // false (uma é false)
+
+// OR com múltiplas condições
+console.log(temCarro || temDinheiro || fazSol);  // true (uma ou mais são true)
+
+// Combinando AND e OR com parênteses
+console.log((temCarro && temDinheiro) || fazSol);  // true
+console.log(temCarro || (temDinheiro && fazSol));  // true
+
+// Usando NOT com AND e OR
+console.log(!temDinheiro && !temCarro);  // false (ambas são false após !)
+console.log(!temDinheiro || !temCarro);  // true (uma é true após !)
+
+// ============================================
+// PARTE 5: VALORES FALSY EM JAVASCRIPT
+// ============================================
+
+// Valores Falsy (são considerados false)
+// false, 0, "", '', ``, null, undefined, NaN
+
+console.log("\n--- VALORES FALSY ---");
+
+let nome = "Maria";
+let idade = 0;  // 0 é falsy
+let idade2 = 1;  // 1 é truthy (verdadeiro)
+let nomeVazio = "";  // string vazia é falsy
+
+console.log(!!false);      // false
+console.log(!!0);          // false
+console.log(!!"");         // false
+console.log(!!null);       // false
+console.log(!!undefined);  // false
+console.log(!!NaN);        // false
+
+console.log(!!1);          // true
+console.log(!!"Maria");    // true
+console.log(!!-1);         // true
+
+// ============================================
+// PARTE 6: SHORT CIRCUIT (Avaliação de Curto-Circuito)
+// ============================================
+
+// && retorna o PRIMEIRO FALSO que encontrar
+// || retorna o PRIMEIRO VERDADEIRO que encontrar
+
+console.log("\n--- SHORT CIRCUIT ---");
+
+let a = "João";
+let b = 0;
+let c = "Paulo";
+
+// AND - retorna o primeiro falso
+console.log(a && b && c);  // Resultado: 0 (primeiro falso)
+console.log(a && 1 && c);  // Resultado: "Paulo" (último verdadeiro)
+
+// OR - retorna o primeiro verdadeiro
+console.log(b || c || a);  // Resultado: "Paulo" (primeiro verdadeiro)
+console.log(0 || null || "Maria");  // Resultado: "Maria" (primeiro verdadeiro)
+
+// ============================================
+// PARTE 7: EXEMPLOS PRÁTICOS
+// ============================================
+
+console.log("\n--- EXEMPLOS PRÁTICOS ---");
+
+// Exemplo 1: Verificar se pode comprar
+let temDinheiroDisponivel = true;
+let lojaAberta = true;
+
+if (temDinheiroDisponivel && lojaAberta) {
+   console.log("Você pode comprar!");
+}
+
+// Exemplo 2: Escolher primeira opção disponível
+let carro = null;
+let bicicleta = null;
+let caminhar = true;
+
+let transporte = carro || bicicleta || caminhar;
+console.log("Vou usar:", transporte);  // true
+
+// Exemplo 3: Verificar se pode entrar
+let temIdade = true;
+let temConvite = false;
+
+if (temIdade || temConvite) {
+   console.log("Pode entrar!");
+}
+
+// Exemplo 4: Negar uma condição
+let chovendo = true;
+
+if (!chovendo) {
+   console.log("Vou sair!");
+} else {
+   console.log("Fico em casa!");
+}
+
+// ============================================
+// RESUMO DOS CONCEITOS
+// ============================================
+// AND (&&): TRUE se TODAS as condições forem verdadeiras
+// OR (||): TRUE se PELO MENOS UMA condição for verdadeira
+// NOT (!): Inverte o valor booleano
+//
+// VALORES FALSY: false, 0, "", null, undefined, NaN
+// VALORES TRUTHY: tudo o resto (1, "texto", objetos, arrays, etc)
+//
+// && retorna o PRIMEIRO FALSO
+// || retorna o PRIMEIRO VERDADEIRO
+// ============================================
+// FIM DO CÓDIGO</code></pre>
+         </article>
+      </main>
+
+      <!-- -->
+
+      <!-- Seção de Doação -->
+      <section class="donation-section">
+         <div class="donation-container">
+            <h2>Obrigado pelo seu apoio! 💙</h2>
+            <p>
+               Se este curso foi útil para você, considere fazer uma doação para
+               ajudar no desenvolvimento de mais conteúdo de qualidade.
+            </p>
+
+            <div class="donation-methods">
+               <!-- PayPal -->
+               <div class="donation-card">
+                  <div class="donation-icon">
+                     <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                           d="M20.067 8.478c.492.88.556 2.014.3 3.327-.74 3.806-3.276 5.12-6.514 5.12h-.5a.805.805 0 00-.794.68l-.04.22-.63 4.003-.028.15a.806.806 0 01-.795.68h-2.41a.595.595 0 01-.586-.72l1.27-8.054h.004c.06-.377.39-.656.78-.656h.5c2.28 0 4.06-.914 4.576-3.546.2-1.032.19-1.886-.24-2.53z"
+                        />
+                     </svg>
+                  </div>
+                  <h3>PayPal</h3>
+                  <a
+                     href="https://www.paypal.com/donate/?hosted_button_id=8XYHYQNR2E27J"
+                     class="donation-link"
+                     >Clique Aqui</a
+                  >
+               </div>
+
+               <!-- Coinbase -->
+               <div class="donation-card">
+                  <div class="donation-icon">
+                     <svg viewBox="0 0 24 24" fill="currentColor">
+                        <circle
+                           cx="12"
+                           cy="12"
+                           r="10"
+                           stroke="currentColor"
+                           stroke-width="2"
+                           fill="none"
+                        />
+                        <path
+                           d="M12 7v10M7 12h10"
+                           stroke="currentColor"
+                           stroke-width="2"
+                        />
+                     </svg>
+                  </div>
+                  <h3>Coinbase</h3>
+                  <a
+                     href="https://commerce.coinbase.com/checkout/959b8db0-848e-4e3b-8620-3a24dab24baf"
+                     class="donation-link"
+                     >Clique Aqui</a
+                  >
+               </div>
+
+               <!-- Bitcoin -->
+               <div class="donation-card">
+                  <div class="donation-icon">
+                     <svg viewBox="0 0 24 24" fill="currentColor">
+                        <circle cx="12" cy="12" r="10" />
+                        <text
+                           x="12"
+                           y="16"
+                           text-anchor="middle"
+                           fill="white"
+                           font-weight="bold"
+                           font-size="14"
+                        >
+                           ₿
+                        </text>
+                     </svg>
+                  </div>
+                  <h3>Bitcoin</h3>
+                  <div
+                     class="copy-container"
+                     onclick="copiarEndereco(this, 'bc1q3zu0nng6765ptpmr86jcfn68h6e62sda7382e3')"
+                  >
+                     <code class="crypto-address"
+                        >bc1q3zu0nng6765ptpmr86jcfn68h6e62sda7382e3</code
+                     >
+                     <span class="copy-tooltip">Copiado!</span>
+                  </div>
+               </div>
+
+               <!-- Ethereum -->
+               <div class="donation-card">
+                  <div class="donation-icon">
+                     <svg viewBox="0 0 24 24" fill="currentColor">
+                        <polygon points="12,2 6,8 6,16 12,22 18,16 18,8" />
+                     </svg>
+                  </div>
+                  <h3>Ethereum</h3>
+                  <div
+                     class="copy-container"
+                     onclick="copiarEndereco(this, '0xF7Eb1D45cDD527b11BC49416DDfA51AD38e26ca1')"
+                  >
+                     <code class="crypto-address"
+                        >0xF7Eb1D45cDD527b11BC49416DDfA51AD38e26ca1</code
+                     >
+                     <span class="copy-tooltip">Copiado!</span>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- -->
+
+      <footer>
+         <p>
+            Desenvolvido com ❤️ por
+            <a
+               href="https://www.linkedin.com/in/jacksondouglasdsouza/"
+               target="_blank"
+               rel="noopener noreferrer"
+            >
+               Jackson Douglas de Souza
+            </a>
+         </p>
+         <p>Siga-me nas redes sociais</p>
+         <p>
+            <a
+               href="https://www.linkedin.com/in/jacksondouglasdsouza/"
+               target="_blank"
+               rel="noopener noreferrer"
+               >LinkedIn</a
+            >
+            |
+            <a
+               href="https://github.com/jacksondouglasdesouza"
+               target="_blank"
+               rel="noopener noreferrer"
+               >Github</a
+            >
+         </p>
+      </footer>
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
+      <script src="main.js"></script>
+   </body>
+</html>

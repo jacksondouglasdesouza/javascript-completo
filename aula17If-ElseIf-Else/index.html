@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="stylesheet" href="style.css" />
+      <title>
+         Aula 17 - Estruturas Condicionais - If, Else If, Else em JavaScript
+      </title>
+      <link
+         href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css"
+         rel="stylesheet"
+      />
+   </head>
+
+   <body>
+      <header>
+         <h1>
+            Aula 17 - Estruturas Condicionais - If, Else If, Else em JavaScript
+         </h1>
+      </header>
+
+      <main>
+         <a href="../" class="btn-voltar">
+            <svg
+               xmlns="http://www.w3.org/2000/svg"
+               viewBox="0 0 24 24"
+               fill="none"
+               stroke="currentColor"
+               stroke-width="2"
+               stroke-linecap="round"
+               stroke-linejoin="round"
+            >
+               <path d="M19 12H5M12 19l-7-7 7-7" />
+            </svg>
+            Voltar para Home
+         </a>
+
+         <section class="section-title">
+            <h2>Estruturas Condicionais - If, Else If, Else em JavaScript</h2>
+         </section>
+
+         <!-- VÍDEO AULA -->
+         <div class="video-container">
+            <h3>
+               🎥 Vídeo Aula - Estruturas Condicionais - If, Else If, Else em
+               JavaScript
+            </h3>
+            <div class="video-wrapper">
+               <iframe
+                  src="https://www.youtube.com/embed/2bJJk-h9vnk?si=WIe4UsuId3sdSTEk"
+                  title="Aula sobre Estruturas Condicionais - If, Else If, Else em JavaScript"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+               >
+               </iframe>
+            </div>
+            <div class="video-credits">
+               <strong>📌 Créditos do Vídeo:</strong><br />
+               Todos os direitos reservados ao autor original do vídeo.<br />
+               Canal:
+               <a
+                  href="https://www.youtube.com/@rinckodev"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >@rinckodev</a
+               ><br />
+               Este material é utilizado exclusivamente para fins educacionais.
+            </div>
+         </div>
+
+         <article>
+            <figure>
+               <img
+                  src="./imgs/EstruturasCondicionaisemjs.png"
+                  alt="Estruturas Condicionais - If, Else If, Else em JavaScript"
+                  width="600"
+               />
+               <figcaption>
+                  Estruturas Condicionais - If, Else If, Else em JavaScript
+               </figcaption>
+            </figure>
+
+            <p>
+               <strong>Estruturas Condicionais</strong> - As estruturas
+               condicionais são a base da tomada de decisão em algoritmos,
+               permitindo que o software execute caminhos diferentes dependendo
+               dos dados recebidos. A sintaxe fundamental em JavaScript utiliza
+               três palavras-chave: <strong>if</strong> (se), que inicia a
+               verificação de uma condição booleana;
+               <strong>else if</strong> (senão se), que propõe testes
+               alternativos caso o anterior falhe; e
+               <strong>else</strong> (senão), que define um comportamento padrão
+               (fallback) executado apenas se nenhuma das condições anteriores
+               for atendida. O controle de fluxo ocorre de forma sequencial e
+               exclusiva: o interpretador avalia as condições de cima para baixo
+               e, ao encontrar a primeira sentença verdadeira (true), executa
+               aquele bloco e ignora imediatamente o restante da cadeia. Para
+               lógicas mais complexas, utiliza-se o conceito de
+               <strong>aninhamento</strong> (nested ifs), onde uma condicional é
+               inserida dentro da outra para criar verificações dependentes ou
+               hierárquicas. Os conceitos principais incluem
+               <strong>fluxo de execução</strong>,
+               <strong>escopo de bloco</strong>,
+               <strong>verificação booleana</strong>,
+               <strong>condicionais aninhadas</strong> e
+               <strong>tratamento de exceções</strong>, pilares para a
+               construção de qualquer software interativo.
+            </p>
+
+            <pre><code class="language-javascript">//ESTRUTURAS DE DECISÃO (CONDICIONAIS)
+// ============================================================
+// ESTRUTURAS DE DECISÃO (CONDICIONAIS)
+// ============================================================
+// As estruturas condicionais permitem que o código tome "decisões".
+// O JavaScript avalia uma expressão; se ela for verdadeira (true),
+// ele executa o bloco de código interno.
+
+// SINTAXE BÁSICA:
+// if (condição) {
+//    // Executa se a condição for VERDADEIRA
+// } else if (outraCondicao) {
+//    // Executa se a primeira falhou e esta for VERDADEIRA
+// } else {
+//    // Executa se NENHUMA das anteriores for verdadeira
+// }
+
+// ============================================================
+// EXEMPLO 1: CONDICIONAL SIMPLES E COMPOSTA (O Básico)
+// ============================================================
+
+let hora = 14; // Experimente mudar para 10 ou 20
+let usuario = "Maria";
+
+// O "if" verifica a primeira condição...
+if (hora <= 12) {
+  console.log("Bom dia", usuario, ", são exatamente [", hora, "] horas");
+} 
+// O "else if" só é testado se o "if" anterior for FALSO...
+else if (hora > 12 && hora <= 18) {
+  console.log("Boa tarde", usuario, ", são exatamente [", hora, "] horas");
+} 
+// O "else" é o "plano B" final, caso nada acima funcione.
+else {
+  console.log("Boa noite", usuario, ", são exatamente [", hora, "] horas");
+}
+
+// ============================================================
+// EXEMPLO 2: COMPARAÇÃO E TIPOS DE DADOS (Nível Intermediário)
+// ============================================================
+// Aqui testamos não apenas números, mas "edge cases" (casos de borda)
+// que podem acontecer em sistemas reais.
+
+let numero01 = 10;
+
+// Cenários de teste para numero02 (Descomente um por um para testar):
+// let numero02 = 15;          // Maior normal
+// let numero02 = "10";        // String (Cuidado com == vs ===)
+// let numero02 = NaN;         // Not a Number (Erro de cálculo)
+let numero02 = true + false;   // CURIOSIDADE: true(1) + false(0) = 1
+
+console.log("--- Analisando números ---");
+
+if (typeof numero01 !== "number" || typeof numero02 !== "number") {
+  // Validação de segurança antes de comparar
+  console.log("Erro: Um dos valores não é um número válido.");
+} 
+else if (numero01 > numero02) {
+  console.log("O número 01 [", numero01, "] é maior que o número 02 [", numero02, "]");
+} 
+else if (numero02 > numero01) {
+  console.log("O número 02 [", numero02, "] é maior que o número 01 [", numero01, "]");
+} 
+else if (numero01 === numero02) {
+  console.log("Os números são ESTRITAMENTE iguais (valor e tipo).");
+} 
+else if (numero01 == numero02) {
+  // Este bloco só roda se eles forem iguais em valor, mas tipos diferentes (ex: 10 e "10")
+  // Nota: Como usamos === acima, este else if serve para capturar a igualdade solta.
+  console.log("Os números são iguais em VALOR, mas tipos diferentes.");
+}
+
+// ============================================================
+// EXEMPLO 3: ESCOPO E CADEIA DE DECISÃO
+// ============================================================
+// Entendendo como o JavaScript para de ler assim que acha uma verdade.
+
+let value01 = 100;
+let value02 = 200;
+let value03 = 300;
+
+// Experimente mudar value01 para 50. O que acontece com value02?
+// RESPOSTA: O JS nem olha para o value02 se o value01 for verdadeiro.
+
+console.log("--- Analisando Cadeia de Valores ---");
+
+if (value01 >= 0 && value01 <= 100) {
+  console.log("Condição 1 aceita: O value01 [", value01, "] está entre 0 e 100.");
+  console.log("O código PARA de verificar as outras condições aqui.");
+} 
+else if (value02 > 100 && value02 <= 200) {
+  console.log("Condição 2 aceita: O value02 [", value02, "] está entre 101 e 200.");
+} 
+else if (value03 > 200 && value03 <= 300) {
+  console.log("Condição 3 aceita: O value03 [", value03, "] está entre 201 e 300.");
+} 
+else {
+  console.log("Nenhuma das condições anteriores foi atendida.");
+}
+
+// ============================================================
+// EXEMPLO 4: IF ANINHADO (NESTED IF)
+// ============================================================
+// Um If dentro de outro If. Útil para dependências.
+
+let usuarioLogado = true;
+let possuiPermissaoAdmin = false;
+
+console.log("--- Verificando Acesso ---");
+
+if (usuarioLogado) {
+    console.log("Usuário autenticado. Verificando permissões...");
+    
+    // Este bloco só é lido se o primeiro IF for true
+    if (possuiPermissaoAdmin) {
+        console.log("Acesso TOTAL liberado ao painel.");
+    } else {
+        console.log("Acesso PARCIAL. Você não é administrador.");
+    }
+} else {
+    console.log("Acesso negado. Faça login primeiro.");
+}
+// FIM DO CÓDIGO</code></pre>
+         </article>
+      </main>
+
+      <!-- -->
+
+      <!-- Seção de Doação -->
+      <section class="donation-section">
+         <div class="donation-container">
+            <h2>Obrigado pelo seu apoio! 💙</h2>
+            <p>
+               Se este curso foi útil para você, considere fazer uma doação para
+               ajudar no desenvolvimento de mais conteúdo de qualidade.
+            </p>
+
+            <div class="donation-methods">
+               <!-- PayPal -->
+               <div class="donation-card">
+                  <div class="donation-icon">
+                     <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                           d="M20.067 8.478c.492.88.556 2.014.3 3.327-.74 3.806-3.276 5.12-6.514 5.12h-.5a.805.805 0 00-.794.68l-.04.22-.63 4.003-.028.15a.806.806 0 01-.795.68h-2.41a.595.595 0 01-.586-.72l1.27-8.054h.004c.06-.377.39-.656.78-.656h.5c2.28 0 4.06-.914 4.576-3.546.2-1.032.19-1.886-.24-2.53z"
+                        />
+                     </svg>
+                  </div>
+                  <h3>PayPal</h3>
+                  <a
+                     href="https://www.paypal.com/donate/?hosted_button_id=8XYHYQNR2E27J"
+                     class="donation-link"
+                     >Clique Aqui</a
+                  >
+               </div>
+
+               <!-- Coinbase -->
+               <div class="donation-card">
+                  <div class="donation-icon">
+                     <svg viewBox="0 0 24 24" fill="currentColor">
+                        <circle
+                           cx="12"
+                           cy="12"
+                           r="10"
+                           stroke="currentColor"
+                           stroke-width="2"
+                           fill="none"
+                        />
+                        <path
+                           d="M12 7v10M7 12h10"
+                           stroke="currentColor"
+                           stroke-width="2"
+                        />
+                     </svg>
+                  </div>
+                  <h3>Coinbase</h3>
+                  <a
+                     href="https://commerce.coinbase.com/checkout/959b8db0-848e-4e3b-8620-3a24dab24baf"
+                     class="donation-link"
+                     >Clique Aqui</a
+                  >
+               </div>
+
+               <!-- Bitcoin -->
+               <div class="donation-card">
+                  <div class="donation-icon">
+                     <svg viewBox="0 0 24 24" fill="currentColor">
+                        <circle cx="12" cy="12" r="10" />
+                        <text
+                           x="12"
+                           y="16"
+                           text-anchor="middle"
+                           fill="white"
+                           font-weight="bold"
+                           font-size="14"
+                        >
+                           ₿
+                        </text>
+                     </svg>
+                  </div>
+                  <h3>Bitcoin</h3>
+                  <div
+                     class="copy-container"
+                     onclick="copiarEndereco(this, 'bc1q3zu0nng6765ptpmr86jcfn68h6e62sda7382e3')"
+                  >
+                     <code class="crypto-address"
+                        >bc1q3zu0nng6765ptpmr86jcfn68h6e62sda7382e3</code
+                     >
+                     <span class="copy-tooltip">Copiado!</span>
+                  </div>
+               </div>
+
+               <!-- Ethereum -->
+               <div class="donation-card">
+                  <div class="donation-icon">
+                     <svg viewBox="0 0 24 24" fill="currentColor">
+                        <polygon points="12,2 6,8 6,16 12,22 18,16 18,8" />
+                     </svg>
+                  </div>
+                  <h3>Ethereum</h3>
+                  <div
+                     class="copy-container"
+                     onclick="copiarEndereco(this, '0xF7Eb1D45cDD527b11BC49416DDfA51AD38e26ca1')"
+                  >
+                     <code class="crypto-address"
+                        >0xF7Eb1D45cDD527b11BC49416DDfA51AD38e26ca1</code
+                     >
+                     <span class="copy-tooltip">Copiado!</span>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- -->
+
+      <footer>
+         <p>
+            Desenvolvido com ❤️ por
+            <a
+               href="https://www.linkedin.com/in/jacksondouglasdsouza/"
+               target="_blank"
+               rel="noopener noreferrer"
+            >
+               Jackson Douglas de Souza
+            </a>
+         </p>
+         <p>Siga-me nas redes sociais</p>
+         <p>
+            <a
+               href="https://www.linkedin.com/in/jacksondouglasdsouza/"
+               target="_blank"
+               rel="noopener noreferrer"
+               >LinkedIn</a
+            >
+            |
+            <a
+               href="https://github.com/jacksondouglasdesouza"
+               target="_blank"
+               rel="noopener noreferrer"
+               >Github</a
+            >
+         </p>
+      </footer>
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
+      <script src="main.js"></script>
+   </body>
+</html>

@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="stylesheet" href="style.css" />
+      <title>Aula 15 - Operadores de comparação em JavaScript</title>
+      <link
+         href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css"
+         rel="stylesheet"
+      />
+   </head>
+
+   <body>
+      <header>
+         <h1>Aula 15 - Operadores de comparação em JavaScript</h1>
+      </header>
+
+      <main>
+         <a href="../" class="btn-voltar">
+            <svg
+               xmlns="http://www.w3.org/2000/svg"
+               viewBox="0 0 24 24"
+               fill="none"
+               stroke="currentColor"
+               stroke-width="2"
+               stroke-linecap="round"
+               stroke-linejoin="round"
+            >
+               <path d="M19 12H5M12 19l-7-7 7-7" />
+            </svg>
+            Voltar para Home
+         </a>
+
+         <section class="section-title">
+            <h2>Operadores de comparação em JavaScript</h2>
+         </section>
+
+         <!-- VÍDEO AULA -->
+         <div class="video-container">
+            <h3>
+               🎥 Vídeo Aula - Operadores de comparação em JavaScript em
+               JavaScript
+            </h3>
+            <div class="video-wrapper">
+               <iframe
+                  src="https://www.youtube.com/embed/QGlWpVAwd0w?si=8dsOyOy-ZqsfZ9Pb"
+                  title="Aula sobre Operadores de comparação em JavaScript"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+               >
+               </iframe>
+            </div>
+            <div class="video-credits">
+               <strong>📌 Créditos do Vídeo:</strong><br />
+               Todos os direitos reservados ao autor original do vídeo.<br />
+               Canal:
+               <a
+                  href="https://www.youtube.com/@rinckodev"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >@rinckodev</a
+               ><br />
+               Este material é utilizado exclusivamente para fins educacionais.
+            </div>
+         </div>
+
+         <article>
+            <figure>
+               <img
+                  src="./imgs/Operadores de comparação em JavaScript.jpg"
+                  alt="Operadores de comparação em JavaScript em JavaScript"
+                  width="600"
+               />
+               <figcaption>Operadores de comparação em JavaScript</figcaption>
+            </figure>
+
+            <p>
+               <strong>Operadores de Comparação</strong> - Operadores de
+               comparação são ferramentas fundamentais em JavaScript que
+               comparam dois valores e retornam um resultado booleano (true ou
+               false). Existem oito operadores principais:
+               <strong>></strong> (maior que), <strong><</strong> (menor que),
+               <strong>>=</strong> (maior ou igual), <strong><=</strong> (menor
+               ou igual), <strong>==</strong> (igual - compara apenas valor),
+               <strong>===</strong> (estritamente igual - compara valor e tipo),
+               <strong>!=</strong> (diferente - compara apenas valor) e
+               <strong>!==</strong> (estritamente diferente - compara valor e
+               tipo). A diferença fundamental entre == e === é que == ignora o
+               tipo de dado e compara apenas o valor, enquanto === é mais
+               rigoroso e verifica tanto o valor quanto o tipo, sendo o padrão
+               recomendado no mercado por ser mais seguro. O mesmo ocorre com !=
+               e !==, onde !== é a versão mais segura que verifica tipo e valor.
+               Esses operadores são essenciais para criar condições, tomar
+               decisões no código e controlar o fluxo de execução de um
+               programa. Os conceitos principais incluem
+               <strong>comparação de valor</strong>,
+               <strong>comparação de tipo</strong>,
+               <strong>operadores relacionais</strong>,
+               <strong>booleanos</strong>, e <strong>type coercion</strong>,
+               entre outros que são fundamentais para lógica de programação.
+            </p>
+
+            <pre><code class="language-javascript">// OPERADORES DE COMPARAÇÃO
+// ============================================
+// OPERADORES DE COMPARAÇÃO - GUIA BÁSICO
+// ============================================
+
+// O que são Operadores de Comparação?
+// São operadores que comparam dois valores e retornam true ou false
+// São muito usados em condições e lógica de programação
+
+// LISTA DOS OPERADORES:
+// >   -- Maior que - compara o valor
+// <   -- Menor que - compara o valor
+// >=  -- Maior ou igual - compara o valor
+// <=  -- Menor ou igual - compara o valor
+// ==  -- Igual - compara apenas o valor (ignora o tipo)
+// === -- Estritamente igual - compara o valor E o tipo (MAIS USADO NO MERCADO)
+// !=  -- Diferente - compara apenas o valor (ignora o tipo)
+// !== -- Estritamente diferente - compara o valor E o tipo (MAIS USADO NO MERCADO)
+
+// ============================================
+// PARTE 1: OPERADORES NUMÉRICOS BÁSICOS
+// ============================================
+
+// ------ 1. MAIOR QUE (>) ------
+
+let numero1 = 10;
+let numero2 = 20;
+
+console.log(numero1 > numero2);  // Resultado: false (10 não é maior que 20)
+console.log(numero2 > numero1);  // Resultado: true (20 é maior que 10)
+
+// ------ 2. MENOR QUE (<) ------
+
+console.log(numero1 < numero2);  // Resultado: true (10 é menor que 20)
+console.log(numero2 < numero1);  // Resultado: false (20 não é menor que 10)
+
+// ------ 3. MAIOR OU IGUAL (>=) ------
+
+console.log(numero1 >= numero2);  // Resultado: false
+console.log(numero2 >= numero1);  // Resultado: true
+
+// ------ 4. MENOR OU IGUAL (<=) ------
+
+console.log(numero1 <= numero2);  // Resultado: true
+console.log(numero2 <= numero1);  // Resultado: false
+
+// ============================================
+// PARTE 2: IGUALDADE (== vs ===)
+// ============================================
+
+// ------ 1. COMPARAÇÃO COM == (ignora o tipo) ------
+
+let numero3 = 10;
+let numero4 = "10";
+
+console.log(numero3 == numero4);  // Resultado: true (valor igual, tipo diferente)
+// == compara apenas o VALOR, não o tipo
+
+// ------ 2. COMPARAÇÃO COM === (compara valor E tipo) ------
+
+console.log(numero3 === numero4);  // Resultado: false (valores iguais, mas tipos diferentes)
+// === é MAIS SEGURO e MAIS USADO no mercado
+// Verifica o valor E o tipo de dado
+
+// ------ 3. DIFERENÇA PRÁTICA ------
+
+console.log("Com ==: ", 10 == "10");  // true (só compara valor)
+console.log("Com ===: ", 10 === "10");  // false (compara valor e tipo)
+
+// ============================================
+// PARTE 3: NEGAÇÃO (!=  vs !==)
+// ============================================
+
+// ------ 1. DIFERENTE (!=) ------
+
+console.log(numero3 != numero4);  // Resultado: false (valores são iguais)
+console.log(10 != 20);            // Resultado: true (valores são diferentes)
+
+// ------ 2. ESTRITAMENTE DIFERENTE (!==) ------
+
+console.log(numero3 !== numero4);  // Resultado: true (tipos diferentes)
+console.log(10 !== "10");          // Resultado: true (valor e tipo diferentes)
+
+// ------ 3. COMPARANDO NÚMEROS DIFERENTES ------
+
+let numero5 = 10;
+let numero6 = 20;
+
+console.log(numero5 !== numero6);  // Resultado: true (são diferentes)
+console.log(numero5 == numero6);   // Resultado: false (são diferentes)
+
+// ============================================
+// PARTE 4: COMPARANDO VALORES IGUAIS
+// ============================================
+
+let numero7 = 10;
+let numero8 = 10;
+
+console.log(numero7 == numero8);   // Resultado: true (iguais)
+console.log(numero7 === numero8);  // Resultado: true (iguais em valor e tipo)
+console.log(numero7 != numero8);   // Resultado: false (não são diferentes)
+console.log(numero7 !== numero8);  // Resultado: false (não são diferentes)
+console.log(numero7 > numero8);    // Resultado: false (10 não é maior que 10)
+console.log(numero7 < numero8);    // Resultado: false (10 não é menor que 10)
+console.log(numero7 >= numero8);   // Resultado: true (10 é igual a 10)
+console.log(numero7 <= numero8);   // Resultado: true (10 é igual a 10)
+
+// ============================================
+// PARTE 5: COMPARANDO STRINGS
+// ============================================
+
+let nome = "João";
+let sobrenome = "da Silva";
+
+// Comparando o tamanho das strings (length)
+console.log(nome.length > sobrenome.length);  // Resultado: false (4 > 9 = false)
+console.log(nome.length < sobrenome.length);  // Resultado: true (4 < 9 = true)
+console.log(nome.length == sobrenome.length); // Resultado: false (4 != 9)
+console.log(nome.length === sobrenome.length); // Resultado: false (4 !== 9)
+
+// ------ Comparando strings diretamente ------
+
+let nome1 = "Maria";
+let nome2 = "Maria";
+let nome3 = "João";
+
+console.log(nome1 == nome2);   // Resultado: true (mesmas strings)
+console.log(nome1 === nome2);  // Resultado: true (mesmas strings)
+console.log(nome1 == nome3);   // Resultado: false (strings diferentes)
+console.log(nome1 === nome3);  // Resultado: false (strings diferentes)
+
+// ============================================
+// PARTE 6: COMPARAÇÕES MISTAS (TIPO E VALOR)
+// ============================================
+
+let texto = "10";
+let numero = 10;
+
+console.log(texto == numero);   // Resultado: true (mesmo valor, tipo ignorado)
+console.log(texto === numero);  // Resultado: false (tipos diferentes)
+console.log(texto != numero);   // Resultado: false (valores iguais)
+console.log(texto !== numero);  // Resultado: true (tipos diferentes)
+console.log(texto > numero);    // Resultado: false
+console.log(texto < numero);    // Resultado: false
+console.log(texto >= numero);   // Resultado: true (converte para comparação)
+console.log(texto <= numero);   // Resultado: true (converte para comparação)
+
+// ============================================
+// PARTE 7: EXEMPLOS PRÁTICOS
+// ============================================
+
+let idade = 18;
+let limiteIdade = 18;
+
+console.log("Maioridade: ", idade >= limiteIdade);  // true
+
+let nota = 7;
+let notaMinima = 6;
+
+console.log("Passou: ", nota >= notaMinima);  // true
+
+let preco = 100;
+let orcamento = 150;
+
+console.log("Posso comprar: ", preco <= orcamento);  // true
+
+// ============================================
+// RESUMO DOS CONCEITOS
+// ============================================
+// MAIOR: >
+// MENOR: <
+// MAIOR OU IGUAL: >=
+// MENOR OU IGUAL: <=
+// IGUAL (valor): ==
+// IGUAL (valor E tipo): === (RECOMENDADO)
+// DIFERENTE (valor): !=
+// DIFERENTE (valor E tipo): !== (RECOMENDADO)
+//
+// DICA: Use sempre === e !== no lugar de == e !=
+// Isso evita erros e é o padrão do mercado!
+// ============================================
+
+// FIM DO CÓDIGO</code></pre>
+         </article>
+      </main>
+
+      <!-- -->
+
+      <!-- Seção de Doação -->
+      <section class="donation-section">
+         <div class="donation-container">
+            <h2>Obrigado pelo seu apoio! 💙</h2>
+            <p>
+               Se este curso foi útil para você, considere fazer uma doação para
+               ajudar no desenvolvimento de mais conteúdo de qualidade.
+            </p>
+
+            <div class="donation-methods">
+               <!-- PayPal -->
+               <div class="donation-card">
+                  <div class="donation-icon">
+                     <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                           d="M20.067 8.478c.492.88.556 2.014.3 3.327-.74 3.806-3.276 5.12-6.514 5.12h-.5a.805.805 0 00-.794.68l-.04.22-.63 4.003-.028.15a.806.806 0 01-.795.68h-2.41a.595.595 0 01-.586-.72l1.27-8.054h.004c.06-.377.39-.656.78-.656h.5c2.28 0 4.06-.914 4.576-3.546.2-1.032.19-1.886-.24-2.53z"
+                        />
+                     </svg>
+                  </div>
+                  <h3>PayPal</h3>
+                  <a
+                     href="https://www.paypal.com/donate/?hosted_button_id=8XYHYQNR2E27J"
+                     class="donation-link"
+                     >Clique Aqui</a
+                  >
+               </div>
+
+               <!-- Coinbase -->
+               <div class="donation-card">
+                  <div class="donation-icon">
+                     <svg viewBox="0 0 24 24" fill="currentColor">
+                        <circle
+                           cx="12"
+                           cy="12"
+                           r="10"
+                           stroke="currentColor"
+                           stroke-width="2"
+                           fill="none"
+                        />
+                        <path
+                           d="M12 7v10M7 12h10"
+                           stroke="currentColor"
+                           stroke-width="2"
+                        />
+                     </svg>
+                  </div>
+                  <h3>Coinbase</h3>
+                  <a
+                     href="https://commerce.coinbase.com/checkout/959b8db0-848e-4e3b-8620-3a24dab24baf"
+                     class="donation-link"
+                     >Clique Aqui</a
+                  >
+               </div>
+
+               <!-- Bitcoin -->
+               <div class="donation-card">
+                  <div class="donation-icon">
+                     <svg viewBox="0 0 24 24" fill="currentColor">
+                        <circle cx="12" cy="12" r="10" />
+                        <text
+                           x="12"
+                           y="16"
+                           text-anchor="middle"
+                           fill="white"
+                           font-weight="bold"
+                           font-size="14"
+                        >
+                           ₿
+                        </text>
+                     </svg>
+                  </div>
+                  <h3>Bitcoin</h3>
+                  <div
+                     class="copy-container"
+                     onclick="copiarEndereco(this, 'bc1q3zu0nng6765ptpmr86jcfn68h6e62sda7382e3')"
+                  >
+                     <code class="crypto-address"
+                        >bc1q3zu0nng6765ptpmr86jcfn68h6e62sda7382e3</code
+                     >
+                     <span class="copy-tooltip">Copiado!</span>
+                  </div>
+               </div>
+
+               <!-- Ethereum -->
+               <div class="donation-card">
+                  <div class="donation-icon">
+                     <svg viewBox="0 0 24 24" fill="currentColor">
+                        <polygon points="12,2 6,8 6,16 12,22 18,16 18,8" />
+                     </svg>
+                  </div>
+                  <h3>Ethereum</h3>
+                  <div
+                     class="copy-container"
+                     onclick="copiarEndereco(this, '0xF7Eb1D45cDD527b11BC49416DDfA51AD38e26ca1')"
+                  >
+                     <code class="crypto-address"
+                        >0xF7Eb1D45cDD527b11BC49416DDfA51AD38e26ca1</code
+                     >
+                     <span class="copy-tooltip">Copiado!</span>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- -->
+
+      <footer>
+         <p>
+            Desenvolvido com ❤️ por
+            <a
+               href="https://www.linkedin.com/in/jacksondouglasdsouza/"
+               target="_blank"
+               rel="noopener noreferrer"
+            >
+               Jackson Douglas de Souza
+            </a>
+         </p>
+         <p>Siga-me nas redes sociais</p>
+         <p>
+            <a
+               href="https://www.linkedin.com/in/jacksondouglasdsouza/"
+               target="_blank"
+               rel="noopener noreferrer"
+               >LinkedIn</a
+            >
+            |
+            <a
+               href="https://github.com/jacksondouglasdesouza"
+               target="_blank"
+               rel="noopener noreferrer"
+               >Github</a
+            >
+         </p>
+      </footer>
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
+      <script src="main.js"></script>
+   </body>
+</html>
