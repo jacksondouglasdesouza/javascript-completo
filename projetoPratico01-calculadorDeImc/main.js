@@ -1,12 +1,9 @@
 function copiarEndereco(element, endereco) {
-   // Copia o endereço para a área de transferência
    navigator.clipboard
       .writeText(endereco)
       .then(() => {
-         // Adiciona classe para mostrar o tooltip
          element.classList.add("copied");
 
-         // Remove a classe após 2 segundos
          setTimeout(() => {
             element.classList.remove("copied");
          }, 2000);
@@ -15,3 +12,29 @@ function copiarEndereco(element, endereco) {
          console.error("Erro ao copiar:", err);
       });
 }
+
+//.copy-container
+document.querySelectorAll(".copy-container").forEach((el) => {
+   el.addEventListener("click", () => {
+      copiarEndereco(el, el.dataset.endereco);
+   });
+});
+
+//---
+
+const scrollToTopBtn = document.getElementById("scrollToTop");
+
+window.addEventListener("scroll", () => {
+   if (window.pageYOffset > 300) {
+      scrollToTopBtn.classList.add("show");
+   } else {
+      scrollToTopBtn.classList.remove("show");
+   }
+});
+
+scrollToTopBtn.addEventListener("click", () => {
+   window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+   });
+});

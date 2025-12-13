@@ -10,7 +10,7 @@ let numero7 = Infinity; // Infinito positivo
 let numero8 = -Infinity; // Infinito negativo
 let numero9 = 0b1010; // Binário (10 em decimal)
 let numero10 = 0o12; // Octal (10 em decimal)
-let numero11 = 0xA; // Hexadecimal (10 em decimal)
+let numero11 = 0xa; // Hexadecimal (10 em decimal)
 let numero12 = Number("42"); // Conversão de string para número
 let numero13 = parseInt("42px"); // Conversão de string para inteiro
 let numero14 = parseFloat("3.14abc"); // Conversão de string para float
@@ -30,7 +30,6 @@ let numeroBinarioToString = numero5.toString(2); // Converte número para string
 let numeroHexToString = numero5.toString(16); // Converte número para string hexadecimal
 let numeroOctalToString = numero5.toString(8); // Converte número para string octal
 let numeroExponencialToString = numero5.toExponential(2); // Converte número para notação exponencial com 2 casas decimais
-
 
 console.log("Números em JavaScript:");
 console.log(numero1, numero2, numero3, numero4, numero5);
@@ -63,20 +62,47 @@ console.log("Soma corrigida de 0.1 + 0.2 =", soma); // Resultado esperado: 0.3
 //-- Documentação MDN Sobre Number
 // https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Number
 
-//-- FIM 
+//-- FIM
 
+//--
 
 function copiarEndereco(element, endereco) {
-    // Copia o endereço para a área de transferência
-    navigator.clipboard.writeText(endereco).then(() => {
-        // Adiciona classe para mostrar o tooltip
-        element.classList.add('copied');
-        
-        // Remove a classe após 2 segundos
-        setTimeout(() => {
-            element.classList.remove('copied');
-        }, 2000);
-    }).catch(err => {
-        console.error('Erro ao copiar:', err);
-    });
+   navigator.clipboard
+      .writeText(endereco)
+      .then(() => {
+         element.classList.add("copied");
+
+         setTimeout(() => {
+            element.classList.remove("copied");
+         }, 2000);
+      })
+      .catch((err) => {
+         console.error("Erro ao copiar:", err);
+      });
 }
+
+//.copy-container
+document.querySelectorAll(".copy-container").forEach((el) => {
+   el.addEventListener("click", () => {
+      copiarEndereco(el, el.dataset.endereco);
+   });
+});
+
+//---
+
+const scrollToTopBtn = document.getElementById("scrollToTop");
+
+window.addEventListener("scroll", () => {
+   if (window.pageYOffset > 300) {
+      scrollToTopBtn.classList.add("show");
+   } else {
+      scrollToTopBtn.classList.remove("show");
+   }
+});
+
+scrollToTopBtn.addEventListener("click", () => {
+   window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+   });
+});

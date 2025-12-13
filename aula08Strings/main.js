@@ -3,28 +3,28 @@
 let umaString = "Olá, mundo!";
 
 // \\ barra invertida para escapar caracteres especiais
-let stringScape  = "Olá, \"mundo\"!"; // aspas duplas dentro de aspas duplas
+let stringScape = 'Olá, "mundo"!'; // aspas duplas dentro de aspas duplas
 
 console.log(stringScape);
 
-let outraString = 'Olá, \'mundo\'!'; // aspas simples dentro de aspas simples
+let outraString = "Olá, 'mundo'!"; // aspas simples dentro de aspas simples
 console.log(outraString);
 
 // usando uma \ para escape e \\ para representar uma barra invertida
 
 let caminhoArquivo = "C:\\Users\\NomeDoUsuario\\Documentos\\arquivo.txt";
 console.log(caminhoArquivo);
-                //  0123456789..... etc 
-let indiceString = "o rato roeu a roupa do rei de Roma";   
+//  0123456789..... etc
+let indiceString = "o rato roeu a roupa do rei de Roma";
 console.log(indiceString[4]); // acessando caractere pelo índice
 console.log(indiceString.charAt(4)); // acessando caractere com charAt
 console.log(indiceString.indexOf("roeu")); // índice da primeira ocorrência
 console.log(indiceString.lastIndexOf("r")); // índice da última ocorrência
 console.log(indiceString.length); // comprimento da string
-let stringNova = 'Um dia normal';
+let stringNova = "Um dia normal";
 
-console.log(stringNova.concat(' em JavaScript.')); // concatenando strings pouco usado pela comunidade, pois é o mesmo que usar o +.
-console.log(stringNova + ' em JavaScript.'); // concatenando strings com +
+console.log(stringNova.concat(" em JavaScript.")); // concatenando strings pouco usado pela comunidade, pois é o mesmo que usar o +.
+console.log(stringNova + " em JavaScript."); // concatenando strings com +
 console.log(`${stringNova} em JavaScript.`); // concatenando strings com template literals (mais usado)
 
 //--
@@ -98,22 +98,48 @@ console.log(stringComEspacos.trimEnd()); // remove espaços em branco do fim
 
 //--
 
-
 //-- DOCUMENTAÇÃO DA MDN COM TODAS AS FUNÇÕES DE STRINGS
 // https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String
 
+//--
+
 function copiarEndereco(element, endereco) {
-    // Copia o endereço para a área de transferência
-    navigator.clipboard.writeText(endereco).then(() => {
-        // Adiciona classe para mostrar o tooltip
-        element.classList.add('copied');
-        
-        // Remove a classe após 2 segundos
-        setTimeout(() => {
-            element.classList.remove('copied');
-        }, 2000);
-    }).catch(err => {
-        console.error('Erro ao copiar:', err);
-    });
+   navigator.clipboard
+      .writeText(endereco)
+      .then(() => {
+         element.classList.add("copied");
+
+         setTimeout(() => {
+            element.classList.remove("copied");
+         }, 2000);
+      })
+      .catch((err) => {
+         console.error("Erro ao copiar:", err);
+      });
 }
 
+//.copy-container
+document.querySelectorAll(".copy-container").forEach((el) => {
+   el.addEventListener("click", () => {
+      copiarEndereco(el, el.dataset.endereco);
+   });
+});
+
+//---
+
+const scrollToTopBtn = document.getElementById("scrollToTop");
+
+window.addEventListener("scroll", () => {
+   if (window.pageYOffset > 300) {
+      scrollToTopBtn.classList.add("show");
+   } else {
+      scrollToTopBtn.classList.remove("show");
+   }
+});
+
+scrollToTopBtn.addEventListener("click", () => {
+   window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+   });
+});

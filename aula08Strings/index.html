@@ -1,90 +1,127 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="style.css">
-        <title>Aula 08 - Strings em JavaScript</title>
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="stylesheet" href="style.css" />
+      <title>Aula 08 - Strings em JavaScript</title>
+      <link
+         href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css"
+         rel="stylesheet"
+      />
+   </head>
 
-    </head>
+   <body>
+      <header>
+         <h1>Aula 08 - Strings em JavaScript</h1>
+      </header>
 
-    <body>
-        <header>
-            <h1>Aula 08 - Strings em JavaScript</h1>
-        </header>
+      <main>
+         <a href="../index.html" class="btn-voltar">
+            <svg
+               xmlns="http://www.w3.org/2000/svg"
+               viewBox="0 0 24 24"
+               fill="none"
+               stroke="currentColor"
+               stroke-width="2"
+               stroke-linecap="round"
+               stroke-linejoin="round"
+            >
+               <path d="M19 12H5M12 19l-7-7 7-7" />
+            </svg>
+            Voltar para Home
+         </a>
 
-        <main>
-            <a href="../index.html" class="btn-voltar">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M19 12H5M12 19l-7-7 7-7"/>
-                </svg>
-                Voltar para Home
-            </a>
+         <section class="section-title">
+            <h2>Strings em JavaScript</h2>
+         </section>
 
-            <section class="section-title">
-                <h2>Strings em JavaScript</h2>
-            </section>
-
-            <!-- VÍDEOS AULAS -->
-            <div class="videos-section">
-                <!-- Vídeo 1 -->
-                <div class="video-container">
-                    <h3>🎥 Vídeo Aula 1 - Introdução às Strings</h3>
-                    <div class="video-wrapper">
-                        <iframe 
-                            src="https://www.youtube.com/embed/lv4hFkirhps?si=Gm1hD_btdHlDPvPj"
-                            title="Aula sobre Strings - Parte 1"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                            allowfullscreen>
-                        </iframe>
-                    </div>
-                </div>
-
-                <!-- Vídeo 2 -->
-                <div class="video-container">
-                    <h3>🎥 Vídeo Aula 2 - Strings Intermediário</h3>
-                    <div class="video-wrapper">
-                        <iframe 
-                            src="https://www.youtube.com/embed/lufkL0FnJy0?si=zhu0NeXGaK4bw3zP" 
-                            title="Aula sobre Strings - Parte 2"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                            allowfullscreen>
-                        </iframe>
-                    </div>
-                </div>
-
-                <!-- Vídeo 3 -->
-                <div class="video-container">
-                    <h3>🎥 Vídeo Aula 3 - Manipulação Avançada de Strings</h3>
-                    <div class="video-wrapper">
-                        <iframe 
-                            src="https://www.youtube.com/embed/j9-iadUDGkI?si=MUJlbh36UsloxVDx" 
-                            title="Aula sobre Strings - Parte 3"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                            allowfullscreen>
-                        </iframe>
-                    </div>
-                </div>
-
-                <!-- Créditos Únicos para todos os vídeos -->
-                <div class="video-credits">
-                    <strong>📌 Créditos dos Vídeos:</strong><br>
-                    Todos os direitos reservados ao autor original dos vídeos.<br>
-                    Canal: <a href="https://www.youtube.com/@cfbcursos" target="_blank" rel="noopener noreferrer">@cfbcursos</a><br>
-                    Este material é utilizado exclusivamente para fins educacionais.
-                </div>
+         <!-- VÍDEOS AULAS -->
+         <div class="videos-section">
+            <!-- Vídeo 1 -->
+            <div class="video-container">
+               <h3>🎥 Vídeo Aula 1 - Introdução às Strings</h3>
+               <div class="video-wrapper">
+                  <iframe
+                     src="https://www.youtube.com/embed/lv4hFkirhps?si=Gm1hD_btdHlDPvPj"
+                     title="Aula sobre Strings - Parte 1"
+                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                     allowfullscreen
+                  >
+                  </iframe>
+               </div>
             </div>
-            
-            <article>
-                <figure>
-                    <img src="./imgs/Strings em JavaScript.jpg" alt="Strings em JavaScript" width="600">
-                    <figcaption>Strings em JavaScript</figcaption>
-                </figure>
-                
-                <p><strong>Strings em JavaScript</strong> - Strings são um dos tipos de dados mais fundamentais em JavaScript. De forma simples, uma string é uma sequência de caracteres usada para representar texto. Em JavaScript, você pode criar strings usando <strong>aspas duplas</strong>, <strong>aspas simples</strong> ou <strong>crases</strong> (template literals). Elas podem conter letras, números, símbolos e espaços. Praticamente qualquer aplicação precisa trabalhar com texto: exibir mensagens, manipular nomes, processar formulários e muito mais. JavaScript oferece diversos métodos para trabalhar com strings, como <strong>toUpperCase()</strong>, <strong>toLowerCase()</strong>, <strong>replace()</strong>, <strong>trim()</strong>, entre outros, facilitando a manipulação de texto no seu código.</p>
 
-                <pre><code class="language-javascript">// Strings em JavaScript
+            <!-- Vídeo 2 -->
+            <div class="video-container">
+               <h3>🎥 Vídeo Aula 2 - Strings Intermediário</h3>
+               <div class="video-wrapper">
+                  <iframe
+                     src="https://www.youtube.com/embed/lufkL0FnJy0?si=zhu0NeXGaK4bw3zP"
+                     title="Aula sobre Strings - Parte 2"
+                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                     allowfullscreen
+                  >
+                  </iframe>
+               </div>
+            </div>
+
+            <!-- Vídeo 3 -->
+            <div class="video-container">
+               <h3>🎥 Vídeo Aula 3 - Manipulação Avançada de Strings</h3>
+               <div class="video-wrapper">
+                  <iframe
+                     src="https://www.youtube.com/embed/j9-iadUDGkI?si=MUJlbh36UsloxVDx"
+                     title="Aula sobre Strings - Parte 3"
+                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                     allowfullscreen
+                  >
+                  </iframe>
+               </div>
+            </div>
+
+            <!-- Créditos Únicos para todos os vídeos -->
+            <div class="video-credits">
+               <strong>📌 Créditos dos Vídeos:</strong><br />
+               Todos os direitos reservados ao autor original dos vídeos.<br />
+               Canal:
+               <a
+                  href="https://www.youtube.com/@cfbcursos"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >@cfbcursos</a
+               ><br />
+               Este material é utilizado exclusivamente para fins educacionais.
+            </div>
+         </div>
+
+         <article>
+            <figure>
+               <img
+                  src="./imgs/Strings em JavaScript.jpg"
+                  alt="Strings em JavaScript"
+                  width="600"
+               />
+               <figcaption>Strings em JavaScript</figcaption>
+            </figure>
+
+            <p>
+               <strong>Strings em JavaScript</strong> - Strings são um dos tipos
+               de dados mais fundamentais em JavaScript. De forma simples, uma
+               string é uma sequência de caracteres usada para representar
+               texto. Em JavaScript, você pode criar strings usando
+               <strong>aspas duplas</strong>, <strong>aspas simples</strong> ou
+               <strong>crases</strong> (template literals). Elas podem conter
+               letras, números, símbolos e espaços. Praticamente qualquer
+               aplicação precisa trabalhar com texto: exibir mensagens,
+               manipular nomes, processar formulários e muito mais. JavaScript
+               oferece diversos métodos para trabalhar com strings, como
+               <strong>toUpperCase()</strong>, <strong>toLowerCase()</strong>,
+               <strong>replace()</strong>, <strong>trim()</strong>, entre
+               outros, facilitando a manipulação de texto no seu código.
+            </p>
+
+            <pre><code class="language-javascript">// Strings em JavaScript
 
 let umaString = "Olá, mundo!";
 
@@ -189,89 +226,159 @@ console.log(stringComEspacos.trimEnd()); // remove espaços em branco do fim
 // https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String
 
 // FIM DO CÓDIGO</code></pre>
-            </article>
-        </main>
+         </article>
+      </main>
 
-        <!-- -->
+      <!-- -->
 
-        <!-- Seção de Doação -->
-        <section class="donation-section">
-            <div class="donation-container">
-                <h2>Obrigado pelo seu apoio! 💙</h2>
-                <p>Se este curso foi útil para você, considere fazer uma doação para ajudar no desenvolvimento de mais conteúdo de qualidade.</p>
-                
-                <div class="donation-methods">
-                    <!-- PayPal -->
-                    <div class="donation-card">
-                        <div class="donation-icon">
-                            <svg viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M20.067 8.478c.492.88.556 2.014.3 3.327-.74 3.806-3.276 5.12-6.514 5.12h-.5a.805.805 0 00-.794.68l-.04.22-.63 4.003-.028.15a.806.806 0 01-.795.68h-2.41a.595.595 0 01-.586-.72l1.27-8.054h.004c.06-.377.39-.656.78-.656h.5c2.28 0 4.06-.914 4.576-3.546.2-1.032.19-1.886-.24-2.53z"/>
-                            </svg>
-                        </div>
-                        <h3>PayPal</h3>
-                        <a href="https://www.paypal.com/donate/?hosted_button_id=8XYHYQNR2E27J" class="donation-link">Clique Aqui</a>
-                    </div>
-
-                    <!-- Coinbase -->
-                    <div class="donation-card">
-                        <div class="donation-icon">
-                            <svg viewBox="0 0 24 24" fill="currentColor">
-                                <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" fill="none"/>
-                                <path d="M12 7v10M7 12h10" stroke="currentColor" stroke-width="2"/>
-                            </svg>
-                        </div>
-                        <h3>Coinbase</h3>
-                        <a href="https://commerce.coinbase.com/checkout/959b8db0-848e-4e3b-8620-3a24dab24baf" class="donation-link">Clique Aqui</a>
-                    </div>
-
-                    <!-- Bitcoin -->
-                    <div class="donation-card">
-                        <div class="donation-icon">
-                            <svg viewBox="0 0 24 24" fill="currentColor">
-                                <circle cx="12" cy="12" r="10"/>
-                                <text x="12" y="16" text-anchor="middle" fill="white" font-weight="bold" font-size="14">₿</text>
-                            </svg>
-                        </div>
-                        <h3>Bitcoin</h3>
-                        <div class="copy-container" onclick="copiarEndereco(this, 'bc1q3zu0nng6765ptpmr86jcfn68h6e62sda7382e3')">
-                            <code class="crypto-address">bc1q3zu0nng6765ptpmr86jcfn68h6e62sda7382e3</code>
-                            <span class="copy-tooltip">Copiado!</span>
-                        </div>
-                    </div>
-
-                    <!-- Ethereum -->
-                    <div class="donation-card">
-                        <div class="donation-icon">
-                            <svg viewBox="0 0 24 24" fill="currentColor">
-                                <polygon points="12,2 6,8 6,16 12,22 18,16 18,8"/>
-                            </svg>
-                        </div>
-                        <h3>Ethereum</h3>
-                        <div class="copy-container" onclick="copiarEndereco(this, '0xF7Eb1D45cDD527b11BC49416DDfA51AD38e26ca1')">
-                            <code class="crypto-address">0xF7Eb1D45cDD527b11BC49416DDfA51AD38e26ca1</code>
-                            <span class="copy-tooltip">Copiado!</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- -->
-
-        <footer>
-            <p>Desenvolvido com ❤️ por
-                <a href="https://www.linkedin.com/in/jacksondouglasdsouza/" target="_blank" rel="noopener noreferrer">
-                    Jackson Douglas de Souza
-                </a>
-            </p>
-            <p>Siga-me nas redes sociais</p>
+      <!-- Seção de Doação -->
+      <section class="donation-section">
+         <div class="donation-container">
+            <h2>Obrigado pelo seu apoio! 💙</h2>
             <p>
-                <a href="https://www.linkedin.com/in/jacksondouglasdsouza/" target="_blank" rel="noopener noreferrer">LinkedIn</a> |
-                <a href="https://github.com/jacksondouglasdesouza" target="_blank" rel="noopener noreferrer">Github</a>
+               Se este curso foi útil para você, considere fazer uma doação para
+               ajudar no desenvolvimento de mais conteúdo de qualidade.
             </p>
-        </footer>
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
-        <script src="main.js"></script>
-    </body>
+            <div class="donation-methods">
+               <!-- PayPal -->
+               <div class="donation-card">
+                  <div class="donation-icon">
+                     <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                           d="M20.067 8.478c.492.88.556 2.014.3 3.327-.74 3.806-3.276 5.12-6.514 5.12h-.5a.805.805 0 00-.794.68l-.04.22-.63 4.003-.028.15a.806.806 0 01-.795.68h-2.41a.595.595 0 01-.586-.72l1.27-8.054h.004c.06-.377.39-.656.78-.656h.5c2.28 0 4.06-.914 4.576-3.546.2-1.032.19-1.886-.24-2.53z"
+                        />
+                     </svg>
+                  </div>
+                  <h3>PayPal</h3>
+                  <a
+                     href="https://www.paypal.com/donate/?hosted_button_id=8XYHYQNR2E27J"
+                     target="_blank"
+                     rel="noopener noreferrer"
+                     class="donation-link"
+                     >Clique Aqui</a
+                  >
+               </div>
+
+               <!-- Coinbase -->
+               <div class="donation-card">
+                  <div class="donation-icon">
+                     <svg viewBox="0 0 24 24" fill="currentColor">
+                        <circle
+                           cx="12"
+                           cy="12"
+                           r="10"
+                           stroke="currentColor"
+                           stroke-width="2"
+                           fill="none"
+                        />
+                        <path
+                           d="M12 7v10M7 12h10"
+                           stroke="currentColor"
+                           stroke-width="2"
+                        />
+                     </svg>
+                  </div>
+                  <h3>Coinbase</h3>
+                  <a
+                     href="https://commerce.coinbase.com/checkout/959b8db0-848e-4e3b-8620-3a24dab24baf"
+                     class="donation-link"
+                     target="_blank"
+                     rel="noopener noreferrer"
+                     >Clique Aqui</a
+                  >
+               </div>
+
+               <!-- Bitcoin -->
+               <div class="donation-card">
+                  <div class="donation-icon">
+                     <svg viewBox="0 0 24 24" fill="currentColor">
+                        <circle cx="12" cy="12" r="10" />
+                        <text
+                           x="12"
+                           y="16"
+                           text-anchor="middle"
+                           fill="white"
+                           font-weight="bold"
+                           font-size="14"
+                        >
+                           ₿
+                        </text>
+                     </svg>
+                  </div>
+                  <h3>Bitcoin</h3>
+                  <div
+                     class="copy-container"
+                     data-endereco="bc1q3zu0nng6765ptpmr86jcfn68h6e62sda7382e3"
+                  >
+                     <code class="crypto-address"
+                        >bc1q3zu0nng6765ptpmr86jcfn68h6e62sda7382e3</code
+                     >
+                     <span class="copy-tooltip">Copiado!</span>
+                  </div>
+               </div>
+
+               <!-- Ethereum -->
+               <div class="donation-card">
+                  <div class="donation-icon">
+                     <svg viewBox="0 0 24 24" fill="currentColor">
+                        <polygon points="12,2 6,8 6,16 12,22 18,16 18,8" />
+                     </svg>
+                  </div>
+                  <h3>Ethereum</h3>
+                  <div
+                     class="copy-container"
+                     data-endereco="0xF7Eb1D45cDD527b11BC49416DDfA51AD38e26ca1"
+                  >
+                     <code class="crypto-address"
+                        >0xF7Eb1D45cDD527b11BC49416DDfA51AD38e26ca1</code
+                     >
+                     <span class="copy-tooltip">Copiado!</span>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- -->
+
+      <footer>
+         <p>
+            Desenvolvido com ❤️ por
+            <a
+               href="https://www.linkedin.com/in/jacksondouglasdsouza/"
+               target="_blank"
+               rel="noopener noreferrer"
+            >
+               Jackson Douglas de Souza
+            </a>
+         </p>
+         <p>Siga-me nas redes sociais</p>
+         <p>
+            <a
+               href="https://www.linkedin.com/in/jacksondouglasdsouza/"
+               target="_blank"
+               rel="noopener noreferrer"
+               >LinkedIn</a
+            >
+            |
+            <a
+               href="https://github.com/jacksondouglasdesouza"
+               target="_blank"
+               rel="noopener noreferrer"
+               >Github</a
+            >
+         </p>
+      </footer>
+
+      <!-- -->
+      <button id="scrollToTop" class="scroll-to-top" title="Voltar ao topo">
+         <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M7 14l5-5 5 5z" />
+         </svg>
+      </button>
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
+      <script src="main.js"></script>
+   </body>
 </html>

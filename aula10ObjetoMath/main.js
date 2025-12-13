@@ -53,7 +53,6 @@ console.log("Math.expm1(1):", Math.expm1(1)); // e^x - 1
 
 //--
 
-
 let value1 = 9.9856478;
 value1Floor = Math.floor(value1);
 console.log("\nExemplos adicionais:");
@@ -66,7 +65,7 @@ value1Round = Math.round(value1);
 console.log("value1 arredondado para o inteiro mais próximo: ", value1Round); // Resultado: 10
 // 9.50 ele arredonda para 10 se for 9.49 ele arredonda para 9
 
-let value2 = [30,75,36,89,12,45,67,23,85,90,11,-10,-50];
+let value2 = [30, 75, 36, 89, 12, 45, 67, 23, 85, 90, 11, -10, -50];
 
 let maxValue = Math.max(...value2);
 console.log("Valor máximo em value2: ", maxValue); // Resultado: 90
@@ -91,18 +90,45 @@ console.log("Verificação se é infinito: ", !isFinite(dividedByZero)); // Resu
 // Documentação oficial do objeto Math
 // https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math
 
+//---
 
 function copiarEndereco(element, endereco) {
-    // Copia o endereço para a área de transferência
-    navigator.clipboard.writeText(endereco).then(() => {
-        // Adiciona classe para mostrar o tooltip
-        element.classList.add('copied');
-        
-        // Remove a classe após 2 segundos
-        setTimeout(() => {
-            element.classList.remove('copied');
-        }, 2000);
-    }).catch(err => {
-        console.error('Erro ao copiar:', err);
-    });
+   navigator.clipboard
+      .writeText(endereco)
+      .then(() => {
+         element.classList.add("copied");
+
+         setTimeout(() => {
+            element.classList.remove("copied");
+         }, 2000);
+      })
+      .catch((err) => {
+         console.error("Erro ao copiar:", err);
+      });
 }
+
+//.copy-container
+document.querySelectorAll(".copy-container").forEach((el) => {
+   el.addEventListener("click", () => {
+      copiarEndereco(el, el.dataset.endereco);
+   });
+});
+
+//---
+
+const scrollToTopBtn = document.getElementById("scrollToTop");
+
+window.addEventListener("scroll", () => {
+   if (window.pageYOffset > 300) {
+      scrollToTopBtn.classList.add("show");
+   } else {
+      scrollToTopBtn.classList.remove("show");
+   }
+});
+
+scrollToTopBtn.addEventListener("click", () => {
+   window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+   });
+});

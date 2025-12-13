@@ -10,7 +10,7 @@ let cidade = "São Paulo"; // String
 let estado = "SP"; // String
 let pais = "Brasil"; // String
 let profissao = "Desenvolvedor Web"; // String
-let salarioMensal = 4500.00; // Number
+let salarioMensal = 4500.0; // Number
 let experienciaAnos = 5; // Number
 let idiomas = ["Português", "Inglês", "Espanhol"]; // Array
 let habilidades = ["JavaScript", "HTML", "CSS", "React"]; // Array
@@ -18,24 +18,24 @@ let contatoEmail = "felipeDev@proton.me"; // String
 let contatoTelefone = "(11) 98765-4321"; // String
 
 let endereco = {
-    rua: "Av. Paulista",
-    numero: 1000,
-    bairro: "Bela Vista",
-    cidade: "São Paulo",
-    estado: "SP",
-    cep: "01310-100"
+   rua: "Av. Paulista",
+   numero: 1000,
+   bairro: "Bela Vista",
+   cidade: "São Paulo",
+   estado: "SP",
+   cep: "01310-100",
 }; // Object
 
 let linkedin = "linkedin.com/in/felipesouza"; // String
 let github = "github.com/felipesouza"; // String
 let portfolio = "www.felipesouza.dev"; // String
 let disponibilidadeTrabalho = true; // Boolean
-let expectativaSalario = 6000.00; // Number
+let expectativaSalario = 6000.0; // Number
 
 //--
 
 console.log(
-    `O nome do candidato a vage é ${nome};
+   `O nome do candidato a vage é ${nome};
 Ele nasceu em ${dataNascimento} e tem ${idade} anos.
 Mede ${altura}m de altura e pesa ${peso}kg.
 Atualmente mora em ${cidade}, ${estado}, ${pais}.
@@ -44,19 +44,20 @@ Possui ${experienciaAnos} anos de experiência na área.
 Fala os seguintes idiomas: ${idiomas.join(", ")}.
 Suas principais habilidades são: ${habilidades.join(", ")}.
 Pode ser contatado pelo email: ${contatoEmail} ou pelo telefone: ${contatoTelefone}.
-Seu endereço é: ${endereco.rua}, ${endereco.numero}, ${endereco.bairro}, ${endereco.cidade} - ${endereco.estado}, CEP: ${endereco.cep}.
+Seu endereço é: ${endereco.rua}, ${endereco.numero}, ${endereco.bairro}, ${
+      endereco.cidade
+   } - ${endereco.estado}, CEP: ${endereco.cep}.
 LinkedIn: ${linkedin};
 GitHub: ${github};
 Portfólio: ${portfolio}.
 Disponibilidade para trabalho: ${disponibilidadeTrabalho ? "Sim" : "Não"}.
 Expectativa salarial: R$${expectativaSalario}.
-    `
-)
+   `
+);
 
 // let é usado para declarar variáveis que podem mudar de valor, mais não podem ser redeclaradas no mesmo escopo.
 // const é usado para declarar constantes, ou seja, valores que não podem ser alterados após a atribuição inicial.
 // var é uma forma mais antiga de declarar variáveis, mas seu uso não é recomendado devido a questões de escopo e hoisting.
-
 
 let nula = null; // Null
 // let indefinida = indefined; // Undefined vai gerar um erro se descomentado!
@@ -78,17 +79,45 @@ let variavelGlobal = "Estou disponível globalmente"; // Variavel global
 
 //alert("Variáveis em JavaScript foram definidas e exibidas no console!");
 
+//--
+
 function copiarEndereco(element, endereco) {
-    // Copia o endereço para a área de transferência
-    navigator.clipboard.writeText(endereco).then(() => {
-        // Adiciona classe para mostrar o tooltip
-        element.classList.add('copied');
-        
-        // Remove a classe após 2 segundos
-        setTimeout(() => {
-            element.classList.remove('copied');
-        }, 2000);
-    }).catch(err => {
-        console.error('Erro ao copiar:', err);
-    });
+   navigator.clipboard
+      .writeText(endereco)
+      .then(() => {
+         element.classList.add("copied");
+
+         setTimeout(() => {
+            element.classList.remove("copied");
+         }, 2000);
+      })
+      .catch((err) => {
+         console.error("Erro ao copiar:", err);
+      });
 }
+
+//.copy-container
+document.querySelectorAll(".copy-container").forEach((el) => {
+   el.addEventListener("click", () => {
+      copiarEndereco(el, el.dataset.endereco);
+   });
+});
+
+//---
+
+const scrollToTopBtn = document.getElementById("scrollToTop");
+
+window.addEventListener("scroll", () => {
+   if (window.pageYOffset > 300) {
+      scrollToTopBtn.classList.add("show");
+   } else {
+      scrollToTopBtn.classList.remove("show");
+   }
+});
+
+scrollToTopBtn.addEventListener("click", () => {
+   window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+   });
+});

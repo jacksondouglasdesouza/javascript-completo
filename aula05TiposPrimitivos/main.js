@@ -4,7 +4,7 @@
 // Uma string é uma sequência de caracteres usada para representar texto.
 // Exemplo:
 let nome = "João";
-let nomeCompleto = 'João da Silva';
+let nomeCompleto = "João da Silva";
 let mensagem = `Olá, ${nome}! Bem-vindo ao JavaScript.`;
 console.log(typeof nome + " - Meu nome é " + nomeCompleto); // "string"
 
@@ -20,7 +20,7 @@ console.log(typeof idade + " - Idade: " + idade); // "number"
 // Undefined
 // O tipo Undefined indica que uma variável foi declarada, mas ainda não foi atribuída a um valor.
 let endereco;
-console.log(typeof endereco + " - Endereço: " + endereco); // "undefined"   
+console.log(typeof endereco + " - Endereço: " + endereco); // "undefined"
 
 // Null
 // O tipo Null representa a ausência intencional de qualquer valor de objeto.
@@ -52,17 +52,45 @@ console.log("Maior BigInt: " + (BigInt(Number.MAX_SAFE_INTEGER) + 1n));
 
 // Esses são os principais tipos primitivos em JavaScript. Cada um deles tem suas próprias características e usos específicos no desenvolvimento de aplicações.
 
+//--
+
 function copiarEndereco(element, endereco) {
-    // Copia o endereço para a área de transferência
-    navigator.clipboard.writeText(endereco).then(() => {
-        // Adiciona classe para mostrar o tooltip
-        element.classList.add('copied');
-        
-        // Remove a classe após 2 segundos
-        setTimeout(() => {
-            element.classList.remove('copied');
-        }, 2000);
-    }).catch(err => {
-        console.error('Erro ao copiar:', err);
-    });
+   navigator.clipboard
+      .writeText(endereco)
+      .then(() => {
+         element.classList.add("copied");
+
+         setTimeout(() => {
+            element.classList.remove("copied");
+         }, 2000);
+      })
+      .catch((err) => {
+         console.error("Erro ao copiar:", err);
+      });
 }
+
+//.copy-container
+document.querySelectorAll(".copy-container").forEach((el) => {
+   el.addEventListener("click", () => {
+      copiarEndereco(el, el.dataset.endereco);
+   });
+});
+
+//---
+
+const scrollToTopBtn = document.getElementById("scrollToTop");
+
+window.addEventListener("scroll", () => {
+   if (window.pageYOffset > 300) {
+      scrollToTopBtn.classList.add("show");
+   } else {
+      scrollToTopBtn.classList.remove("show");
+   }
+});
+
+scrollToTopBtn.addEventListener("click", () => {
+   window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+   });
+});

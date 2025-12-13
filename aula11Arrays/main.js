@@ -1,6 +1,14 @@
 // ARRAYS
 
-let listaAlunos = ['Luis', 'Souza', 'Carlos', 'Maria', 'Caroline', 'Luan', 'Luana'];
+let listaAlunos = [
+   "Luis",
+   "Souza",
+   "Carlos",
+   "Maria",
+   "Caroline",
+   "Luan",
+   "Luana",
+];
 console.log(listaAlunos);
 
 console.log(listaAlunos[0]);
@@ -13,21 +21,21 @@ console.log(listaAlunos[6]);
 
 //--
 
-listaAlunos[0] = 'Jackson Douglas';
+listaAlunos[0] = "Jackson Douglas";
 
 console.log(listaAlunos);
-listaAlunos[8] = 'Novo Aluno';
+listaAlunos[8] = "Novo Aluno";
 console.log(listaAlunos);
 console.log(listaAlunos.length);
 
 //--
 
-listaAlunos.push('Douglas Maciel');
+listaAlunos.push("Douglas Maciel");
 console.log(listaAlunos);
 
 //--
 
-listaAlunos.unshift('Primeiro Elemento Adicionado');
+listaAlunos.unshift("Primeiro Elemento Adicionado");
 console.log(listaAlunos);
 
 //--
@@ -38,13 +46,13 @@ console.log(`Aluno removido do fim da lista foi: ${alunoRemovidoFimLista}`);
 
 //--
 
-
 const alunoRemovidoInicioLista = listaAlunos.shift();
 console.log(listaAlunos);
-console.log(`Aluno removido do inicio da lista foi: ${alunoRemovidoInicioLista}`);
+console.log(
+   `Aluno removido do inicio da lista foi: ${alunoRemovidoInicioLista}`
+);
 
 //--
-
 
 delete listaAlunos[5];
 console.log(listaAlunos);
@@ -66,18 +74,43 @@ console.log(listaAlunos instanceof Array);
 
 //--
 
-
 function copiarEndereco(element, endereco) {
-    // Copia o endereço para a área de transferência
-    navigator.clipboard.writeText(endereco).then(() => {
-        // Adiciona classe para mostrar o tooltip
-        element.classList.add('copied');
-        
-        // Remove a classe após 2 segundos
-        setTimeout(() => {
-            element.classList.remove('copied');
-        }, 2000);
-    }).catch(err => {
-        console.error('Erro ao copiar:', err);
-    });
+   navigator.clipboard
+      .writeText(endereco)
+      .then(() => {
+         element.classList.add("copied");
+
+         setTimeout(() => {
+            element.classList.remove("copied");
+         }, 2000);
+      })
+      .catch((err) => {
+         console.error("Erro ao copiar:", err);
+      });
 }
+
+//.copy-container
+document.querySelectorAll(".copy-container").forEach((el) => {
+   el.addEventListener("click", () => {
+      copiarEndereco(el, el.dataset.endereco);
+   });
+});
+
+//---
+
+const scrollToTopBtn = document.getElementById("scrollToTop");
+
+window.addEventListener("scroll", () => {
+   if (window.pageYOffset > 300) {
+      scrollToTopBtn.classList.add("show");
+   } else {
+      scrollToTopBtn.classList.remove("show");
+   }
+});
+
+scrollToTopBtn.addEventListener("click", () => {
+   window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+   });
+});

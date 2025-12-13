@@ -1,59 +1,98 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="style.css">
-        <title>Aula 11 - Arrays</title>
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="stylesheet" href="style.css" />
+      <title>Aula 11 - Arrays</title>
+      <link
+         href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css"
+         rel="stylesheet"
+      />
+   </head>
 
-    </head>
+   <body>
+      <header>
+         <h1>Aula 11 - Arrays</h1>
+      </header>
 
-    <body>
-        <header>
-            <h1>Aula 11 - Arrays</h1>
-        </header>
+      <main>
+         <a href="../index.html" class="btn-voltar">
+            <svg
+               xmlns="http://www.w3.org/2000/svg"
+               viewBox="0 0 24 24"
+               fill="none"
+               stroke="currentColor"
+               stroke-width="2"
+               stroke-linecap="round"
+               stroke-linejoin="round"
+            >
+               <path d="M19 12H5M12 19l-7-7 7-7" />
+            </svg>
+            Voltar para Home
+         </a>
 
-        <main>
-            <a href="../index.html" class="btn-voltar">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M19 12H5M12 19l-7-7 7-7"/>
-                </svg>
-                Voltar para Home
-            </a>
+         <section class="section-title">
+            <h2>Arrays</h2>
+         </section>
 
-            <section class="section-title">
-                <h2>Arrays</h2>
-            </section>
-
-            <!-- VÍDEO AULA -->
-            <div class="video-container">
-                <h3>🎥 Vídeo Aula - Arrays em JavaScript | Não use [ VAR ] use { LET } </h3>
-                <div class="video-wrapper">
-                    <iframe 
-                        src="https://www.youtube.com/embed/Wds7LrlAQVA?si=26sKTApfwEi2PsSD"
-                        title="Aula sobre Arrays"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                        allowfullscreen>
-                    </iframe>
-                </div>
-                <div class="video-credits">
-                    <strong>📌 Créditos do Vídeo:</strong><br>
-                    Todos os direitos reservados ao autor original do vídeo.<br>
-                    Canal: <a href="https://www.youtube.com/@TecEdu4All" target="_blank" rel="noopener noreferrer">@TecEdu4All</a><br>
-                    Este material é utilizado exclusivamente para fins educacionais.
-                </div>
+         <!-- VÍDEO AULA -->
+         <div class="video-container">
+            <h3>
+               🎥 Vídeo Aula - Arrays em JavaScript | Não use [ VAR ] use { LET
+               }
+            </h3>
+            <div class="video-wrapper">
+               <iframe
+                  src="https://www.youtube.com/embed/Wds7LrlAQVA?si=26sKTApfwEi2PsSD"
+                  title="Aula sobre Arrays"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+               >
+               </iframe>
             </div>
-            
-            <article>
-                <figure>
-                    <img src="./imgs/javascript-array-blocks.png" alt=Arrays em JavaScript" width="600">
-                    <figcaption>Arrays</figcaption>
-                </figure>
-                
-                <p><strong>Arrays</strong> - Arrays são estruturas de dados nativas do JavaScript que funcionam como listas ordenadas para armazenar múltiplos valores em uma única variável. Diferente de variáveis comuns que guardam apenas um valor, os arrays podem conter diversos elementos de qualquer tipo (strings, números, booleanos, objetos, etc). Cada elemento de um array ocupa uma posição chamada de <strong>índice</strong>, que sempre começa em <strong>0</strong>. Os arrays são muito úteis para organizar e manipular coleções de dados de forma eficiente. Os métodos mais comuns incluem <strong>Array.push()</strong> (adiciona um elemento no final), <strong>Array.pop()</strong> (remove o último elemento), <strong>Array.shift()</strong> (remove o primeiro elemento), <strong>Array.unshift()</strong> (adiciona um elemento no início), <strong>Array.slice()</strong> (extrai uma parte do array), <strong>Array.length</strong> (retorna o tamanho do array), entre muitos outros que facilitam o trabalho com listas e coleções de dados no desenvolvimento.</p>
+            <div class="video-credits">
+               <strong>📌 Créditos do Vídeo:</strong><br />
+               Todos os direitos reservados ao autor original do vídeo.<br />
+               Canal:
+               <a
+                  href="https://www.youtube.com/@TecEdu4All"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >@TecEdu4All</a
+               ><br />
+               Este material é utilizado exclusivamente para fins educacionais.
+            </div>
+         </div>
 
-                <pre><code class="language-javascript">//Arrays
+         <article>
+            <figure>
+               <img src="./imgs/javascript-array-blocks.png" alt=Arrays em
+               JavaScript" width="600">
+               <figcaption>Arrays</figcaption>
+            </figure>
+
+            <p>
+               <strong>Arrays</strong> - Arrays são estruturas de dados nativas
+               do JavaScript que funcionam como listas ordenadas para armazenar
+               múltiplos valores em uma única variável. Diferente de variáveis
+               comuns que guardam apenas um valor, os arrays podem conter
+               diversos elementos de qualquer tipo (strings, números, booleanos,
+               objetos, etc). Cada elemento de um array ocupa uma posição
+               chamada de <strong>índice</strong>, que sempre começa em
+               <strong>0</strong>. Os arrays são muito úteis para organizar e
+               manipular coleções de dados de forma eficiente. Os métodos mais
+               comuns incluem <strong>Array.push()</strong> (adiciona um
+               elemento no final), <strong>Array.pop()</strong> (remove o último
+               elemento), <strong>Array.shift()</strong> (remove o primeiro
+               elemento), <strong>Array.unshift()</strong> (adiciona um elemento
+               no início), <strong>Array.slice()</strong> (extrai uma parte do
+               array), <strong>Array.length</strong> (retorna o tamanho do
+               array), entre muitos outros que facilitam o trabalho com listas e
+               coleções de dados no desenvolvimento.
+            </p>
+
+            <pre><code class="language-javascript">//Arrays
 
 // ============================================
 // ARRAYS EM JAVASCRIPT - GUIA BÁSICO
@@ -200,89 +239,159 @@ console.log(listaCursos.length);  // 3
 // https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array
 
 // FIM DO CÓDIGO</code></pre>
-            </article>
-        </main>
+         </article>
+      </main>
 
-        <!-- -->
+      <!-- -->
 
-        <!-- Seção de Doação -->
-        <section class="donation-section">
-            <div class="donation-container">
-                <h2>Obrigado pelo seu apoio! 💙</h2>
-                <p>Se este curso foi útil para você, considere fazer uma doação para ajudar no desenvolvimento de mais conteúdo de qualidade.</p>
-                
-                <div class="donation-methods">
-                    <!-- PayPal -->
-                    <div class="donation-card">
-                        <div class="donation-icon">
-                            <svg viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M20.067 8.478c.492.88.556 2.014.3 3.327-.74 3.806-3.276 5.12-6.514 5.12h-.5a.805.805 0 00-.794.68l-.04.22-.63 4.003-.028.15a.806.806 0 01-.795.68h-2.41a.595.595 0 01-.586-.72l1.27-8.054h.004c.06-.377.39-.656.78-.656h.5c2.28 0 4.06-.914 4.576-3.546.2-1.032.19-1.886-.24-2.53z"/>
-                            </svg>
-                        </div>
-                        <h3>PayPal</h3>
-                        <a href="https://www.paypal.com/donate/?hosted_button_id=8XYHYQNR2E27J" class="donation-link">Clique Aqui</a>
-                    </div>
-
-                    <!-- Coinbase -->
-                    <div class="donation-card">
-                        <div class="donation-icon">
-                            <svg viewBox="0 0 24 24" fill="currentColor">
-                                <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" fill="none"/>
-                                <path d="M12 7v10M7 12h10" stroke="currentColor" stroke-width="2"/>
-                            </svg>
-                        </div>
-                        <h3>Coinbase</h3>
-                        <a href="https://commerce.coinbase.com/checkout/959b8db0-848e-4e3b-8620-3a24dab24baf" class="donation-link">Clique Aqui</a>
-                    </div>
-
-                    <!-- Bitcoin -->
-                    <div class="donation-card">
-                        <div class="donation-icon">
-                            <svg viewBox="0 0 24 24" fill="currentColor">
-                                <circle cx="12" cy="12" r="10"/>
-                                <text x="12" y="16" text-anchor="middle" fill="white" font-weight="bold" font-size="14">₿</text>
-                            </svg>
-                        </div>
-                        <h3>Bitcoin</h3>
-                        <div class="copy-container" onclick="copiarEndereco(this, 'bc1q3zu0nng6765ptpmr86jcfn68h6e62sda7382e3')">
-                            <code class="crypto-address">bc1q3zu0nng6765ptpmr86jcfn68h6e62sda7382e3</code>
-                            <span class="copy-tooltip">Copiado!</span>
-                        </div>
-                    </div>
-
-                    <!-- Ethereum -->
-                    <div class="donation-card">
-                        <div class="donation-icon">
-                            <svg viewBox="0 0 24 24" fill="currentColor">
-                                <polygon points="12,2 6,8 6,16 12,22 18,16 18,8"/>
-                            </svg>
-                        </div>
-                        <h3>Ethereum</h3>
-                        <div class="copy-container" onclick="copiarEndereco(this, '0xF7Eb1D45cDD527b11BC49416DDfA51AD38e26ca1')">
-                            <code class="crypto-address">0xF7Eb1D45cDD527b11BC49416DDfA51AD38e26ca1</code>
-                            <span class="copy-tooltip">Copiado!</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- -->
-
-        <footer>
-            <p>Desenvolvido com ❤️ por
-                <a href="https://www.linkedin.com/in/jacksondouglasdsouza/" target="_blank" rel="noopener noreferrer">
-                    Jackson Douglas de Souza
-                </a>
-            </p>
-            <p>Siga-me nas redes sociais</p>
+      <!-- Seção de Doação -->
+      <section class="donation-section">
+         <div class="donation-container">
+            <h2>Obrigado pelo seu apoio! 💙</h2>
             <p>
-                <a href="https://www.linkedin.com/in/jacksondouglasdsouza/" target="_blank" rel="noopener noreferrer">LinkedIn</a> |
-                <a href="https://github.com/jacksondouglasdesouza" target="_blank" rel="noopener noreferrer">Github</a>
+               Se este curso foi útil para você, considere fazer uma doação para
+               ajudar no desenvolvimento de mais conteúdo de qualidade.
             </p>
-        </footer>
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
-        <script src="main.js"></script>
-    </body>
+            <div class="donation-methods">
+               <!-- PayPal -->
+               <div class="donation-card">
+                  <div class="donation-icon">
+                     <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                           d="M20.067 8.478c.492.88.556 2.014.3 3.327-.74 3.806-3.276 5.12-6.514 5.12h-.5a.805.805 0 00-.794.68l-.04.22-.63 4.003-.028.15a.806.806 0 01-.795.68h-2.41a.595.595 0 01-.586-.72l1.27-8.054h.004c.06-.377.39-.656.78-.656h.5c2.28 0 4.06-.914 4.576-3.546.2-1.032.19-1.886-.24-2.53z"
+                        />
+                     </svg>
+                  </div>
+                  <h3>PayPal</h3>
+                  <a
+                     href="https://www.paypal.com/donate/?hosted_button_id=8XYHYQNR2E27J"
+                     target="_blank"
+                     rel="noopener noreferrer"
+                     class="donation-link"
+                     >Clique Aqui</a
+                  >
+               </div>
+
+               <!-- Coinbase -->
+               <div class="donation-card">
+                  <div class="donation-icon">
+                     <svg viewBox="0 0 24 24" fill="currentColor">
+                        <circle
+                           cx="12"
+                           cy="12"
+                           r="10"
+                           stroke="currentColor"
+                           stroke-width="2"
+                           fill="none"
+                        />
+                        <path
+                           d="M12 7v10M7 12h10"
+                           stroke="currentColor"
+                           stroke-width="2"
+                        />
+                     </svg>
+                  </div>
+                  <h3>Coinbase</h3>
+                  <a
+                     href="https://commerce.coinbase.com/checkout/959b8db0-848e-4e3b-8620-3a24dab24baf"
+                     class="donation-link"
+                     target="_blank"
+                     rel="noopener noreferrer"
+                     >Clique Aqui</a
+                  >
+               </div>
+
+               <!-- Bitcoin -->
+               <div class="donation-card">
+                  <div class="donation-icon">
+                     <svg viewBox="0 0 24 24" fill="currentColor">
+                        <circle cx="12" cy="12" r="10" />
+                        <text
+                           x="12"
+                           y="16"
+                           text-anchor="middle"
+                           fill="white"
+                           font-weight="bold"
+                           font-size="14"
+                        >
+                           ₿
+                        </text>
+                     </svg>
+                  </div>
+                  <h3>Bitcoin</h3>
+                  <div
+                     class="copy-container"
+                     data-endereco="bc1q3zu0nng6765ptpmr86jcfn68h6e62sda7382e3"
+                  >
+                     <code class="crypto-address"
+                        >bc1q3zu0nng6765ptpmr86jcfn68h6e62sda7382e3</code
+                     >
+                     <span class="copy-tooltip">Copiado!</span>
+                  </div>
+               </div>
+
+               <!-- Ethereum -->
+               <div class="donation-card">
+                  <div class="donation-icon">
+                     <svg viewBox="0 0 24 24" fill="currentColor">
+                        <polygon points="12,2 6,8 6,16 12,22 18,16 18,8" />
+                     </svg>
+                  </div>
+                  <h3>Ethereum</h3>
+                  <div
+                     class="copy-container"
+                     data-endereco="0xF7Eb1D45cDD527b11BC49416DDfA51AD38e26ca1"
+                  >
+                     <code class="crypto-address"
+                        >0xF7Eb1D45cDD527b11BC49416DDfA51AD38e26ca1</code
+                     >
+                     <span class="copy-tooltip">Copiado!</span>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- -->
+
+      <footer>
+         <p>
+            Desenvolvido com ❤️ por
+            <a
+               href="https://www.linkedin.com/in/jacksondouglasdsouza/"
+               target="_blank"
+               rel="noopener noreferrer"
+            >
+               Jackson Douglas de Souza
+            </a>
+         </p>
+         <p>Siga-me nas redes sociais</p>
+         <p>
+            <a
+               href="https://www.linkedin.com/in/jacksondouglasdsouza/"
+               target="_blank"
+               rel="noopener noreferrer"
+               >LinkedIn</a
+            >
+            |
+            <a
+               href="https://github.com/jacksondouglasdesouza"
+               target="_blank"
+               rel="noopener noreferrer"
+               >Github</a
+            >
+         </p>
+      </footer>
+
+      <!-- -->
+      <button id="scrollToTop" class="scroll-to-top" title="Voltar ao topo">
+         <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M7 14l5-5 5 5z" />
+         </svg>
+      </button>
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
+      <script src="main.js"></script>
+   </body>
 </html>

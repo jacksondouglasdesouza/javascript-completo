@@ -258,6 +258,8 @@ if (usuarioLogado) {
                   <h3>PayPal</h3>
                   <a
                      href="https://www.paypal.com/donate/?hosted_button_id=8XYHYQNR2E27J"
+                     target="_blank"
+                     rel="noopener noreferrer"
                      class="donation-link"
                      >Clique Aqui</a
                   >
@@ -286,6 +288,8 @@ if (usuarioLogado) {
                   <a
                      href="https://commerce.coinbase.com/checkout/959b8db0-848e-4e3b-8620-3a24dab24baf"
                      class="donation-link"
+                     target="_blank"
+                     rel="noopener noreferrer"
                      >Clique Aqui</a
                   >
                </div>
@@ -310,7 +314,7 @@ if (usuarioLogado) {
                   <h3>Bitcoin</h3>
                   <div
                      class="copy-container"
-                     onclick="copiarEndereco(this, 'bc1q3zu0nng6765ptpmr86jcfn68h6e62sda7382e3')"
+                     data-endereco="bc1q3zu0nng6765ptpmr86jcfn68h6e62sda7382e3"
                   >
                      <code class="crypto-address"
                         >bc1q3zu0nng6765ptpmr86jcfn68h6e62sda7382e3</code
@@ -329,7 +333,7 @@ if (usuarioLogado) {
                   <h3>Ethereum</h3>
                   <div
                      class="copy-container"
-                     onclick="copiarEndereco(this, '0xF7Eb1D45cDD527b11BC49416DDfA51AD38e26ca1')"
+                     data-endereco="0xF7Eb1D45cDD527b11BC49416DDfA51AD38e26ca1"
                   >
                      <code class="crypto-address"
                         >0xF7Eb1D45cDD527b11BC49416DDfA51AD38e26ca1</code
@@ -370,6 +374,13 @@ if (usuarioLogado) {
             >
          </p>
       </footer>
+
+      <!-- -->
+      <button id="scrollToTop" class="scroll-to-top" title="Voltar ao topo">
+         <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M7 14l5-5 5 5z" />
+         </svg>
+      </button>
 
       <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
