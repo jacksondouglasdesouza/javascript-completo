@@ -2,8 +2,8 @@
    "name": "Curso de JavaScript Completo",
    "short_name": "JS Completo",
    "description": "Curso JavaScript Completo - Do zero ao avançado com exemplos práticos e projetos reais.",
-   "start_url": "https://jacksondouglasdesouza.github.io/javascript-completo/",
-   "scope": "https://jacksondouglasdesouza.github.io/javascript-completo/",
+   "start_url": "./",
+   "scope": "./",
    "display": "standalone",
    "orientation": "portrait-primary",
    "theme_color": "#75b8fa",
@@ -16,25 +16,25 @@
          "purpose": "any"
       },
       {
-         "src": "./favicon/favicon-192x192.png",
+         "src": "./favicon/web-app-manifest-192x192.png",
          "sizes": "192x192",
          "type": "image/png",
          "purpose": "any"
       },
       {
-         "src": "./favicon/favicon-192x192.png",
+         "src": "./favicon/web-app-manifest-192x192.png",
          "sizes": "192x192",
          "type": "image/png",
          "purpose": "maskable"
       },
       {
-         "src": "./favicon/favicon-512x512.png",
+         "src": "./favicon/web-app-manifest-512x512.png",
          "sizes": "512x512",
          "type": "image/png",
          "purpose": "any"
       },
       {
-         "src": "./favicon/favicon-512x512.png",
+         "src": "./favicon/web-app-manifest-512x512.png",
          "sizes": "512x512",
          "type": "image/png",
          "purpose": "maskable"
@@ -43,7 +43,7 @@
    "categories": ["education", "productivity"],
    "screenshots": [
       {
-         "src": "./favicon/favicon-192x192.png",
+         "src": "./favicon/web-app-manifest-192x192.png",
          "sizes": "192x192",
          "type": "image/png"
       }
