@@ -37,12 +37,10 @@
          </section>
 
          <!-- CALCULADOR DE IMC -->
-         <div id="box-calculador-imc">
-            <h2 class="calculador-imc-titulo">💪 Calculador de IMC</h2>
-            <p class="calculador-imc-subtitulo">
-               Descubra o seu índice de massa corporal
-            </p>
-            <!-- -->
+         <div class="container">
+            <h1>💪 Calculador de IMC</h1>
+            <p class="subtitle">Descubra seu índice de massa corporal</p>
+
             <div class="info-indices">
                <strong>Tabela de Índices IMC:</strong><br />
                • <strong>Abaixo do peso:</strong> Menor que 18,5<br />
@@ -51,80 +49,69 @@
                • <strong>Obesidade:</strong> Maior que 30<br />
             </div>
 
-            <!-- -->
-
             <form id="FormIMC">
-               <!-- PESO -->
                <div class="form-group-imc">
                   <label for="peso">Peso</label>
                   <div class="input-wrapper-imc">
-                     <div class="input-group-imc">
-                        <input
-                           type="number"
-                           id="peso"
-                           class="input-imc"
-                           placeholder="Ex: 75"
-                           step="0.1"
-                           min="0"
-                           required
-                        />
-                     </div>
+                     <input
+                        type="number"
+                        id="peso"
+                        class="input-imc"
+                        placeholder="Ex: 75"
+                        step="0.1"
+                        min="0"
+                        required
+                     />
+                     <span class="unit-imc">Kg</span>
                   </div>
-                  <span class="unit-imc">Kg</span>
                </div>
 
-               <!-- ALTURA -->
                <div class="form-group-imc">
                   <label for="altura">Altura</label>
                   <div class="input-wrapper-imc">
-                     <div class="input-group-imc">
-                        <input
-                           type="number"
-                           iid="altura"
-                           class="input-imc"
-                           placeholder="Ex: 1.75"
-                           step="0.01"
-                           min="0"
-                           required
-                        />
-                     </div>
+                     <input
+                        type="number"
+                        id="altura"
+                        class="input-imc"
+                        placeholder="Ex: 1.75"
+                        step="0.01"
+                        min="0"
+                        required
+                     />
+                     <span class="unit-imc">m</span>
                   </div>
-                  <span class="unit-imc">m</span>
                </div>
 
-               <!-- BUTOON -->
                <div class="button-group-imc">
                   <button
                      type="button"
                      class="btn-imc btn-calcular-imc"
-                     onclick="calcularIMC()"
+                     id="btnCalcular"
                   >
                      Calcular IMC
                   </button>
-                  <!-- -->
                   <button
                      type="button"
                      class="btn-imc btn-limpar-imc"
-                     onclick="limparCamposIMC()"
+                     id="btnLimpar"
                   >
                      Limpar
                   </button>
                </div>
             </form>
 
-            <!-- -->
             <div id="resultado" class="resultado-imc">
                <div class="imc-valor" id="imc-Valor">--</div>
                <div class="imc-categoria" id="imc-Categoria"></div>
                <div class="imc-descricao" id="imc-Descricao"></div>
-               <!-- -->
+
                <div class="info-detalhes-imc">
                   <div class="detalhe-label-imc">Peso Informado</div>
                   <div class="detalhe-valor-imc" id="pesoInfo">-- kg</div>
                </div>
-               <!-- -->
+
                <div class="detalhe-item-imc">
-                  <div class="detalhe-label-imc"></div>
+                  <div class="detalhe-label-imc">Altura Informada</div>
                   <div class="detalhe-valor-imc" id="alturaInfo">-- m</div>
                </div>
             </div>
