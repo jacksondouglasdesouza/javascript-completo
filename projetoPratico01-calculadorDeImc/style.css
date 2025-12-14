@@ -23,84 +23,154 @@ h6 {
    font-family: "Poppins", sans-serif;
 }
 
-/* BOTÃO VOLTAR */
-.btn-voltar {
-   display: inline-flex;
+/* ========================
+   NAVBAR MODERNA (HEADER)
+   ======================== */
+.main-header {
+   position: fixed; /* Fica fixo no topo ao rolar */
+   top: 0;
+   left: 0;
+   width: 100%;
+   z-index: 1000;
+   /* Efeito de Vidro (Glassmorphism) */
+   background: rgba(15, 15, 15, 0.85);
+   backdrop-filter: blur(12px);
+   -webkit-backdrop-filter: blur(12px);
+   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+}
+
+.header-container {
+   max-width: 1300px;
+   margin: 0 auto;
+   padding: 15px 20px;
+   display: flex;
+   justify-content: space-between;
    align-items: center;
-   gap: 10px;
-   padding: 12px 24px;
-   background: linear-gradient(135deg, #2c2c2c, #3a3a3a);
-   color: #ffffff;
-   text-decoration: none;
-   border: 2px solid #4a4a4a;
-   border-radius: 10px;
-   font-size: 15px;
-   font-weight: 600;
-   cursor: pointer;
-   transition: all 0.3s ease;
-   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-   margin-bottom: 30px;
 }
 
-.btn-voltar:hover {
-   background: linear-gradient(135deg, #3a3a3a, #4a4a4a);
-   transform: translateY(-2px);
-   box-shadow: 0 6px 20px rgba(117, 184, 250, 0.3);
+/* ESQUERDA - LOGO */
+.header-left {
+   display: flex;
+   align-items: center;
 }
 
-.btn-voltar svg {
-   width: 20px;
-   height: 20px;
+.logo-js img {
+   width: 40px;
+   height: 40px;
+   border-radius: 4px;
+   display: block;
    transition: transform 0.3s ease;
 }
 
-.btn-voltar:hover svg {
-   transform: translateX(-4px);
+.logo-js img:hover {
+   transform: rotate(-10deg) scale(1.1);
 }
 
-/* Header */
-header {
-   background: linear-gradient(135deg, #0f0f0f, #1f1f1f);
-   padding: 50px 20px;
-   text-align: center;
-   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+.header-nav {
+   display: flex;
+   gap: 30px;
+}
+
+.nav-link {
+   color: #ccc;
+   text-decoration: none;
+   font-size: 0.95rem;
+   font-weight: 500;
    position: relative;
-   overflow: hidden;
+   transition: color 0.3s ease;
 }
 
-header::before {
+/* Efeito legal de sublinhado ao passar o mouse */
+.nav-link::after {
    content: "";
    position: absolute;
-   top: 0;
+   width: 0;
+   height: 2px;
+   bottom: -4px;
    left: 0;
-   right: 0;
-   height: 4px;
-   background: linear-gradient(90deg, #75b8fa, #5a9fd4, #75b8fa);
-   animation: shimmer 3s infinite;
+   background-color: #75b8fa;
+   transition: width 0.3s ease;
 }
 
-@keyframes shimmer {
-   0%,
-   100% {
-      opacity: 0.5;
-   }
-   50% {
-      opacity: 1;
-   }
+.nav-link:hover {
+   color: #fff;
 }
 
-header h1 {
+.nav-link:hover::after,
+.nav-link.active::after {
+   width: 100%;
+}
+
+.nav-link.active {
    color: #75b8fa;
-   font-size: 2.5rem;
-   font-weight: 700;
-   text-shadow: 0 0 20px rgba(117, 184, 250, 0.5);
+   font-weight: 600;
 }
 
-/* Main Content */
+/* DIREITA - ÍCONES */
+.header-right {
+   display: flex;
+   gap: 15px;
+}
+
+.icon-link-header svg {
+   width: 24px;
+   height: 24px;
+   fill: #ccc;
+   transition: all 0.3s ease;
+}
+
+.icon-link-header:hover svg {
+   fill: #75b8fa;
+   transform: translateY(-2px);
+   filter: drop-shadow(0 0 5px rgba(117, 184, 250, 0.5));
+}
+
+/* RESPONSIVO PARA O HEADER */
+@media (max-width: 768px) {
+   .header-nav {
+      gap: 15px;
+   }
+
+   .nav-link {
+      font-size: 0.85rem;
+   }
+
+   .header-container {
+      padding: 12px 15px;
+   }
+}
+
+@media (max-width: 480px) {
+   /* No celular muito pequeno, escondemos os links e deixamos só home e icons */
+   .nav-link:not(.active) {
+      display: none;
+   }
+
+   .logo-js svg {
+      width: 32px;
+      height: 32px;
+   }
+}
+
+/* =======================================================
+   MAIN CONTENT (Conteúdo Principal)
+   ======================================================= */
 main {
    max-width: 1300px;
    margin: 0 auto;
-   padding: 40px 20px;
+
+   /* AQUI ESTÁ A CORREÇÃO PRINCIPAL: */
+   /* 130px em cima para empurrar o conteúdo para baixo da barra fixa */
+   /* 20px nas laterais e 40px embaixo */
+   padding: 130px 20px 40px 20px;
+}
+
+@media (max-width: 768px) {
+   /* No celular a barra é menor, então o padding pode ser menor */
+   main {
+      padding-top: 100px;
+   }
 }
 
 /* Section Title */
@@ -129,7 +199,7 @@ main {
    background: linear-gradient(90deg, transparent, #75b8fa, transparent);
 }
 
-/* CALCULADOR DE IMC - COM CONTAINER */
+/* CALCULADOR DE IMC - CONTAINER */
 
 .container {
    background: linear-gradient(135deg, #2a2a2a, #323232);
@@ -983,6 +1053,85 @@ input[type="number"] {
    text-decoration: underline;
 }
 
+.download {
+   display: flex;
+   flex-direction: column;
+   margin-top: 20px;
+   margin-bottom: 20px;
+   padding: 25px;
+   background: rgba(15, 15, 15, 0.6);
+   border-radius: 12px;
+   gap: 15px;
+   text-align: left;
+   color: #ccc;
+}
+
+.download strong {
+   font-weight: 600;
+   color: #75b8fa;
+   font-size: 0.95rem;
+   display: block;
+   margin-bottom: 8px;
+}
+
+.download p {
+   margin: 0;
+   display: flex;
+   flex-direction: column;
+}
+
+.download a {
+   color: #75b8fa;
+   text-decoration: none;
+   font-weight: 600;
+   padding: 10px 15px;
+   background: linear-gradient(135deg, #75b8fa, #5a9fd4);
+   color: #0f0f0f;
+   border-radius: 8px;
+   transition: all 0.3s ease;
+   display: inline-block;
+   width: fit-content;
+   box-shadow: 0 4px 15px rgba(117, 184, 250, 0.3);
+}
+
+.download a:hover {
+   transform: translateY(-2px);
+   box-shadow: 0 6px 25px rgba(117, 184, 250, 0.5);
+}
+
+.download a:active {
+   transform: translateY(0);
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+   .download {
+      padding: 20px;
+      margin-top: 15px;
+   }
+
+   .download strong {
+      font-size: 0.9rem;
+   }
+
+   .download a {
+      padding: 9px 12px;
+      font-size: 0.9rem;
+   }
+}
+
+@media (max-width: 480px) {
+   .download {
+      padding: 15px;
+      gap: 12px;
+   }
+
+   .download a {
+      padding: 8px 10px;
+      font-size: 0.85rem;
+   }
+}
+
 /* Article Card */
 article {
    background: linear-gradient(135deg, #2a2a2a, #323232);
@@ -1063,20 +1212,106 @@ code[class*="language-"] {
    font-family: "Fira Code", "Consolas", monospace;
 }
 
-/* Footer */
+/* =======================================================
+   FOOTER - CODYME ACADEMY (VERSÃO FINAL)
+   ======================================================= */
 footer {
    background: linear-gradient(to right, #0f0f0f, #1a1a1a);
    color: #d1d1d1;
-   text-align: center;
    margin-top: 80px;
-   padding: 30px 0;
+   padding: 40px 20px;
    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.5);
+   /* Segurança extra para nada vazar da tela */
+   overflow: hidden;
 }
 
-footer p {
-   margin: 8px 0;
+.footer-container {
+   max-width: 1300px;
+   margin: 0 auto;
+   display: flex;
+   justify-content: space-between;
+   align-items: flex-start; /* Alinhamento Topo (Desktop) */
+   gap: 20px;
+   padding: 10px;
 }
 
+/* Configuração Genérica */
+.footer-section {
+   flex: 1;
+}
+
+/* --- ESQUERDA (RECURSOS) --- */
+.footer-left {
+   display: flex;
+   flex-direction: column;
+   gap: 12px;
+   align-items: flex-start;
+   text-align: left;
+}
+
+.footer-left p {
+   margin: 0;
+}
+
+.footer-left a {
+   display: block;
+   color: #75b8fa;
+   text-decoration: none;
+   font-weight: 600;
+   transition: all 0.3s ease;
+   font-size: 0.95rem;
+   padding: 2px 0;
+}
+
+.footer-left a:hover {
+   color: #a0d0ff;
+   text-shadow: 0 0 10px rgba(117, 184, 250, 0.5);
+   padding-left: 5px;
+}
+
+/* --- CENTRO (CRÉDITOS) --- */
+.footer-center {
+   flex: 3; /* Espaço amplo no desktop */
+   text-align: center;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: flex-start;
+}
+
+.footer-center p {
+   font-size: 0.95rem;
+   line-height: 1.5;
+   white-space: nowrap; /* Linha única no Desktop */
+   margin: 0;
+   margin-bottom: 8px;
+}
+
+.footer-center p:first-child {
+   margin-top: 0;
+   padding-top: 0;
+}
+
+/* --- DIREITA (LOGO/LIB) --- */
+.footer-right {
+   display: flex;
+   justify-content: flex-end;
+   align-items: flex-start;
+}
+
+.lib-group {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 8px;
+}
+
+.lib-group .footer-title {
+   white-space: nowrap;
+   margin: 0;
+}
+
+/* Estilos Gerais */
 footer a {
    color: #75b8fa;
    text-decoration: none;
@@ -1089,6 +1324,192 @@ footer a:hover {
    text-shadow: 0 0 10px rgba(117, 184, 250, 0.5);
 }
 
+.footer-title {
+   font-weight: 600;
+   color: #75b8fa;
+   text-transform: uppercase;
+   font-size: 0.9rem;
+   letter-spacing: 0.5px;
+   margin-bottom: 5px;
+}
+
+/* Ícones Sociais */
+.social-icons {
+   display: flex;
+   gap: 20px;
+   margin-top: 10px;
+   justify-content: center;
+}
+
+.icon-link svg {
+   width: 28px;
+   height: 28px;
+   fill: #75b8fa;
+   transition: all 0.3s ease;
+}
+
+.icon-link:hover svg {
+   fill: #a0d0ff;
+   transform: translateY(-3px) scale(1.1);
+   filter: drop-shadow(0 0 8px rgba(117, 184, 250, 0.6));
+}
+
+/* LOGO (Funciona para IMG ou SVG) */
+.library-logo-link {
+   display: inline-block;
+   transition: transform 0.3s ease;
+}
+
+.library-logo {
+   width: 200px; /* Tamanho original desktop */
+   height: auto;
+   border-radius: 8px;
+   box-shadow: 0 4px 15px rgba(117, 184, 250, 0.2);
+   transition: all 0.3s ease;
+   display: block;
+}
+
+.library-logo-link:hover .library-logo {
+   transform: scale(1.05);
+   box-shadow: 0 6px 20px rgba(117, 184, 250, 0.4);
+}
+
+/* =======================================================
+   MEDIA QUERIES - A MÁGICA DA RESPONSIVIDADE
+   (Do maior para o menor, cobrindo até 120px)
+   ======================================================= */
+
+/* 1. TABLET / NOTEBOOK PEQUENO (Max: 1024px) */
+/* Aqui liberamos o texto para quebrar linha, senão ele vaza */
+@media (max-width: 1024px) {
+   .footer-center p {
+      white-space: normal; /* PERMITE quebra de texto */
+      padding: 0 10px; /* Margem de segurança */
+   }
+
+   .library-logo {
+      width: 160px; /* Reduz levemente a logo */
+   }
+
+   .footer-container {
+      gap: 15px; /* Aperta um pouco o layout */
+   }
+}
+
+/* 2. TABLET E CELULAR DEITADO (Max: 768px) */
+/* Ponto de ruptura: Vira COLUNA (um embaixo do outro) */
+@media (max-width: 768px) {
+   .footer-container {
+      flex-direction: column; /* Empilha */
+      align-items: center; /* Centraliza tudo */
+      text-align: center;
+      gap: 35px;
+   }
+
+   /* Força largura total para centralizar */
+   .footer-left,
+   .footer-center,
+   .footer-right {
+      width: 100%;
+      align-items: center;
+      justify-content: center;
+   }
+
+   .footer-left {
+      text-align: center; /* Garante links centralizados */
+   }
+
+   .footer-left a:hover {
+      padding-left: 0; /* Remove efeito lateral no mobile */
+      transform: scale(1.05);
+   }
+
+   .library-logo {
+      width: 150px;
+   }
+}
+
+/* 3. CELULAR PADRÃO (Max: 480px) */
+@media (max-width: 480px) {
+   footer {
+      padding: 30px 15px;
+      margin-top: 40px;
+   }
+
+   .library-logo {
+      width: 140px;
+   }
+
+   /* Diminui levemente fontes para caber melhor */
+   .footer-title {
+      font-size: 0.85rem;
+   }
+   .footer-left a {
+      font-size: 0.9rem;
+   }
+   .footer-center p {
+      font-size: 0.85rem;
+   }
+}
+
+/* 4. CELULAR PEQUENO (Max: 360px) */
+@media (max-width: 360px) {
+   footer {
+      padding: 20px 10px;
+   }
+
+   .footer-container {
+      gap: 25px;
+   }
+
+   .library-logo {
+      width: 120px;
+   }
+
+   /* Ícones mais juntinhos */
+   .social-icons {
+      gap: 15px;
+   }
+}
+
+/* 5. MICRO TELAS / RELÓGIOS (Max: 200px até 120px) */
+/* Aqui é sobrevivência: tudo muito pequeno para caber */
+@media (max-width: 200px) {
+   footer {
+      padding: 10px 5px;
+   }
+
+   .footer-container {
+      gap: 20px;
+   }
+
+   /* Logo minúscula */
+   .library-logo {
+      width: 80px;
+   }
+
+   /* Fontes microscópicas */
+   .footer-title {
+      font-size: 0.7rem;
+      margin-bottom: 2px;
+   }
+   .footer-left a {
+      font-size: 0.7rem;
+   }
+   .footer-center p {
+      font-size: 0.65rem;
+      line-height: 1.2;
+   }
+
+   /* Ajuste de ícones */
+   .icon-link svg {
+      width: 20px;
+      height: 20px;
+   }
+   .social-icons {
+      gap: 8px;
+   }
+}
 /* Responsive */
 @media (max-width: 768px) {
    header h1 {
@@ -1113,5 +1534,144 @@ footer a:hover {
 
    article p {
       font-size: 1rem;
+   }
+
+   .footer-right {
+      align-items: center;
+   }
+}
+
+/* =================================================================
+   CORREÇÃO DE RESPONSIVIDADE ULTRA-COMPACTA (Telas < 380px)
+   Adicione isso ao final do seu arquivo style.css
+================================================================= */
+
+@media (max-width: 380px) {
+   /* --- 1. HEADER: Fim da sobreposição --- */
+   /* Esconde os links de texto (Home, Livro) para dar espaço ao Logo e Ícones */
+   .header-nav {
+      display: none !important;
+   }
+
+   .header-container {
+      padding: 10px 15px; /* Reduz espaçamento lateral */
+   }
+
+   .logo-js img {
+      width: 35px; /* Reduz levemente o logo para ganhar espaço */
+      height: 35px;
+   }
+
+   /* --- 2. CONTEÚDO: Fim do "texto espremido" --- */
+
+   /* O problema principal: no desktop você usou max-width: 70%.
+      Aqui forçamos a ocupar 100% do espaço disponível no card */
+   .info-indices,
+   .form-group-imc,
+   .button-group-imc,
+   .resultado-imc {
+      max-width: 100% !important;
+      width: 100%;
+   }
+
+   /* Ajuste do Card Principal */
+   .container {
+      padding: 20px 15px; /* Menos padding interno para o texto respirar */
+   }
+
+   /* Títulos menores para não quebrar linha bruscamente */
+   .container h1 {
+      font-size: 1.4rem;
+   }
+
+   /* Inputs ocupando a linha inteira se necessário */
+   .input-wrapper-imc {
+      width: 100%;
+   }
+
+   /* --- 3. TEXTOS EXPLICATIVOS (Article) --- */
+   article {
+      padding: 15px;
+   }
+
+   /* Remove margens laterais excessivas dos parágrafos */
+   article p {
+      padding: 10px;
+      font-size: 0.9rem; /* Fonte ligeiramente menor para leitura fluida */
+      word-spacing: normal; /* Evita buracos no texto justificado */
+      line-height: 1.5;
+   }
+}
+
+/* =======================================================
+   CORREÇÃO EXTREMA (Telas < 250px - Ex: Galaxy Fold Frontal)
+   ======================================================= */
+@media (max-width: 250px) {
+   /* 1. HEADER: Ajuste final de alinhamento */
+   .header-container {
+      flex-direction: column; /* Empilha Logo em cima, Ícones embaixo */
+      gap: 10px;
+      justify-content: center;
+      padding: 10px 5px;
+   }
+
+   /* 2. SEÇÃO DE DOAÇÃO (Obrigado pelo seu apoio) */
+   .donation-section {
+      padding: 10px 2px !important; /* Quase zero de padding lateral */
+      width: 100% !important;
+      overflow-x: hidden;
+   }
+
+   .donation-container {
+      width: 100% !important;
+      padding: 5px !important;
+      margin: 0 !important;
+   }
+
+   /* O Título "Obrigado..." estava gigante */
+   .donation-container h2 {
+      font-size: 1.1rem !important; /* Diminui drasticamente a fonte */
+      line-height: 1.2;
+      word-wrap: break-word; /* Garante que não vaze */
+   }
+
+   .donation-container p {
+      font-size: 0.8rem !important;
+      padding: 0 !important;
+   }
+
+   /* 3. CARTÕES DE DOAÇÃO (PayPal, etc) */
+   .donation-methods {
+      display: flex !important;
+      flex-direction: column !important;
+      gap: 10px !important;
+      width: 100% !important;
+   }
+
+   .donation-card {
+      width: 100% !important;
+      min-width: 0 !important; /* Remove travas de largura mínima */
+      padding: 10px !important;
+      margin: 0 !important;
+      box-sizing: border-box; /* Garante que o padding não aumente a largura */
+   }
+
+   /* Ajusta o ícone e botão dentro do card */
+   .donation-icon svg {
+      width: 30px !important;
+      height: 30px !important;
+   }
+
+   .donation-link {
+      width: 100% !important;
+      padding: 8px 0 !important;
+      font-size: 0.8rem !important;
+   }
+
+   /* 4. PREVINE SCROLL HORIZONTAL GERAL */
+   body,
+   html {
+      overflow-x: hidden;
+      width: 100%;
    }
 }

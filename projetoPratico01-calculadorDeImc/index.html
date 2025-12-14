@@ -2,36 +2,221 @@
 <html lang="pt-BR">
    <head>
       <meta charset="UTF-8" />
+      <meta name="language" content="pt-BR" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta
+         http-equiv="Content-Security-Policy"
+         content="default-src 'self'; script-src 'self' https://www.youtube.com https://www.googletagmanager.com https://www.google-analytics.com https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src https://fonts.gstatic.com; img-src 'self' data: https:; frame-src https://www.youtube.com; connect-src 'self' https://www.google-analytics.com https://www.googletagmanager.com https://cdnjs.cloudflare.com;"
+      />
+      <meta name="referrer" content="strict-origin-when-cross-origin" />
+      <meta
+         http-equiv="Permissions-Policy"
+         content="camera=(), microphone=(), geolocation=(), payment=(), usb=(), magnetometer=(), gyroscope=(), accelerometer=()"
+      />
+      <meta
+         http-equiv="Strict-Transport-Security"
+         content="max-age=63072000; includeSubDomains; preload"
+      />
+      <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+
+      <!-- Preconnect para CDNs -->
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+      <link rel="preconnect" href="https://www.googletagmanager.com" />
+      <link rel="preconnect" href="https://www.google-analytics.com" />
+      <link rel="preconnect" href="https://www.youtube.com" />
+
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Calculador de IMC - Calcule seu Índice de Massa Corporal</title>
+      <meta name="robots" content="index, follow" />
+      <meta name="revisit-after" content="7 days" />
+      <meta
+         name="description"
+         content="Calculador de IMC online gratuito. Calcule seu Índice de Massa Corporal de forma rápida e fácil. Descubra sua categoria de peso e receba feedback personalizado."
+      />
+      <meta
+         name="keywords"
+         content="calculador imc, imc, índice de massa corporal, peso ideal, saúde, calculadora online, bmi calculator, javascript, js, curso javascript, frontend, desenvolvimento web, jackson douglas de souza, programação, tutorial"
+      />
+      <meta name="author" content="Jackson Douglas de Souza" />
+      <meta name="copyright" content="© 2025 Jackson Douglas de Souza" />
+      <link
+         rel="canonical"
+         href="https://jacksondouglasdesouza.github.io/javascript-completo/projetoPratico01-calculadorDeImc/"
+      />
+      <meta
+         name="google-site-verification"
+         content="Olz_lzfwqH30d4eQ-g-tAAhlupJK_ujt3cc85CvMHLc"
+      />
+      <meta property="og:type" content="website" />
+      <meta
+         property="og:url"
+         content="https://jacksondouglasdesouza.github.io/javascript-completo/projetoPratico01-calculadorDeImc/"
+      />
+      <meta property="og:site_name" content="Calculador de IMC" />
+      <meta
+         property="og:title"
+         content="Calculador de IMC - Índice de Massa Corporal"
+      />
+      <meta
+         property="og:description"
+         content="Calculador de IMC online gratuito. Calcule seu Índice de Massa Corporal de forma rápida e fácil. Descubra sua categoria de peso e receba feedback personalizado."
+      />
+      <meta property="og:locale" content="pt_BR" />
+      <meta
+         property="og:image"
+         content="https://jacksondouglasdesouza.github.io/javascript-completo/projetoPratico01-calculadorDeImc/imgs/IMC-CALCULO.jpg"
+      />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
+      <meta property="og:image:alt" content="Calculador de IMC Online" />
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:site" content="@jacksondouglasdesouza" />
+      <meta
+         name="twitter:title"
+         content="Calculador de IMC - Calcule seu Índice de Massa Corporal"
+      />
+      <meta
+         name="twitter:description"
+         content="Calculador de IMC online gratuito. Calcule seu Índice de Massa Corporal de forma rápida e fácil. Descubra sua categoria de peso e receba feedback personalizado."
+      />
+      <meta
+         name="twitter:image"
+         content="https://jacksondouglasdesouza.github.io/javascript-completo/projetoPratico01-calculadorDeImc/imgs/IMC-CALCULO.jpg"
+      />
+      <link
+         rel="icon"
+         type="image/png"
+         href="../favicon/favicon-96x96.png"
+         sizes="96x96"
+      />
+      <link rel="icon" type="image/svg+xml" href="../favicon/favicon.svg" />
+      <link rel="shortcut icon" href="../favicon/favicon.ico" />
+      <link
+         rel="apple-touch-icon"
+         sizes="180x180"
+         href="../favicon/apple-touch-icon.png"
+      />
+      <link rel="manifest" href="../favicon/site.webmanifest" />
+
+      <!-- Google Analytics -->
+      <script
+         async
+         src="https://www.googletagmanager.com/gtag/js?id=G-QF33YD6QW9"
+      ></script>
+      <script>
+         window.dataLayer = window.dataLayer || [];
+         function gtag() {
+            dataLayer.push(arguments);
+         }
+         gtag("js", new Date());
+         gtag("config", "G-QF33YD6QW9");
+      </script>
+
+      <!-- Fonts -->
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
       <link rel="stylesheet" href="style.css" />
-      <title>Projeto Prático 01 - Calculador de IMC</title>
+      <link
+         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      />
+      <!-- Prisma -->
       <link
          href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css"
          rel="stylesheet"
       />
+
+      <!-- Schema.org - Calculadora -->
+      <script type="application/ld+json">
+         {
+            "@context": "https://schema.org",
+            "@type": "WebApplication",
+            "name": "Calculador de IMC",
+            "description": "Ferramenta online gratuita para calcular o Índice de Massa Corporal (IMC) de forma rápida e fácil.",
+            "url": "https://jacksondouglasdesouza.github.io/javascript-completo/projetoPratico01-calculadorDeImc/",
+            "applicationCategory": "HealthApplication",
+            "offers": {
+               "@type": "Offer",
+               "price": "0",
+               "priceCurrency": "BRL"
+            },
+            "author": {
+               "@type": "Person",
+               "name": "Jackson Douglas de Souza",
+               "url": "https://github.com/jacksondouglasdesouza"
+            }
+         }
+      </script>
    </head>
 
    <body>
-      <header>
-         <h1>Projeto Prático 01 - Calculador de IMC</h1>
+      <header class="main-header">
+         <div class="header-container">
+            <div class="header-left">
+               <div class="logo-js">
+                  <a href="../">
+                     <img
+                        src="../logoJavascript.png"
+                        alt="JavaScript Logo"
+                        width="50px"
+                     />
+                  </a>
+               </div>
+            </div>
+
+            <nav class="header-nav">
+               <a href="../" class="nav-link active">Home</a>
+               <a
+                  href="https://eloquentjavascript.net/"
+                  target="_blank"
+                  class="nav-link"
+                  >Livro</a
+               >
+               <a
+                  href="https://github.com/jacksondouglasdesouza"
+                  target="_blank"
+                  class="nav-link"
+                  >Repositório</a
+               >
+            </nav>
+
+            <div class="header-right">
+               <a
+                  href="https://www.linkedin.com/in/jacksondouglasdsouza/"
+                  target="_blank"
+                  class="icon-link-header"
+               >
+                  <svg
+                     xmlns="http://www.w3.org/2000/svg"
+                     viewBox="0 0 24 24"
+                     fill="currentColor"
+                  >
+                     <path
+                        d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452z"
+                     />
+                  </svg>
+               </a>
+               <a
+                  href="https://github.com/jacksondouglasdesouza"
+                  target="_blank"
+                  class="icon-link-header"
+               >
+                  <svg
+                     xmlns="http://www.w3.org/2000/svg"
+                     viewBox="0 0 24 24"
+                     fill="currentColor"
+                  >
+                     <path
+                        d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
+                     />
+                  </svg>
+               </a>
+            </div>
+         </div>
       </header>
 
       <main>
-         <a href="../" class="btn-voltar">
-            <svg
-               xmlns="http://www.w3.org/2000/svg"
-               viewBox="0 0 24 24"
-               fill="none"
-               stroke="currentColor"
-               stroke-width="2"
-               stroke-linecap="round"
-               stroke-linejoin="round"
-            >
-               <path d="M19 12H5M12 19l-7-7 7-7" />
-            </svg>
-            Voltar para Home
-         </a>
-
          <section class="section-title">
             <h2>Calculador de IMC</h2>
          </section>
@@ -148,16 +333,236 @@
          <article>
             <figure>
                <img
-                  src="./imgs/valorReferencia.jpg"
+                  src="./imgs/IMC-CALCULO.jpg"
                   alt="Calculador de IMC em JavaScript"
                   width="600"
                />
                <figcaption>Calculador de IMC</figcaption>
             </figure>
 
-            <p><strong>Calculador de IMC</strong> -</p>
+            <p>
+               O<strong>Índice de Massa Corporal (IMC)</strong> é uma medida
+               utilizada para avaliar se o peso de uma pessoa está adequado para
+               sua altura. Este cálculo é importante para determinar se há
+               riscos de saúde relacionados ao peso e orientar sobre a
+               necessidade de mudanças nos hábitos de vida.
+            </p>
 
-            <pre><code class="language-html">//Projeto Prático 01 - Calculador de IMC
+            <p>
+               A fórmula para calcular o IMC é simples e direta:
+               <strong>IMC = Peso (kg) ÷ Altura² (m)</strong>. Por exemplo, uma
+               pessoa que pesa 70 quilogramas e tem 1,75 metros de altura terá
+               um IMC de <strong>22,86</strong>, que é considerado saudável.
+            </p>
+
+            <div class="download">
+               <h3>📥 Downloads dos Arquivos do Calculador de IMC</h3>
+
+               <p>
+                  <strong>Arquivo CSS:</strong>
+                  <a href="codigoCalculadorDownload/calculadorImc.css" download>
+                     📥 Baixar CSS
+                  </a>
+               </p>
+
+               <p>
+                  <strong>Arquivo HTML:</strong>
+                  <a
+                     href="codigoCalculadorDownload/calculadorImc.html"
+                     download
+                  >
+                     📥 Baixar HTML
+                  </a>
+               </p>
+
+               <p>
+                  <strong>Arquivo JavaScript:</strong>
+                  <a href="codigoCalculadorDownload/calculadorImc.js" download>
+                     📥 Baixar JavaScript
+                  </a>
+               </p>
+            </div>
+
+            <pre><code class="language-html">//Projeto Prático 01 - Calculador de IMC.
+// ============================================
+// PROJETO PRÁTICO 01 - Calculador de IMC em JavaScript
+// ============================================
+// Este projeto calcula o Índice de Massa Corporal (IMC)
+// e classifica o resultado em 4 categorias de saúde
+
+// ============================================
+// PASSO 1: DEFINIR AS CATEGORIAS DE IMC
+// ============================================
+// Este objeto contém TODAS as informações sobre as
+// 4 categorias de IMC (abaixo do peso, normal, sobrepeso, obeso)
+// Cada categoria tem: valor mínimo, valor máximo, nome, estilo CSS e descrição
+const categoriasIMC = {
+   // Categoria 1: Abaixo do Peso
+   abaixo: {
+      min: 0,           // IMC a partir de 0
+      max: 18.5,        // IMC até 18,5
+      nome: "Abaixo do Peso",
+      classe: "categoria-abaixo",  // Classe CSS para estilo azul
+      descricao:
+         "Seu IMC está abaixo do ideal. Considere consultar um nutricionista para uma alimentação mais equilibrada.",
+   },
+   
+   // Categoria 2: Peso Saudável/Normal
+   saudavel: {
+      min: 18.5,
+      max: 24.9,
+      nome: "Peso Normal",
+      classe: "categoria-saudavel",  // Classe CSS para estilo verde
+      descricao:
+         "Parabéns! Seu peso está dentro da faixa saudável. Continue mantendo seus hábitos!",
+   },
+   
+   // Categoria 3: Sobrepeso
+   sobrepeso: {
+      min: 25,
+      max: 29.9,
+      nome: "Sobrepeso",
+      classe: "categoria-sobrepeso",  // Classe CSS para estilo amarelo/laranja
+      descricao:
+         "Você está com sobrepeso. Uma atividade física regular pode ajudar a melhorar sua saúde.",
+   },
+   
+   // Categoria 4: Obesidade
+   obeso: {
+      min: 30,
+      max: 999,         // Qualquer valor acima de 30
+      nome: "Obesidade",
+      classe: "categoria-obeso",  // Classe CSS para estilo vermelho
+      descricao:
+         "Você está na faixa de obesidade. Recomenda-se buscar orientação médica e nutricional.",
+   },
+};
+
+// ============================================
+// PASSO 2: FUNÇÃO PARA CALCULAR O IMC
+// ============================================
+// Esta função é responsável por:
+// 1. Pegar os valores de peso e altura do formulário
+// 2. Validar se os valores estão corretos
+// 3. Calcular a fórmula: IMC = peso / (altura × altura)
+// 4. Identificar qual é a categoria do usuário
+// 5. Chamar a função para exibir o resultado
+function calcularIMC() {
+   // Pega o peso do campo de entrada e converte para número decimal
+   const peso = parseFloat(document.getElementById("peso").value);
+   
+   // Pega a altura do campo de entrada e converte para número decimal
+   const altura = parseFloat(document.getElementById("altura").value);
+
+   // VALIDAÇÃO: Verifica se peso e altura foram preenchidos corretamente
+   // Se estiverem vazios OU forem zero ou menores que zero, mostra alerta
+   if (!peso || !altura || peso <= 0 || altura <= 0) {
+      alert("Por favor, preencha corretamente o peso e altura!");
+      return;  // Para a execução da função aqui
+   }
+
+   // CÁLCULO DO IMC: Fórmula matemática oficial
+   // IMC = Peso (kg) ÷ Altura² (metros)
+   // Exemplo: Peso 70kg, Altura 1,75m → 70 ÷ (1,75 × 1,75) = 22,86
+   const imc = peso / (altura * altura);
+   
+   // Variável que será preenchida com a categoria encontrada
+   let categoria = null;
+
+   // LOOP: Percorre todas as categorias para encontrar em qual faixa o IMC se encaixa
+   for (let key in categoriasIMC) {
+      // Pega a categoria atual do objeto
+      const cat = categoriasIMC[key];
+      
+      // Verifica se o IMC calculado está dentro dessa faixa (min e max)
+      if (imc >= cat.min && imc <= cat.max) {
+         categoria = cat;  // Encontrou! Armazena a categoria
+         break;            // Para o loop, pois já encontrou a categoria correta
+      }
+   }
+
+   // CHAMA A FUNÇÃO para exibir o resultado na tela
+   exibirResultado(imc, categoria, peso, altura);
+}
+
+// ============================================
+// PASSO 3: FUNÇÃO PARA EXIBIR O RESULTADO
+// ============================================
+// Esta função recebe o IMC calculado e a categoria encontrada
+// e coloca essas informações na tela para o usuário ver
+function exibirResultado(imc, categoria, peso, altura) {
+   // Coloca o valor do IMC na tela (com 2 casas decimais)
+   // Exemplo: 22.86 (não 22.857891...)
+   document.getElementById("imc-Valor").textContent = imc.toFixed(2);
+
+   // Busca o elemento que mostra a categoria
+   const categoriaEl = document.getElementById("imc-Categoria");
+   
+   // Coloca o nome da categoria (Ex: "Peso Normal")
+   categoriaEl.textContent = categoria.nome;
+   
+   // Adiciona a classe CSS para colorir o resultado
+   // (Ex: "categoria-saudavel" deixa com cor verde)
+   categoriaEl.className = `imc-categoria ${categoria.classe}`;
+
+   // Coloca a descrição/conselho na tela
+   document.getElementById("imc-Descricao").textContent = categoria.descricao;
+   
+   // Mostra novamente o peso que foi informado
+   document.getElementById("pesoInfo").textContent = `${peso} kg`;
+   
+   // Mostra novamente a altura que foi informada
+   document.getElementById("alturaInfo").textContent = `${altura} m`;
+
+   // Busca a caixa de resultado (estava escondida)
+   const resultadoEl = document.getElementById("resultado");
+   
+   // Adiciona a classe "ativo" que faz aparecer com animação
+   // (CSS tem: opacity: 1 e transform quando "ativo")
+   resultadoEl.classList.add("ativo");
+}
+
+// ============================================
+// PASSO 4: FUNÇÃO PARA LIMPAR O FORMULÁRIO
+// ============================================
+// Limpa todos os campos e esconde o resultado
+function limparCamposIMC() {
+   // Limpa o campo de peso (deixa em branco)
+   document.getElementById("peso").value = "";
+   
+   // Limpa o campo de altura (deixa em branco)
+   document.getElementById("altura").value = "";
+   
+   // Remove a classe "ativo" para esconder o resultado novamente
+   document.getElementById("resultado").classList.remove("ativo");
+}
+
+// ============================================
+// PASSO 5: EVENTOS - BOTÕES E TECLA ENTER
+// ============================================
+
+// EVENTO 1: Permite calcular quando o usuário pressiona ENTER
+// (Melhor experiência de usuário - não precisa clicar no botão)
+document.getElementById("FormIMC").addEventListener("keypress", function (e) {
+   // Verifica se a tecla pressionada foi ENTER
+   if (e.key === "Enter") {
+      e.preventDefault();      // Para o comportamento padrão do Enter
+      calcularIMC();           // Executa o cálculo
+   }
+});
+
+// EVENTO 2: Botão "Calcular IMC" - Quando clica, calcula o IMC
+document.getElementById("btnCalcular").addEventListener("click", function (e) {
+   e.preventDefault();  // Para o comportamento padrão do botão
+   calcularIMC();       // Executa a função de cálculo
+});
+
+// EVENTO 3: Botão "Limpar" - Quando clica, limpa tudo
+document.getElementById("btnLimpar").addEventListener("click", function (e) {
+   e.preventDefault();      // Para o comportamento padrão do botão
+   limparCamposIMC();       // Executa a função de limpeza
+});
+
 // FIM DO CÓDIGO</code></pre>
          </article>
       </main>
@@ -273,36 +678,108 @@
          </div>
       </section>
       <!-- -->
-
       <footer>
-         <p>
-            Desenvolvido com ❤️ por
-            <a
-               href="https://www.linkedin.com/in/jacksondouglasdsouza/"
-               target="_blank"
-               rel="noopener noreferrer"
-            >
-               Jackson Douglas de Souza
-            </a>
-         </p>
-         <p>Siga-me nas redes sociais</p>
-         <p>
-            <a
-               href="https://www.linkedin.com/in/jacksondouglasdsouza/"
-               target="_blank"
-               rel="noopener noreferrer"
-               >LinkedIn</a
-            >
-            |
-            <a
-               href="https://github.com/jacksondouglasdesouza"
-               target="_blank"
-               rel="noopener noreferrer"
-               >Github</a
-            >
-         </p>
-      </footer>
+         <div class="footer-container">
+            <!-- Esquerda: Links da Biblioteca -->
+            <div class="footer-section footer-left">
+               <p class="footer-title">Recursos</p>
+               <a
+                  href="https://eloquentjavascript.net/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+               >
+                  Home
+               </a>
+               <a
+                  href="https://eloquentjavascript.net/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+               >
+                  Livro
+               </a>
+               <a
+                  href="https://github.com/jacksondouglasdesouza"
+                  target="_blank"
+                  rel="noopener noreferrer"
+               >
+                  Repositório
+               </a>
+            </div>
+            <!-- -->
+            <div class="footer-section footer-center">
+               <p>
+                  Desenvolvido com ❤️ por
+                  <a
+                     href="https://www.linkedin.com/in/jacksondouglasdsouza/"
+                     target="_blank"
+                     rel="noopener noreferrer"
+                  >
+                     Jackson Douglas de Souza
+                  </a>
+               </p>
 
+               <p>Siga-me nas redes sociais</p>
+
+               <div class="social-icons">
+                  <a
+                     href="https://www.linkedin.com/in/jacksondouglasdsouza/"
+                     target="_blank"
+                     rel="noopener noreferrer"
+                     aria-label="LinkedIn"
+                     class="icon-link"
+                  >
+                     <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                     >
+                        <path
+                           d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452z"
+                        />
+                     </svg>
+                  </a>
+
+                  <a
+                     href="https://github.com/jacksondouglasdesouza"
+                     target="_blank"
+                     rel="noopener noreferrer"
+                     aria-label="Github"
+                     class="icon-link"
+                  >
+                     <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                     >
+                        <path
+                           d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
+                        />
+                     </svg>
+                  </a>
+               </div>
+            </div>
+            <!-- -->
+            <div class="footer-section footer-right">
+               <div class="lib-group">
+                  <p class="footer-title">Conheça minha Lib</p>
+
+                  <a
+                     href="https://www.npmjs.com/package/codymath"
+                     target="_blank"
+                     rel="noopener noreferrer"
+                     class="library-logo-link"
+                     title="CodyMath - Biblioteca Matemática"
+                  >
+                     <img
+                        src="./imgs/logoCodyMath.png"
+                        alt="CodyMath - Biblioteca Matemática"
+                        class="library-logo"
+                     />
+                  </a>
+               </div>
+            </div>
+         </div>
+      </footer>
       <!-- -->
       <button id="scrollToTop" class="scroll-to-top" title="Voltar ao topo">
          <svg viewBox="0 0 24 24" fill="currentColor">
