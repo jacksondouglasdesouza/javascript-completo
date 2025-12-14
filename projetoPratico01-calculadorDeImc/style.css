@@ -23,16 +23,12 @@ h6 {
    font-family: "Poppins", sans-serif;
 }
 
-/* ========================
-   NAVBAR MODERNA (HEADER)
-   ======================== */
 .main-header {
-   position: fixed; /* Fica fixo no topo ao rolar */
+   position: fixed;
    top: 0;
    left: 0;
    width: 100%;
    z-index: 1000;
-   /* Efeito de Vidro (Glassmorphism) */
    background: rgba(15, 15, 15, 0.85);
    backdrop-filter: blur(12px);
    -webkit-backdrop-filter: blur(12px);
@@ -49,7 +45,6 @@ h6 {
    align-items: center;
 }
 
-/* ESQUERDA - LOGO */
 .header-left {
    display: flex;
    align-items: center;
@@ -81,7 +76,6 @@ h6 {
    transition: color 0.3s ease;
 }
 
-/* Efeito legal de sublinhado ao passar o mouse */
 .nav-link::after {
    content: "";
    position: absolute;
@@ -107,7 +101,6 @@ h6 {
    font-weight: 600;
 }
 
-/* DIREITA - ÍCONES */
 .header-right {
    display: flex;
    gap: 15px;
@@ -126,7 +119,6 @@ h6 {
    filter: drop-shadow(0 0 5px rgba(117, 184, 250, 0.5));
 }
 
-/* RESPONSIVO PARA O HEADER */
 @media (max-width: 768px) {
    .header-nav {
       gap: 15px;
@@ -142,7 +134,6 @@ h6 {
 }
 
 @media (max-width: 480px) {
-   /* No celular muito pequeno, escondemos os links e deixamos só home e icons */
    .nav-link:not(.active) {
       display: none;
    }
@@ -153,21 +144,14 @@ h6 {
    }
 }
 
-/* =======================================================
-   MAIN CONTENT (Conteúdo Principal)
-   ======================================================= */
 main {
    max-width: 1300px;
    margin: 0 auto;
 
-   /* AQUI ESTÁ A CORREÇÃO PRINCIPAL: */
-   /* 130px em cima para empurrar o conteúdo para baixo da barra fixa */
-   /* 20px nas laterais e 40px embaixo */
    padding: 130px 20px 40px 20px;
 }
 
 @media (max-width: 768px) {
-   /* No celular a barra é menor, então o padding pode ser menor */
    main {
       padding-top: 100px;
    }
@@ -1212,16 +1196,14 @@ code[class*="language-"] {
    font-family: "Fira Code", "Consolas", monospace;
 }
 
-/* =======================================================
-   FOOTER - CODYME ACADEMY (VERSÃO FINAL)
-   ======================================================= */
+/* --------------------------------------*/
+
 footer {
    background: linear-gradient(to right, #0f0f0f, #1a1a1a);
    color: #d1d1d1;
    margin-top: 80px;
    padding: 40px 20px;
    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.5);
-   /* Segurança extra para nada vazar da tela */
    overflow: hidden;
 }
 
@@ -1230,17 +1212,15 @@ footer {
    margin: 0 auto;
    display: flex;
    justify-content: space-between;
-   align-items: flex-start; /* Alinhamento Topo (Desktop) */
+   align-items: flex-start;
    gap: 20px;
    padding: 10px;
 }
 
-/* Configuração Genérica */
 .footer-section {
    flex: 1;
 }
 
-/* --- ESQUERDA (RECURSOS) --- */
 .footer-left {
    display: flex;
    flex-direction: column;
@@ -1269,9 +1249,8 @@ footer {
    padding-left: 5px;
 }
 
-/* --- CENTRO (CRÉDITOS) --- */
 .footer-center {
-   flex: 3; /* Espaço amplo no desktop */
+   flex: 3;
    text-align: center;
    display: flex;
    flex-direction: column;
@@ -1282,7 +1261,7 @@ footer {
 .footer-center p {
    font-size: 0.95rem;
    line-height: 1.5;
-   white-space: nowrap; /* Linha única no Desktop */
+   white-space: nowrap;
    margin: 0;
    margin-bottom: 8px;
 }
@@ -1292,7 +1271,6 @@ footer {
    padding-top: 0;
 }
 
-/* --- DIREITA (LOGO/LIB) --- */
 .footer-right {
    display: flex;
    justify-content: flex-end;
@@ -1311,7 +1289,6 @@ footer {
    margin: 0;
 }
 
-/* Estilos Gerais */
 footer a {
    color: #75b8fa;
    text-decoration: none;
@@ -1333,7 +1310,6 @@ footer a:hover {
    margin-bottom: 5px;
 }
 
-/* Ícones Sociais */
 .social-icons {
    display: flex;
    gap: 20px;
@@ -1354,14 +1330,13 @@ footer a:hover {
    filter: drop-shadow(0 0 8px rgba(117, 184, 250, 0.6));
 }
 
-/* LOGO (Funciona para IMG ou SVG) */
 .library-logo-link {
    display: inline-block;
    transition: transform 0.3s ease;
 }
 
 .library-logo {
-   width: 200px; /* Tamanho original desktop */
+   width: 200px;
    height: auto;
    border-radius: 8px;
    box-shadow: 0 4px 15px rgba(117, 184, 250, 0.2);
@@ -1374,39 +1349,29 @@ footer a:hover {
    box-shadow: 0 6px 20px rgba(117, 184, 250, 0.4);
 }
 
-/* =======================================================
-   MEDIA QUERIES - A MÁGICA DA RESPONSIVIDADE
-   (Do maior para o menor, cobrindo até 120px)
-   ======================================================= */
-
-/* 1. TABLET / NOTEBOOK PEQUENO (Max: 1024px) */
-/* Aqui liberamos o texto para quebrar linha, senão ele vaza */
 @media (max-width: 1024px) {
    .footer-center p {
-      white-space: normal; /* PERMITE quebra de texto */
-      padding: 0 10px; /* Margem de segurança */
+      white-space: normal;
+      padding: 0 10px;
    }
 
    .library-logo {
-      width: 160px; /* Reduz levemente a logo */
+      width: 160px;
    }
 
    .footer-container {
-      gap: 15px; /* Aperta um pouco o layout */
+      gap: 15px;
    }
 }
 
-/* 2. TABLET E CELULAR DEITADO (Max: 768px) */
-/* Ponto de ruptura: Vira COLUNA (um embaixo do outro) */
 @media (max-width: 768px) {
    .footer-container {
-      flex-direction: column; /* Empilha */
-      align-items: center; /* Centraliza tudo */
+      flex-direction: column;
+      align-items: center;
       text-align: center;
       gap: 35px;
    }
 
-   /* Força largura total para centralizar */
    .footer-left,
    .footer-center,
    .footer-right {
@@ -1416,11 +1381,11 @@ footer a:hover {
    }
 
    .footer-left {
-      text-align: center; /* Garante links centralizados */
+      text-align: center;
    }
 
    .footer-left a:hover {
-      padding-left: 0; /* Remove efeito lateral no mobile */
+      padding-left: 0;
       transform: scale(1.05);
    }
 
@@ -1429,7 +1394,6 @@ footer a:hover {
    }
 }
 
-/* 3. CELULAR PADRÃO (Max: 480px) */
 @media (max-width: 480px) {
    footer {
       padding: 30px 15px;
@@ -1440,7 +1404,6 @@ footer a:hover {
       width: 140px;
    }
 
-   /* Diminui levemente fontes para caber melhor */
    .footer-title {
       font-size: 0.85rem;
    }
@@ -1452,7 +1415,6 @@ footer a:hover {
    }
 }
 
-/* 4. CELULAR PEQUENO (Max: 360px) */
 @media (max-width: 360px) {
    footer {
       padding: 20px 10px;
@@ -1466,14 +1428,11 @@ footer a:hover {
       width: 120px;
    }
 
-   /* Ícones mais juntinhos */
    .social-icons {
       gap: 15px;
    }
 }
 
-/* 5. MICRO TELAS / RELÓGIOS (Max: 200px até 120px) */
-/* Aqui é sobrevivência: tudo muito pequeno para caber */
 @media (max-width: 200px) {
    footer {
       padding: 10px 5px;
@@ -1483,12 +1442,10 @@ footer a:hover {
       gap: 20px;
    }
 
-   /* Logo minúscula */
    .library-logo {
       width: 80px;
    }
 
-   /* Fontes microscópicas */
    .footer-title {
       font-size: 0.7rem;
       margin-bottom: 2px;
@@ -1501,7 +1458,6 @@ footer a:hover {
       line-height: 1.2;
    }
 
-   /* Ajuste de ícones */
    .icon-link svg {
       width: 20px;
       height: 20px;
@@ -1510,6 +1466,7 @@ footer a:hover {
       gap: 8px;
    }
 }
+
 /* Responsive */
 @media (max-width: 768px) {
    header h1 {
@@ -1541,31 +1498,20 @@ footer a:hover {
    }
 }
 
-/* =================================================================
-   CORREÇÃO DE RESPONSIVIDADE ULTRA-COMPACTA (Telas < 380px)
-   Adicione isso ao final do seu arquivo style.css
-================================================================= */
-
 @media (max-width: 380px) {
-   /* --- 1. HEADER: Fim da sobreposição --- */
-   /* Esconde os links de texto (Home, Livro) para dar espaço ao Logo e Ícones */
    .header-nav {
       display: none !important;
    }
 
    .header-container {
-      padding: 10px 15px; /* Reduz espaçamento lateral */
+      padding: 10px 15px;
    }
 
    .logo-js img {
-      width: 35px; /* Reduz levemente o logo para ganhar espaço */
+      width: 35px;
       height: 35px;
    }
 
-   /* --- 2. CONTEÚDO: Fim do "texto espremido" --- */
-
-   /* O problema principal: no desktop você usou max-width: 70%.
-      Aqui forçamos a ocupar 100% do espaço disponível no card */
    .info-indices,
    .form-group-imc,
    .button-group-imc,
@@ -1576,48 +1522,39 @@ footer a:hover {
 
    /* Ajuste do Card Principal */
    .container {
-      padding: 20px 15px; /* Menos padding interno para o texto respirar */
+      padding: 20px 15px;
    }
 
-   /* Títulos menores para não quebrar linha bruscamente */
    .container h1 {
       font-size: 1.4rem;
    }
 
-   /* Inputs ocupando a linha inteira se necessário */
    .input-wrapper-imc {
       width: 100%;
    }
 
-   /* --- 3. TEXTOS EXPLICATIVOS (Article) --- */
    article {
       padding: 15px;
    }
 
-   /* Remove margens laterais excessivas dos parágrafos */
    article p {
       padding: 10px;
-      font-size: 0.9rem; /* Fonte ligeiramente menor para leitura fluida */
-      word-spacing: normal; /* Evita buracos no texto justificado */
+      font-size: 0.9rem;
+      word-spacing: normal;
       line-height: 1.5;
    }
 }
 
-/* =======================================================
-   CORREÇÃO EXTREMA (Telas < 250px - Ex: Galaxy Fold Frontal)
-   ======================================================= */
 @media (max-width: 250px) {
-   /* 1. HEADER: Ajuste final de alinhamento */
    .header-container {
-      flex-direction: column; /* Empilha Logo em cima, Ícones embaixo */
+      flex-direction: column;
       gap: 10px;
       justify-content: center;
       padding: 10px 5px;
    }
 
-   /* 2. SEÇÃO DE DOAÇÃO (Obrigado pelo seu apoio) */
    .donation-section {
-      padding: 10px 2px !important; /* Quase zero de padding lateral */
+      padding: 10px 2px !important;
       width: 100% !important;
       overflow-x: hidden;
    }
@@ -1628,11 +1565,10 @@ footer a:hover {
       margin: 0 !important;
    }
 
-   /* O Título "Obrigado..." estava gigante */
    .donation-container h2 {
-      font-size: 1.1rem !important; /* Diminui drasticamente a fonte */
+      font-size: 1.1rem !important;
       line-height: 1.2;
-      word-wrap: break-word; /* Garante que não vaze */
+      word-wrap: break-word;
    }
 
    .donation-container p {
@@ -1640,7 +1576,6 @@ footer a:hover {
       padding: 0 !important;
    }
 
-   /* 3. CARTÕES DE DOAÇÃO (PayPal, etc) */
    .donation-methods {
       display: flex !important;
       flex-direction: column !important;
@@ -1650,13 +1585,12 @@ footer a:hover {
 
    .donation-card {
       width: 100% !important;
-      min-width: 0 !important; /* Remove travas de largura mínima */
+      min-width: 0 !important;
       padding: 10px !important;
       margin: 0 !important;
-      box-sizing: border-box; /* Garante que o padding não aumente a largura */
+      box-sizing: border-box;
    }
 
-   /* Ajusta o ícone e botão dentro do card */
    .donation-icon svg {
       width: 30px !important;
       height: 30px !important;
@@ -1668,7 +1602,6 @@ footer a:hover {
       font-size: 0.8rem !important;
    }
 
-   /* 4. PREVINE SCROLL HORIZONTAL GERAL */
    body,
    html {
       overflow-x: hidden;
