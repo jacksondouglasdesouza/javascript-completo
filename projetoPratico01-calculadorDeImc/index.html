@@ -6,7 +6,7 @@
       <meta http-equiv="X-UA-Compatible" content="IE=edge" />
       <meta
          http-equiv="Content-Security-Policy"
-         content="default-src 'self'; script-src 'self' https://www.youtube.com https://www.googletagmanager.com https://www.google-analytics.com https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src https://fonts.gstatic.com; img-src 'self' data: https:; frame-src https://www.youtube.com; connect-src 'self' https://www.google-analytics.com https://www.googletagmanager.com https://cdnjs.cloudflare.com;"
+         content="default-src 'self'; script-src 'self' 'nonce-7f3a9b2c5e8d1f4a' https://www.youtube.com https://www.googletagmanager.com https://www.google-analytics.com https://cdnjs.cloudflare.com; style-src 'self' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src https://fonts.gstatic.com data:; img-src 'self' data: https:; frame-src https://www.youtube.com; connect-src 'self' https://www.google-analytics.com https://www.googletagmanager.com https://cdnjs.cloudflare.com; frame-ancestors 'none'"
       />
       <meta name="referrer" content="strict-origin-when-cross-origin" />
       <meta
@@ -105,7 +105,7 @@
          async
          src="https://www.googletagmanager.com/gtag/js?id=G-QF33YD6QW9"
       ></script>
-      <script>
+      <script nonce="7f3a9b2c5e8d1f4a">
          window.dataLayer = window.dataLayer || [];
          function gtag() {
             dataLayer.push(arguments);
@@ -174,7 +174,7 @@
                   >Livro</a
                >
                <a
-                  href="https://github.com/jacksondouglasdesouza"
+                  href="https://github.com/jacksondouglasdesouza/javascript-completo"
                   target="_blank"
                   class="nav-link"
                   >Repositório</a
@@ -383,7 +383,7 @@
                </p>
             </div>
 
-            <pre><code class="language-html">//Projeto Prático 01 - Calculador de IMC.
+            <pre><code class="language-javascript">//Projeto Prático 01 - Calculador de IMC.
 // ============================================
 // PROJETO PRÁTICO 01 - Calculador de IMC em JavaScript
 // ============================================
@@ -683,9 +683,7 @@ document.getElementById("btnLimpar").addEventListener("click", function (e) {
             <!-- Esquerda: Links da Biblioteca -->
             <div class="footer-section footer-left">
                <p class="footer-title">Recursos</p>
-               <a href="../" target="_blank" rel="noopener noreferrer">
-                  Home
-               </a>
+               <a href="../"> Home </a>
                <a
                   href="https://eloquentjavascript.net/"
                   target="_blank"

@@ -1256,14 +1256,14 @@ footer {
    flex-direction: column;
    align-items: center;
    justify-content: flex-start;
+   margin: 0 auto;
 }
 
 .footer-center p {
-   font-size: 0.95rem;
-   line-height: 1.5;
+   font-size: 1.1rem;
+   line-height: 1.4;
    white-space: nowrap;
-   margin: 0;
-   margin-bottom: 8px;
+   margin-bottom: 2px;
 }
 
 .footer-center p:first-child {
@@ -1499,8 +1499,8 @@ footer a:hover {
 }
 
 @media (max-width: 380px) {
-   .header-nav {
-      display: none !important;
+   header h1 {
+      font-size: 1.4rem;
    }
 
    .header-container {
