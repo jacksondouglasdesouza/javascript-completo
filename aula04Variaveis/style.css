@@ -65,7 +65,7 @@ h6 {
 
 .header-nav {
    display: flex;
-   gap: 30px;
+   gap: 40px;
 }
 
 .nav-link {
@@ -75,6 +75,14 @@ h6 {
    font-weight: 500;
    position: relative;
    transition: color 0.3s ease;
+   text-align: center;
+   margin-right: 12px;
+}
+
+.nav-link .nav-link-svg {
+   display: inline;
+   vertical-align: middle;
+   margin: 0;
 }
 
 .nav-link::after {

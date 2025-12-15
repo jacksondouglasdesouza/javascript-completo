@@ -19,34 +19,83 @@
                   <a href="../">
                      <img
                         src="../logoJavascript.png"
-                        alt="JavaScript Logo"
+                        alt="JavaScript Logo - Voltar a home"
                         width="50px"
+                        height="50px"
                      />
                   </a>
                </div>
             </div>
 
-            <nav class="header-nav">
+            <nav class="hadeer-nav">
                <a href="../" class="nav-link active">Home</a>
+               <!-- -->
                <a
                   href="https://eloquentjavascript.net/"
                   target="_blank"
+                  rel="noopener noreferrer"
                   class="nav-link"
-                  >Livro</a
+                  aria-label="Abrir Livro Eloquent JavaScript em nova aba"
                >
+                  <svg
+                     xmlns="http://www.w3.org/2000/svg"
+                     viewBox="0 0 24 24"
+                     fill="none"
+                     stroke="currentColor"
+                     stroke-width="2"
+                     stroke-linecap="round"
+                     stroke-linejoin="round"
+                     width="16"
+                     height="16"
+                     aria-hidden="true"
+                     class="nav-link-svg"
+                  >
+                     <path
+                        d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                     ></path>
+                     <polyline points="15 3 21 3 21 9"></polyline>
+                     <line x1="10" y1="14" x2="21" y2="3"></line>
+                  </svg>
+                  Livro
+               </a>
+               <!-- -->
                <a
                   href="https://github.com/jacksondouglasdesouza/javascript-completo"
                   target="_blank"
+                  rel="noopener noreferrer"
                   class="nav-link"
-                  >Repositório</a
+                  aria-label="Abrir o Repositório da página no GitHub em nova aba"
                >
+                  <svg
+                     xmlns="http://www.w3.org/2000/svg"
+                     viewBox="0 0 24 24"
+                     fill="none"
+                     stroke="currentColor"
+                     stroke-width="2"
+                     stroke-linecap="round"
+                     stroke-linejoin="round"
+                     width="16"
+                     height="16"
+                     class="nav-link-svg"
+                     aria-hidden="true"
+                  >
+                     <path
+                        d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                     ></path>
+                     <polyline points="15 3 21 3 21 9"></polyline>
+                     <line x1="10" y1="14" x2="21" y2="3"></line>
+                  </svg>
+                  Repositório
+               </a>
             </nav>
 
             <div class="header-right">
                <a
                   href="https://www.linkedin.com/in/jacksondouglasdsouza/"
                   target="_blank"
+                  rel="noopener noreferrer"
                   class="icon-link-header"
+                  aria-label="Abre a página do LinkedIn do author da Página em outra aba"
                >
                   <svg
                      xmlns="http://www.w3.org/2000/svg"
@@ -61,7 +110,9 @@
                <a
                   href="https://github.com/jacksondouglasdesouza"
                   target="_blank"
+                  rel="noopener noreferrer"
                   class="icon-link-header"
+                  aria-label="Abre a página do github do author da Página em outra aba"
                >
                   <svg
                      xmlns="http://www.w3.org/2000/svg"
@@ -262,7 +313,28 @@ console.log("Verificação se é infinito: ", !isFinite(dividedByZero)); // Resu
                      target="_blank"
                      rel="noopener noreferrer"
                      class="donation-link"
-                     >Clique Aqui</a
+                     aria-label="Abre a página de doação do PayPal do author da Página em outra aba"
+                  >
+                     <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        width="16"
+                        height="16"
+                        class="nav-link-svg"
+                        aria-hidden="true"
+                     >
+                        <path
+                           d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                        ></path>
+                        <polyline points="15 3 21 3 21 9"></polyline>
+                        <line x1="10" y1="14" x2="21" y2="3"></line>
+                     </svg>
+                     Doe via PayPal</a
                   >
                </div>
 
@@ -291,7 +363,28 @@ console.log("Verificação se é infinito: ", !isFinite(dividedByZero)); // Resu
                      class="donation-link"
                      target="_blank"
                      rel="noopener noreferrer"
-                     >Clique Aqui</a
+                     aria-label="Abre a página de doação da Coinbase do author da Página em outra aba"
+                  >
+                     <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        width="16"
+                        height="16"
+                        class="nav-link-svg"
+                        aria-hidden="true"
+                     >
+                        <path
+                           d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                        ></path>
+                        <polyline points="15 3 21 3 21 9"></polyline>
+                        <line x1="10" y1="14" x2="21" y2="3"></line>
+                     </svg>
+                     Doe via Coinbase</a
                   >
                </div>
 
@@ -345,6 +438,7 @@ console.log("Verificação se é infinito: ", !isFinite(dividedByZero)); // Resu
             </div>
          </div>
       </section>
+
       <!-- -->
 
       <footer>
@@ -356,15 +450,56 @@ console.log("Verificação se é infinito: ", !isFinite(dividedByZero)); // Resu
                <a
                   href="https://eloquentjavascript.net/"
                   target="_blank"
-                  rel="noopener noreferrer"
+                  class="nav-link"
+                  aria-label="Abrir Livro Eloquent JavaScript em nova aba"
                >
-                  Livro Eloquent JS
+                  <svg
+                     xmlns="http://www.w3.org/2000/svg"
+                     viewBox="0 0 24 24"
+                     fill="none"
+                     stroke="currentColor"
+                     stroke-width="2"
+                     stroke-linecap="round"
+                     stroke-linejoin="round"
+                     width="16"
+                     height="16"
+                     class="nav-link-svg"
+                     aria-hidden="true"
+                  >
+                     <path
+                        d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                     ></path>
+                     <polyline points="15 3 21 3 21 9"></polyline>
+                     <line x1="10" y1="14" x2="21" y2="3"></line>
+                  </svg>
+                  Livro
                </a>
                <a
                   href="https://github.com/jacksondouglasdesouza/javascript-completo"
                   target="_blank"
                   rel="noopener noreferrer"
+                  class="nav-link"
+                  aria-label="Abrir o Repositório da página no GitHub em nova aba"
                >
+                  <svg
+                     xmlns="http://www.w3.org/2000/svg"
+                     viewBox="0 0 24 24"
+                     fill="none"
+                     stroke="currentColor"
+                     stroke-width="2"
+                     stroke-linecap="round"
+                     stroke-linejoin="round"
+                     width="16"
+                     height="16"
+                     class="nav-link-svg"
+                     aria-hidden="true"
+                  >
+                     <path
+                        d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                     ></path>
+                     <polyline points="15 3 21 3 21 9"></polyline>
+                     <line x1="10" y1="14" x2="21" y2="3"></line>
+                  </svg>
                   Repositório
                </a>
             </div>
@@ -376,7 +511,27 @@ console.log("Verificação se é infinito: ", !isFinite(dividedByZero)); // Resu
                      href="https://www.linkedin.com/in/jacksondouglasdsouza/"
                      target="_blank"
                      rel="noopener noreferrer"
+                     aria-label="Abre a página do LinkedIn do author da página"
                   >
+                     <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        width="16"
+                        height="16"
+                        class="nav-link-svg"
+                        aria-hidden="true"
+                     >
+                        <path
+                           d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                        ></path>
+                        <polyline points="15 3 21 3 21 9"></polyline>
+                        <line x1="10" y1="14" x2="21" y2="3"></line>
+                     </svg>
                      Jackson Douglas de Souza
                   </a>
                </p>
@@ -437,12 +592,15 @@ console.log("Verificação se é infinito: ", !isFinite(dividedByZero)); // Resu
                         src="../logoCodyMath.png"
                         alt="CodyMath - Biblioteca Matemática"
                         class="library-logo"
+                        width="200px"
+                        height="100%"
                      />
                   </a>
                </div>
             </div>
          </div>
       </footer>
+
       <!-- -->
       <button id="scrollToTop" class="scroll-to-top" title="Voltar ao topo">
          <svg viewBox="0 0 24 24" fill="currentColor">
