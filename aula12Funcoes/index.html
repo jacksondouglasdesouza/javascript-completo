@@ -2,13 +2,146 @@
 <html lang="pt-BR">
    <head>
       <meta charset="UTF-8" />
+      <meta name="language" content="pt-BR" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta
+         http-equiv="Content-Security-Policy"
+         content="default-src 'self'; script-src 'self' 'nonce-7f3a9b2c5e8d1f4a' https://www.youtube.com https://www.googletagmanager.com https://www.google-analytics.com https://cdnjs.cloudflare.com; style-src 'self' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src https://fonts.gstatic.com data:; img-src 'self' data: https:; frame-src https://www.youtube.com; connect-src 'self' https://www.google-analytics.com https://www.googletagmanager.com https://cdnjs.cloudflare.com; frame-ancestors 'none'"
+      />
+      <meta name="referrer" content="strict-origin-when-cross-origin" />
+      <meta
+         http-equiv="Permissions-Policy"
+         content="camera=(), microphone=(), geolocation=(), payment=(), usb=(), magnetometer=(), gyroscope=(), accelerometer=()"
+      />
+      <meta
+         http-equiv="Strict-Transport-Security"
+         content="max-age=63072000; includeSubDomains; preload"
+      />
+      <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+      <link rel="preconnect" href="https://www.googletagmanager.com" />
+      <link rel="preconnect" href="https://www.google-analytics.com" />
+      <link rel="preconnect" href="https://www.youtube.com" />
+
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Aula 12 - Funções | JavaScript Completo</title>
+
+      <meta name="robots" content="index, follow" />
+      <meta name="revisit-after" content="7 days" />
+      <meta
+         name="description"
+         content="Aprenda tudo sobre Funções em JavaScript. Entenda como criar blocos de código reutilizáveis usando função tradicional, função anônima e arrow functions, além de parâmetros e retornos."
+      />
+      <meta
+         name="keywords"
+         content="funções, javascript, function, arrow function, return, parâmetros, função anônima, function expression, reutilização de código, frontend, curso javascript, Jackson Douglas de Souza"
+      />
+      <meta name="author" content="Jackson Douglas de Souza" />
+      <meta name="copyright" content="© 2025 Jackson Douglas de Souza" />
+
+      <link
+         rel="canonical"
+         href="https://jacksondouglasdesouza.github.io/javascript-completo/aula12Funcoes/"
+      />
+      <meta
+         name="google-site-verification"
+         content="Olz_lzfwqH30d4eQ-g-tAAhlupJK_ujt3cc85CvMHLc"
+      />
+      <meta property="og:type" content="website" />
+      <meta
+         property="og:url"
+         content="https://jacksondouglasdesouza.github.io/javascript-completo/aula12Funcoes/"
+      />
+
+      <meta property="og:site_name" content="JavaScript Completo" />
+      <meta
+         property="og:title"
+         content="Aula 12 - Funções | JavaScript Completo"
+      />
+      <meta
+         property="og:description"
+         content="Aprenda tudo sobre Funções em JavaScript. Entenda como criar blocos de código reutilizáveis usando função tradicional, função anônima e arrow functions."
+      />
+      <meta property="og:locale" content="pt_BR" />
+      <meta
+         property="og:image"
+         content="https://jacksondouglasdesouza.github.io/javascript-completo/aula12Funcoes/imgs/funcoes.webp"
+      />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
+      <meta property="og:image:alt" content="Funções em JavaScript" />
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:site" content="@cursojscompleto" />
+      <meta
+         name="twitter:title"
+         content="Aula 12 - Funções | JavaScript Completo"
+      />
+      <meta
+         name="twitter:description"
+         content="Aprenda tudo sobre Funções em JavaScript. Entenda como criar blocos de código reutilizáveis usando função tradicional, função anônima e arrow functions."
+      />
+      <meta
+         name="twitter:image"
+         content="https://jacksondouglasdesouza.github.io/javascript-completo/aula12Funcoes/imgs/funcoes.webp"
+      />
+      <link
+         rel="icon"
+         type="image/png"
+         href="../favicon/favicon-96x96.png"
+         sizes="96x96"
+      />
+      <link rel="icon" type="image/svg+xml" href="../favicon/favicon.svg" />
+      <link rel="shortcut icon" href="../favicon/favicon.ico" />
+      <link
+         rel="apple-touch-icon"
+         sizes="180x180"
+         href="../favicon/apple-touch-icon.png"
+      />
+      <link rel="manifest" href="../favicon/site.webmanifest" />
+
+      <script
+         async
+         src="https://www.googletagmanager.com/gtag/js?id=G-QF33YD6QW9"
+      ></script>
+      <script nonce="7f3a9b2c5e8d1f4a">
+         window.dataLayer = window.dataLayer || [];
+         function gtag() {
+            dataLayer.push(arguments);
+         }
+         gtag("js", new Date());
+         gtag("config", "G-QF33YD6QW9");
+      </script>
+
       <link rel="stylesheet" href="style.css" />
-      <title>Aula 12 - Funções</title>
+
+      <link
+         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      />
+
       <link
          href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css"
          rel="stylesheet"
       />
+
+      <script type="application/ld+json">
+         {
+            "@context": "https://schema.org",
+            "@type": "EducationEvent",
+            "name": "Aula 12 - Funções",
+            "description": "Aula completa sobre Funções em JavaScript, explicando função tradicional, anônima e arrow functions, além de parâmetros e retornos.",
+            "url": "https://jacksondouglasdesouza.github.io/javascript-completo/aula12Funcoes/",
+            "inLanguage": "pt-BR",
+            "author": {
+               "@type": "Person",
+               "name": "Jackson Douglas de Souza",
+               "url": "https://github.com/jacksondouglasdesouza"
+            },
+            "image": "https://jacksondouglasdesouza.github.io/javascript-completo/aula12Funcoes/imgs/funcoes.webp"
+         }
+      </script>
    </head>
 
    <body>

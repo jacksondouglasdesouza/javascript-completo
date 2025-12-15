@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+   <url>
+      <loc>https://jacksondouglasdesouza.github.io/javascript-completo/</loc>
+      <lastmod>2025-12-15</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+   </url>
+
+   <url>
+      <loc>https://jacksondouglasdesouza.github.io/javascript-completo/aula01PreparacaoAmbiente/</loc>
+      <lastmod>2025-12-15</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.8</priority>
+   </url>
+
+   <url>
+      <loc>https://jacksondouglasdesouza.github.io/javascript-completo/aula02Comentarios/</loc>
+      <lastmod>2025-12-15</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.8</priority>
+   </url>
+
+   <url>
+      <loc>https://jacksondouglasdesouza.github.io/javascript-completo/aula03NodeVsNavegador/</loc>
+      <lastmod>2025-12-15</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.8</priority>
+   </url>
+
+   <url>
+      <loc>https://jacksondouglasdesouza.github.io/javascript-completo/aula04Variaveis/</loc>
+      <lastmod>2025-12-15</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.8</priority>
+   </url>
+
+   <url>
+      <loc>https://jacksondouglasdesouza.github.io/javascript-completo/aula05TiposPrimitivos/</loc>
+      <lastmod>2025-12-15</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.8</priority>
+   </url>
+
+   <url>
+      <loc>https://jacksondouglasdesouza.github.io/javascript-completo/aula06OperadoresAritmeticos/</loc>
+      <lastmod>2025-12-15</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.8</priority>
+   </url>
+
+   <url>
+      <loc>https://jacksondouglasdesouza.github.io/javascript-completo/aula07AlertConfirmPromptandNavegador/</loc>
+      <lastmod>2025-12-15</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.8</priority>
+   </url>
+
+   <url>
+      <loc>https://jacksondouglasdesouza.github.io/javascript-completo/aula08Strings/</loc>
+      <lastmod>2025-12-15</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.8</priority>
+   </url>
+
+   <url>
+      <loc>https://jacksondouglasdesouza.github.io/javascript-completo/aula09Numbers/</loc>
+      <lastmod>2025-12-15</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.8</priority>
+   </url>
+
+   <url>
+      <loc>https://jacksondouglasdesouza.github.io/javascript-completo/aula10ObjetoMath/</loc>
+      <lastmod>2025-12-15</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.8</priority>
+   </url>
+
+   <url>
+      <loc>https://jacksondouglasdesouza.github.io/javascript-completo/aula11Arrays/</loc>
+      <lastmod>2025-12-15</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.8</priority>
+   </url>
+
+   <url>
+      <loc>https://jacksondouglasdesouza.github.io/javascript-completo/aula12Funcoes/</loc>
+      <lastmod>2025-12-15</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.8</priority>
+   </url>
+
+   <url>
+      <loc>https://jacksondouglasdesouza.github.io/javascript-completo/aula13Objetos/</loc>
+      <lastmod>2025-12-15</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.8</priority>
+   </url>
+
+   <url>
+      <loc>https://jacksondouglasdesouza.github.io/javascript-completo/aula14ValoresPrimitivosValoresPorReferencia/</loc>
+      <lastmod>2025-12-15</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.8</priority>
+   </url>
+
+   <url>
+      <loc>https://jacksondouglasdesouza.github.io/javascript-completo/aula15OperadoresComparacao/</loc>
+      <lastmod>2025-12-15</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.8</priority>
+   </url>
+
+   <url>
+      <loc>https://jacksondouglasdesouza.github.io/javascript-completo/aula16OperadoresLogicos/</loc>
+      <lastmod>2025-12-15</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.8</priority>
+   </url>
+
+   <url>
+      <loc>https://jacksondouglasdesouza.github.io/javascript-completo/aula17If-ElseIf-Else/</loc>
+      <lastmod>2025-12-15</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.8</priority>
+   </url>
+
+   <url>
+      <loc>https://jacksondouglasdesouza.github.io/javascript-completo/projetoPratico01-calculadorDeImc/</loc>
+      <lastmod>2025-12-15</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.8</priority>
+   </url>
+
+</urlset>
