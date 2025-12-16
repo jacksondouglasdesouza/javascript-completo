@@ -134,4 +134,32 @@
       <priority>0.8</priority>
    </url>
 
+      <url>
+      <loc>https://jacksondouglasdesouza.github.io/javascript-completo/projeto-pratico02-relogio-digital-online/</loc>
+      <lastmod>2025-12-16</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.8</priority>
+   </url>
+
+   <url>
+      <loc>https://jacksondouglasdesouza.github.io/javascript-completo/aula18OperacaoTernaria/</loc>
+      <lastmod>2025-12-16</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.8</priority>
+   </url>
+
+   <url>
+      <loc>https://jacksondouglasdesouza.github.io/javascript-completo/aula19ObjetoDate/</loc>
+      <lastmod>2025-12-16</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.8</priority>
+   </url>
+
+   <url>
+      <loc>https://jacksondouglasdesouza.github.io/javascript-completo/aula20SwitchCase/</loc>
+      <lastmod>2025-12-16</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.8</priority>
+   </url>
+
 </urlset>
