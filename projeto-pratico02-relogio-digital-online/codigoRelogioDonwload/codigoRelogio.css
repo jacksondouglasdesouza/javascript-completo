@@ -1,0 +1,185 @@
+.container-relogio {
+   text-align: center;
+   background: rgba(0, 0, 0, 0.5);
+   backdrop-filter: blur(5px);
+   -webkit-backdrop-filter: blur(5px);
+   border: 1px solid rgba(255, 255, 255, 0.05);
+   border-radius: 10px;
+   padding: 30px 20px;
+   margin: 30px auto;
+   width: 90%;
+   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+#relogio-container {
+   padding: 60px 50px;
+   max-width: 800px;
+}
+
+.display-relogio {
+   text-align: center;
+   margin: 40px 0;
+   padding: 0;
+}
+
+.hora-principal {
+   font-family: "Google Sans Code", monospace;
+   font-size: 7em;
+   font-weight: 800;
+   color: #75b8fa; /* Azul Neon */
+   text-shadow: 0 0 10px rgba(117, 184, 250, 0.2),
+      0 0 20px rgba(117, 184, 250, 0.2);
+   margin-bottom: 20px;
+   letter-spacing: 5px;
+   line-height: 1.1;
+}
+
+.data-principal {
+   font-family: "Poppins", sans-serif;
+   font-size: 1.6rem;
+   font-weight: 500;
+   color: #cecece;
+   text-transform: capitalize;
+}
+
+#relogio-container .subtitle {
+   color: #ccc;
+   font-style: normal;
+}
+
+/* RESPONSIVIDADE DEFINITIVA */
+
+@media (max-width: 900px) {
+   #relogio-container {
+      padding: 40px 20px;
+      width: 100%;
+      max-width: 100%;
+   }
+
+   .container-relogio {
+      width: 90%;
+      padding: 30px 10px;
+   }
+
+   .hora-principal {
+      font-size: 14vw;
+      line-height: 1.1;
+      letter-spacing: 2px;
+   }
+
+   .data-principal {
+      font-size: 1.3rem;
+   }
+}
+
+@media (max-width: 600px) {
+   #relogio-container {
+      padding: 20px 10px;
+   }
+
+   .container-relogio {
+      width: 95%;
+      padding: 20px 5px;
+   }
+
+   .hora-principal {
+      font-size: 13vw;
+      letter-spacing: 0px;
+   }
+
+   .data-principal {
+      font-size: 1rem;
+   }
+
+   #relogio-container h1 {
+      font-size: 1.6rem;
+   }
+}
+
+@media (max-width: 450px) {
+   #relogio-container {
+      padding: 15px 5px !important;
+   }
+
+   .container-relogio {
+      width: 100% !important;
+      padding: 15px 0 !important;
+      border-radius: 8px;
+   }
+
+   .hora-principal {
+      font-size: 12.5vw !important;
+      letter-spacing: -1px;
+      margin-bottom: 5px;
+   }
+
+   .data-principal {
+      font-size: 0.85rem;
+      padding: 0 5px;
+      font-weight: 400;
+      opacity: 0.8;
+   }
+
+   #relogio-container h1 {
+      font-size: 1.3rem;
+      margin-bottom: 5px;
+   }
+
+   #relogio-container .subtitle {
+      font-size: 0.8rem;
+      margin-bottom: 15px;
+   }
+}
+
+@media (max-width: 360px) {
+   .hora-principal {
+      font-size: 12vw !important;
+   }
+
+   .data-principal {
+      font-size: 0.75rem;
+   }
+}
+
+@media (max-width: 280px) {
+   .hora-principal {
+      font-size: 11.5vw !important;
+   }
+
+   .container-relogio {
+      border: none;
+      background: rgba(0, 0, 0, 0.2);
+   }
+
+   #relogio-container h1 {
+      font-size: 1rem;
+   }
+}
+
+@media (max-width: 120px) {
+   #relogio-container h1,
+   #relogio-container .subtitle,
+   .data-principal {
+      display: none !important;
+   }
+
+   #relogio-container,
+   .container-relogio {
+      margin: 0 !important;
+      padding: 0 !important;
+      width: 100% !important;
+      height: 100vh;
+      background: transparent;
+      border: none;
+      box-shadow: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+   }
+
+   .hora-principal {
+      font-size: 22vw !important;
+      margin: 0;
+      text-align: center;
+   }
+}

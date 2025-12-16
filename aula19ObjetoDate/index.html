@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="language" content="pt-BR" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta
+         http-equiv="Content-Security-Policy"
+         content="default-src 'self'; script-src 'self' 'nonce-7f3a9b2c5e8d1f4a' https://www.youtube.com https://www.googletagmanager.com https://www.google-analytics.com https://cdnjs.cloudflare.com; style-src 'self' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src https://fonts.gstatic.com data:; img-src 'self' data: https:; frame-src https://www.youtube.com; connect-src 'self' https://www.google-analytics.com https://www.googletagmanager.com https://cdnjs.cloudflare.com; frame-ancestors 'none'"
+      />
+      <meta name="referrer" content="strict-origin-when-cross-origin" />
+      <meta
+         http-equiv="Permissions-Policy"
+         content="camera=(), microphone=(), geolocation=(), payment=(), usb=(), magnetometer=(), gyroscope=(), accelerometer=()"
+      />
+      <meta
+         http-equiv="Strict-Transport-Security"
+         content="max-age=63072000; includeSubDomains; preload"
+      />
+      <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+      <link rel="preconnect" href="https://www.googletagmanager.com" />
+      <link rel="preconnect" href="https://www.google-analytics.com" />
+      <link rel="preconnect" href="https://www.youtube.com" />
+
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Aula 19 - Objeto Date em JavaScript | JavaScript Completo</title>
+
+      <meta name="robots" content="index, follow" />
+      <meta name="revisit-after" content="7 days" />
+      <meta
+         name="description"
+         content="Aprenda tudo sobre o Objeto Date em JavaScript. Entenda como manipular datas e horas, o Unix Epoch, instanciar datas e usar métodos como getFullYear, getMonth e setDate."
+      />
+      <meta
+         name="keywords"
+         content="objeto date, javascript, datas, horas, unix epoch, manipulação de data, getdate, setdate, timestamp, frontend, curso javascript, Jackson Douglas de Souza"
+      />
+      <meta name="author" content="Jackson Douglas de Souza" />
+      <meta name="copyright" content="© 2025 Jackson Douglas de Souza" />
+
+      <link rel="canonical" href="[Adicionarei em seguida...]" />
+      <meta
+         name="google-site-verification"
+         content="Olz_lzfwqH30d4eQ-g-tAAhlupJK_ujt3cc85CvMHLc"
+      />
+      <meta property="og:type" content="website" />
+      <meta property="og:url" content="[Adicionarei em seguida...]" />
+
+      <meta property="og:site_name" content="JavaScript Completo" />
+      <meta
+         property="og:title"
+         content="Aula 19 - Objeto Date em JavaScript | JavaScript Completo"
+      />
+      <meta
+         property="og:description"
+         content="Aprenda tudo sobre o Objeto Date em JavaScript. Entenda como manipular datas e horas, o Unix Epoch, instanciar datas e usar métodos essenciais."
+      />
+      <meta property="og:locale" content="pt_BR" />
+      <meta property="og:image" content="[Adicionarei em seguida...]" />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
+      <meta property="og:image:alt" content="Objeto Date em JavaScript" />
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:site" content="@cursojscompleto" />
+      <meta
+         name="twitter:title"
+         content="Aula 19 - Objeto Date em JavaScript | JavaScript Completo"
+      />
+      <meta
+         name="twitter:description"
+         content="Aprenda tudo sobre o Objeto Date em JavaScript. Entenda como manipular datas e horas, o Unix Epoch, instanciar datas e usar métodos essenciais."
+      />
+      <meta name="twitter:image" content="[Adicionarei em seguida...]" />
+      <link
+         rel="icon"
+         type="image/png"
+         href="../favicon/favicon-96x96.png"
+         sizes="96x96"
+      />
+      <link rel="icon" type="image/svg+xml" href="../favicon/favicon.svg" />
+      <link rel="shortcut icon" href="../favicon/favicon.ico" />
+      <link
+         rel="apple-touch-icon"
+         sizes="180x180"
+         href="../favicon/apple-touch-icon.png"
+      />
+      <link rel="manifest" href="../favicon/site.webmanifest" />
+
+      <script
+         async
+         src="https://www.googletagmanager.com/gtag/js?id=G-QF33YD6QW9"
+      ></script>
+      <script nonce="7f3a9b2c5e8d1f4a">
+         window.dataLayer = window.dataLayer || [];
+         function gtag() {
+            dataLayer.push(arguments);
+         }
+         gtag("js", new Date());
+         gtag("config", "G-QF33YD6QW9");
+      </script>
+
+      <link rel="stylesheet" href="style.css" />
+
+      <link
+         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      />
+
+      <link
+         href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css"
+         rel="stylesheet"
+      />
+
+      <script type="application/ld+json">
+         {
+            "@context": "https://schema.org",
+            "@type": "EducationEvent",
+            "name": "Aula 19 - Objeto Date em JavaScript",
+            "description": "Aula completa sobre o Objeto Date em JavaScript, abordando a manipulação de datas, horas, Unix Epoch e métodos de formatação.",
+            "url": "[Adicionarei em seguida...]",
+            "inLanguage": "pt-BR",
+            "author": {
+               "@type": "Person",
+               "name": "Jackson Douglas de Souza",
+               "url": "https://github.com/jacksondouglasdesouza"
+            },
+            "image": "[Adicionarei em seguida...]"
+         }
+      </script>
+   </head>
+
+   <body>
+      <header class="main-header">
+         <div class="header-container">
+            <div class="header-left">
+               <div class="logo-js">
+                  <a href="../">
+                     <img
+                        src="../logoJavascript.png"
+                        alt="JavaScript Logo - Voltar a home"
+                        width="50px"
+                        height="50px"
+                     />
+                  </a>
+               </div>
+            </div>
+
+            <nav class="hadeer-nav">
+               <a href="../" class="nav-link active">Home</a>
+               <!-- -->
+               <a
+                  href="https://eloquentjavascript.net/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="nav-link"
+                  aria-label="Abrir Livro Eloquent JavaScript em nova aba"
+               >
+                  <svg
+                     xmlns="http://www.w3.org/2000/svg"
+                     viewBox="0 0 24 24"
+                     fill="none"
+                     stroke="currentColor"
+                     stroke-width="2"
+                     stroke-linecap="round"
+                     stroke-linejoin="round"
+                     width="16"
+                     height="16"
+                     aria-hidden="true"
+                     class="nav-link-svg"
+                  >
+                     <path
+                        d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                     ></path>
+                     <polyline points="15 3 21 3 21 9"></polyline>
+                     <line x1="10" y1="14" x2="21" y2="3"></line>
+                  </svg>
+                  Livro
+               </a>
+               <!-- -->
+               <a
+                  href="https://github.com/jacksondouglasdesouza/javascript-completo"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="nav-link"
+                  aria-label="Abrir o Repositório da página no GitHub em nova aba"
+               >
+                  <svg
+                     xmlns="http://www.w3.org/2000/svg"
+                     viewBox="0 0 24 24"
+                     fill="none"
+                     stroke="currentColor"
+                     stroke-width="2"
+                     stroke-linecap="round"
+                     stroke-linejoin="round"
+                     width="16"
+                     height="16"
+                     class="nav-link-svg"
+                     aria-hidden="true"
+                  >
+                     <path
+                        d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                     ></path>
+                     <polyline points="15 3 21 3 21 9"></polyline>
+                     <line x1="10" y1="14" x2="21" y2="3"></line>
+                  </svg>
+                  Repositório
+               </a>
+            </nav>
+
+            <div class="header-right">
+               <a
+                  href="https://www.linkedin.com/in/jacksondouglasdsouza/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="icon-link-header"
+                  aria-label="Abre a página do LinkedIn do author da Página em outra aba"
+               >
+                  <svg
+                     xmlns="http://www.w3.org/2000/svg"
+                     viewBox="0 0 24 24"
+                     fill="currentColor"
+                  >
+                     <path
+                        d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452z"
+                     />
+                  </svg>
+               </a>
+               <a
+                  href="https://github.com/jacksondouglasdesouza"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="icon-link-header"
+                  aria-label="Abre a página do github do author da Página em outra aba"
+               >
+                  <svg
+                     xmlns="http://www.w3.org/2000/svg"
+                     viewBox="0 0 24 24"
+                     fill="currentColor"
+                  >
+                     <path
+                        d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
+                     />
+                  </svg>
+               </a>
+            </div>
+         </div>
+      </header>
+
+      <main>
+         <section class="section-title">
+            <h2>Objeto Date em JavaScript</h2>
+         </section>
+
+         <!-- VÍDEO AULA -->
+         <div class="video-container">
+            <h3>🎥 Vídeo Aula - Objeto Date em JavaScript</h3>
+            <div class="video-wrapper">
+               <iframe
+                  width="560"
+                  height="315"
+                  src="https://www.youtube.com/embed/KHq_RO_8Qb0?si=XLO8FpvZRbafJf4D"
+                  title="Vídeo Aula - Objeto Date em JavaScript"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  allowfullscreen
+               ></iframe>
+            </div>
+            <div class="video-credits">
+               <strong>📌 Créditos do Vídeo:</strong><br />
+               Todos os direitos reservados ao autor original do vídeo.<br />
+               Canal:
+               <a
+                  href="https://www.youtube.com/@cfbcursos"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >@cfbcursos</a
+               ><br />
+               Este material é utilizado exclusivamente para fins educacionais.
+            </div>
+         </div>
+
+         <article>
+            <figure>
+               <img
+                  src="./imgs/ObjetoDateemJavaScript.jpg"
+                  alt="Objeto Date em JavaScript"
+                  width="600"
+                  height="100%"
+               />
+               <figcaption>Objeto Date em JavaScript</figcaption>
+            </figure>
+
+            <p>
+               <strong>Objeto Date em JavaScript</strong> - O objeto Date é a
+               estrutura fundamental para manipulação de datas e horas,
+               permitindo criar, armazenar, comparar e formatar informações
+               temporais em aplicações web. Ao contrário de tipos primitivos
+               como números e strings, Date é um <strong>objeto</strong> que
+               requer instanciação através do construtor
+               <strong>new Date()</strong>, que captura automaticamente a data e
+               hora atual do sistema do usuário ou aceita parâmetros específicos
+               para datas personalizadas. O Date armazena internamente o tempo
+               em
+               <strong>milissegundos desde 1º de janeiro de 1970</strong>
+               (conhecido como Unix Epoch), um padrão universal que facilita
+               cálculos e comparações entre diferentes fusos horários e
+               sistemas. Para extrair informações específicas, o objeto
+               disponibiliza métodos como <strong>getFullYear()</strong> (ano
+               completo), <strong>getMonth()</strong> (mês numerado de 0 a 11),
+               <strong>getDate()</strong> (dia do mês),
+               <strong>getDay()</strong> (dia da semana de 0 a 6) e
+               <strong>getTime()</strong> (milissegundos desde o Epoch).
+               Igualmente importante, os métodos <strong>setFullYear()</strong>,
+               <strong>setMonth()</strong> e similares permitem
+               <strong>modificar componentes da data</strong> de forma
+               programática, enquanto <strong>getHours()</strong>,
+               <strong>getMinutes()</strong> e
+               <strong>getSeconds()</strong> tratam de componentes horários. Os
+               conceitos principais incluem
+               <strong>instanciação de objetos</strong>,
+               <strong>Unix Epoch</strong>,
+               <strong>métodos de leitura e escrita</strong>,
+               <strong>comparação de datas</strong>,
+               <strong>cálculos de diferenças temporais</strong> e
+               <strong>formatação de saída</strong>, sendo pilares essenciais
+               para aplicações que envolvem agendamentos, contadores,
+               cronômetros ou qualquer lógica temporal.
+            </p>
+
+            <pre><code class="language-javascript">// --- 
+// ========================================
+// OBJETO DATE EM JAVASCRIPT
+// ========================================
+// Date é um objeto nativo para trabalhar com datas e horas
+// Ele armazena o tempo em milissegundos desde 1º de janeiro de 1970 (Unix Epoch)
+
+// ========================================
+// EXEMPLO 1: Data e Hora Atual
+// ========================================
+
+// new Date() cria uma instância com a data/hora atual do sistema
+const novaData = new Date();
+console.log(novaData);
+console.log(typeof novaData); // Saída: "object" (Date é um objeto, não um tipo primitivo)
+console.log(novaData.toString()); // Saída: "Thu Dec 16 2025 03:28:51 GMT-0300..."
+console.log("\n");
+
+// ========================================
+// EXEMPLO 2: Unix Epoch (Data Zero)
+// ========================================
+
+// Date(0) representa o marco zero: 1º de janeiro de 1970 00:00:00 UTC
+let novaData2 = new Date(0);
+console.log(novaData2);
+console.log(typeof novaData2); // Saída: "object"
+console.log(novaData2.toString()); // Saída: "Wed Dec 31 1969 21:00:00 GMT-0300..."
+// Nota: Mostra 1969 no Brasil porque estamos no fuso GMT-3
+
+// Números negativos representam datas ANTES de 1970
+let novaData3 = new Date(-1);
+console.log(novaData3.toString()); // Um milissegundo antes do Epoch
+console.log("\n");
+
+// ========================================
+// EXEMPLO 3: Criando Datas com Milissegundos
+// ========================================
+
+// Cálculo: 60 segundos × 60 minutos × 3 horas = 10.800 segundos = 10.800.000 ms
+let horaBrasil = 60 * 60 * 3 * 1000; // 10.800.000 milissegundos
+let novaData4 = new Date(horaBrasil);
+console.log(novaData4.toString()); // Thu Jan 01 1970 00:00:00 GMT-0300
+// Este é o "marco zero" ajustado para o fuso horário de Brasília
+console.log("\n");
+
+// ========================================
+// EXEMPLO 4: Criando Datas com Parâmetros
+// ========================================
+
+// Sintaxe: new Date(ano, mês, dia, hora, minuto, segundo, milissegundo)
+// IMPORTANTE: Mês começa em 0 (janeiro = 0, dezembro = 11)
+let novaData5 = new Date(2018, 9, 26, 18, 18, 18);
+// Parâmetros: ano=2018, mês=9 (outubro), dia=26, hora=18, min=18, seg=18
+console.log(novaData5.toString()); // Saída: "Fri Oct 26 2018 18:18:18 GMT-0300"
+console.log("\n");
+
+// ========================================
+// EXEMPLO 5: Criando Datas com Strings
+// ========================================
+
+// Você pode passar uma data como string (formato ISO ou personalizado)
+let novaData6 = new Date("2023-01-26 23:10:00");
+console.log(novaData6.toString()); // Interpreta a string como data/hora
+
+// Também funciona com apenas a data (assume 00:00:00)
+let novaData7 = new Date("2023-01-26");
+console.log(novaData7.toString()); // Saída: "Thu Jan 26 2023 00:00:00 GMT-0300"
+console.log("\n");
+
+// ========================================
+// EXEMPLO 6: Extraindo Componentes de uma Data
+// ========================================
+
+// Métodos GET extraem partes específicas da data
+let data = new Date(); // Data/hora atual: 16/12/2025 às 03:28:51
+
+console.log("=== COMPONENTES DA DATA ===");
+console.log("Dia do mês:", data.getDate()); // Saída: 16
+console.log("Mês:", data.getMonth()); // Saída: 11 (dezembro, pois é 0-indexado)
+console.log("Mês (corrigido):", data.getMonth() + 1); // Saída: 12 (adicionamos +1 para uso humano)
+console.log("Ano:", data.getFullYear()); // Saída: 2025
+console.log("Hora:", data.getHours()); // Saída: 3
+console.log("Minutos:", data.getMinutes()); // Saída: 28
+console.log("Segundos:", data.getSeconds()); // Saída: 51
+console.log("Milissegundos:", data.getMilliseconds()); // Saída: 95
+console.log("\n");
+
+// ========================================
+// EXEMPLO 7: Dia da Semana
+// ========================================
+
+// getDay() retorna um número de 0 a 6 (domingo = 0)
+console.log("Dia da semana (número):", data.getDay()); // Saída: 2 (terça-feira)
+
+// Mapeamento:
+// 0 = domingo
+// 1 = segunda-feira
+// 2 = terça-feira
+// 3 = quarta-feira
+// 4 = quinta-feira
+// 5 = sexta-feira
+// 6 = sábado
+
+const diasSemana = ["Domingo", "Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado"];
+console.log("Dia da semana (texto):", diasSemana[data.getDay()]); // Saída: "Terça"
+console.log("\n");
+
+// ========================================
+// EXEMPLO 8: Date.now() - Timestamp Atual
+// ========================================
+
+// Date.now() retorna milissegundos desde o Unix Epoch até AGORA
+// Este é um método ESTÁTICO (chamado diretamente em Date, não em uma instância)
+let dataNow = Date.now();
+console.log("Timestamp atual (ms):", dataNow); // Saída: 1765867009156 (aproximadamente, em 16/12/2025)
+
+// Você pode converter este número para um objeto Date
+let novaData8 = new Date(dataNow);
+console.log("Data convertida:", novaData8.toString()); // Saída: "Tue Dec 16 2025 03:36:49 GMT-0300"
+console.log("\n");
+
+// ========================================
+// EXEMPLO 9: Função Auxiliar - Zero à Esquerda
+// ========================================
+
+// Esta função garante que números menores que 10 fiquem com um zero à frente
+function zeroEsquerda(num) {
+   return num >= 10 ? num : `0${num}`;
+}
+
+console.log("Teste zeroEsquerda:");
+console.log(zeroEsquerda(5)); // Saída: "05"
+console.log(zeroEsquerda(15)); // Saída: 15
+console.log("\n");
+
+// ========================================
+// EXEMPLO 10: Formatação Personalizada de Data
+// ========================================
+
+function formatacaoData(data) {
+   // Extrai cada componente e aplica zeroEsquerda
+   const dia = zeroEsquerda(data.getDate());
+   const mes = zeroEsquerda(data.getMonth() + 1); // +1 porque mês começa em 0
+   const ano = zeroEsquerda(data.getFullYear());
+   const hora = zeroEsquerda(data.getHours());
+   const minutos = zeroEsquerda(data.getMinutes());
+   const segundos = zeroEsquerda(data.getSeconds());
+
+   // Retorna string formatada no padrão brasileiro
+   return `${dia}/${mes}/${ano} às ${hora}:${minutos}:${segundos}`;
+}
+
+let novaData9 = new Date();
+console.log("Data formatada:", formatacaoData(novaData9)); // Saída: "16/12/2025 às 03:28:51"
+console.log("\n");
+
+// ========================================
+// EXEMPLO 11: Comparação de Datas
+// ========================================
+
+let dataAniversario = new Date(2005, 8, 15); // 15 de setembro de 2005
+let dataAtual = new Date();
+
+// Você pode comparar datas convertendo para timestamps
+if (dataAtual > dataAniversario) {
+   console.log("A data atual é posterior ao aniversário");
+}
+
+// Calculando diferença em milissegundos
+let diferenca = dataAtual - dataAniversario;
+console.log("Milissegundos de diferença:", diferenca);
+console.log("Dias de diferença:", Math.floor(diferenca / (1000 * 60 * 60 * 24)));
+console.log("\n");
+
+// ========================================
+// EXEMPLO 12: Modificando Componentes de Data
+// ========================================
+
+let dataTeste = new Date(2020, 0, 15); // 15 de janeiro de 2020
+console.log("Data original:", dataTeste.toString());
+
+// Métodos SET permitem modificar componentes
+dataTeste.setFullYear(2025); // Altera o ano para 2025
+dataTeste.setMonth(11); // Altera para dezembro (11, pois é 0-indexado)
+dataTeste.setDate(25); // Altera para dia 25
+
+console.log("Data modificada:", dataTeste.toString());
+console.log("\n");
+
+// ========================================
+// EXEMPLO 13: Validação de Datas
+// ========================================
+
+// Função para verificar se uma data é válida
+function ehDataValida(data) {
+   return data instanceof Date && !isNaN(data.getTime());
+}
+
+let dataBoa = new Date(2025, 11, 16);
+let dataRuim = new Date("data inválida");
+
+console.log("Data boa é válida?", ehDataValida(dataBoa)); // Saída: true
+console.log("Data ruim é válida?", ehDataValida(dataRuim)); // Saída: false
+console.log("\n");
+
+// ========================================
+// EXEMPLO 14: Calculando Próximo Aniversário
+// ========================================
+
+let dataNascimento = new Date(1995, 4, 20); // 20 de maio de 1995
+let agora = new Date();
+
+let proximoAniversario = new Date(agora.getFullYear(), dataNascimento.getMonth(), dataNascimento.getDate());
+
+// Se o aniversário já passou este ano, ajusta para o próximo ano
+if (proximoAniversario < agora) {
+   proximoAniversario.setFullYear(agora.getFullYear() + 1);
+}
+
+console.log("Próximo aniversário:", formatacaoData(proximoAniversario));
+console.log("\n");
+
+// ========================================
+// RESUMO DE MÉTODOS IMPORTANTES
+// ========================================
+
+console.log("=== MÉTODOS GET (LEITURA) ===");
+console.log("getDate() - Dia do mês (1-31)");
+console.log("getMonth() - Mês (0-11)");
+console.log("getFullYear() - Ano completo");
+console.log("getDay() - Dia da semana (0-6)");
+console.log("getHours() - Horas (0-23)");
+console.log("getMinutes() - Minutos (0-59)");
+console.log("getSeconds() - Segundos (0-59)");
+console.log("getMilliseconds() - Milissegundos (0-999)");
+console.log("getTime() - Milissegundos desde Unix Epoch");
+console.log("\n");
+
+console.log("=== MÉTODOS SET (ESCRITA) ===");
+console.log("setDate() - Define dia");
+console.log("setMonth() - Define mês");
+console.log("setFullYear() - Define ano");
+console.log("setHours() - Define horas");
+console.log("setMinutes() - Define minutos");
+console.log("setSeconds() - Define segundos");
+console.log("setMilliseconds() - Define milissegundos");
+console.log("\n");
+
+// ========================================
+// REFERÊNCIAS OFICIAIS
+// ========================================
+// MDN - Documentação oficial do JavaScript:
+// https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Date
+// FIM DO CÓDIGO</code></pre>
+         </article>
+      </main>
+
+      <!-- -->
+
+      <!-- Seção de Doação -->
+      <section class="donation-section">
+         <div class="donation-container">
+            <h2>Obrigado pelo seu apoio! 💙</h2>
+            <p>
+               Se este curso foi útil para você, considere fazer uma doação para
+               ajudar no desenvolvimento de mais conteúdo de qualidade.
+            </p>
+
+            <div class="donation-methods">
+               <!-- PayPal -->
+               <div class="donation-card">
+                  <div class="donation-icon">
+                     <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                           d="M20.067 8.478c.492.88.556 2.014.3 3.327-.74 3.806-3.276 5.12-6.514 5.12h-.5a.805.805 0 00-.794.68l-.04.22-.63 4.003-.028.15a.806.806 0 01-.795.68h-2.41a.595.595 0 01-.586-.72l1.27-8.054h.004c.06-.377.39-.656.78-.656h.5c2.28 0 4.06-.914 4.576-3.546.2-1.032.19-1.886-.24-2.53z"
+                        />
+                     </svg>
+                  </div>
+                  <h3>PayPal</h3>
+                  <a
+                     href="https://www.paypal.com/donate/?hosted_button_id=8XYHYQNR2E27J"
+                     target="_blank"
+                     rel="noopener noreferrer"
+                     class="donation-link"
+                     aria-label="Abre a página de doação do PayPal do author da Página em outra aba"
+                  >
+                     <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        width="16"
+                        height="16"
+                        class="nav-link-svg"
+                        aria-hidden="true"
+                     >
+                        <path
+                           d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                        ></path>
+                        <polyline points="15 3 21 3 21 9"></polyline>
+                        <line x1="10" y1="14" x2="21" y2="3"></line>
+                     </svg>
+                     Doe via PayPal</a
+                  >
+               </div>
+
+               <!-- Coinbase -->
+               <div class="donation-card">
+                  <div class="donation-icon">
+                     <svg viewBox="0 0 24 24" fill="currentColor">
+                        <circle
+                           cx="12"
+                           cy="12"
+                           r="10"
+                           stroke="currentColor"
+                           stroke-width="2"
+                           fill="none"
+                        />
+                        <path
+                           d="M12 7v10M7 12h10"
+                           stroke="currentColor"
+                           stroke-width="2"
+                        />
+                     </svg>
+                  </div>
+                  <h3>Coinbase</h3>
+                  <a
+                     href="https://commerce.coinbase.com/checkout/959b8db0-848e-4e3b-8620-3a24dab24baf"
+                     class="donation-link"
+                     target="_blank"
+                     rel="noopener noreferrer"
+                     aria-label="Abre a página de doação da Coinbase do author da Página em outra aba"
+                  >
+                     <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        width="16"
+                        height="16"
+                        class="nav-link-svg"
+                        aria-hidden="true"
+                     >
+                        <path
+                           d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                        ></path>
+                        <polyline points="15 3 21 3 21 9"></polyline>
+                        <line x1="10" y1="14" x2="21" y2="3"></line>
+                     </svg>
+                     Doe via Coinbase</a
+                  >
+               </div>
+
+               <!-- Bitcoin -->
+               <div class="donation-card">
+                  <div class="donation-icon">
+                     <svg viewBox="0 0 24 24" fill="currentColor">
+                        <circle cx="12" cy="12" r="10" />
+                        <text
+                           x="12"
+                           y="16"
+                           text-anchor="middle"
+                           fill="white"
+                           font-weight="bold"
+                           font-size="14"
+                        >
+                           ₿
+                        </text>
+                     </svg>
+                  </div>
+                  <h3>Bitcoin</h3>
+                  <div
+                     class="copy-container"
+                     data-endereco="bc1q3zu0nng6765ptpmr86jcfn68h6e62sda7382e3"
+                  >
+                     <code class="crypto-address"
+                        >bc1q3zu0nng6765ptpmr86jcfn68h6e62sda7382e3</code
+                     >
+                     <span class="copy-tooltip">Copiado!</span>
+                  </div>
+               </div>
+
+               <!-- Ethereum -->
+               <div class="donation-card">
+                  <div class="donation-icon">
+                     <svg viewBox="0 0 24 24" fill="currentColor">
+                        <polygon points="12,2 6,8 6,16 12,22 18,16 18,8" />
+                     </svg>
+                  </div>
+                  <h3>Ethereum</h3>
+                  <div
+                     class="copy-container"
+                     data-endereco="0xF7Eb1D45cDD527b11BC49416DDfA51AD38e26ca1"
+                  >
+                     <code class="crypto-address"
+                        >0xF7Eb1D45cDD527b11BC49416DDfA51AD38e26ca1</code
+                     >
+                     <span class="copy-tooltip">Copiado!</span>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <!-- -->
+
+      <footer>
+         <div class="footer-container">
+            <!-- Esquerda: Links da Biblioteca -->
+            <div class="footer-section footer-left">
+               <p class="footer-title">Recursos</p>
+               <a href="../"> Home </a>
+               <a
+                  href="https://eloquentjavascript.net/"
+                  target="_blank"
+                  class="nav-link"
+                  aria-label="Abrir Livro Eloquent JavaScript em nova aba"
+               >
+                  <svg
+                     xmlns="http://www.w3.org/2000/svg"
+                     viewBox="0 0 24 24"
+                     fill="none"
+                     stroke="currentColor"
+                     stroke-width="2"
+                     stroke-linecap="round"
+                     stroke-linejoin="round"
+                     width="16"
+                     height="16"
+                     class="nav-link-svg"
+                     aria-hidden="true"
+                  >
+                     <path
+                        d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                     ></path>
+                     <polyline points="15 3 21 3 21 9"></polyline>
+                     <line x1="10" y1="14" x2="21" y2="3"></line>
+                  </svg>
+                  Livro
+               </a>
+               <a
+                  href="https://github.com/jacksondouglasdesouza/javascript-completo"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="nav-link"
+                  aria-label="Abrir o Repositório da página no GitHub em nova aba"
+               >
+                  <svg
+                     xmlns="http://www.w3.org/2000/svg"
+                     viewBox="0 0 24 24"
+                     fill="none"
+                     stroke="currentColor"
+                     stroke-width="2"
+                     stroke-linecap="round"
+                     stroke-linejoin="round"
+                     width="16"
+                     height="16"
+                     class="nav-link-svg"
+                     aria-hidden="true"
+                  >
+                     <path
+                        d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                     ></path>
+                     <polyline points="15 3 21 3 21 9"></polyline>
+                     <line x1="10" y1="14" x2="21" y2="3"></line>
+                  </svg>
+                  Repositório
+               </a>
+            </div>
+            <!-- -->
+            <div class="footer-section footer-center">
+               <p>
+                  Desenvolvido com ❤️ por
+                  <a
+                     href="https://www.linkedin.com/in/jacksondouglasdsouza/"
+                     target="_blank"
+                     rel="noopener noreferrer"
+                     aria-label="Abre a página do LinkedIn do author da página"
+                  >
+                     <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        width="16"
+                        height="16"
+                        class="nav-link-svg"
+                        aria-hidden="true"
+                     >
+                        <path
+                           d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                        ></path>
+                        <polyline points="15 3 21 3 21 9"></polyline>
+                        <line x1="10" y1="14" x2="21" y2="3"></line>
+                     </svg>
+                     Jackson Douglas de Souza
+                  </a>
+               </p>
+
+               <p>Siga-me nas redes sociais</p>
+
+               <div class="social-icons">
+                  <a
+                     href="https://www.linkedin.com/in/jacksondouglasdsouza/"
+                     target="_blank"
+                     rel="noopener noreferrer"
+                     aria-label="LinkedIn"
+                     class="icon-link"
+                  >
+                     <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                     >
+                        <path
+                           d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452z"
+                        />
+                     </svg>
+                  </a>
+
+                  <a
+                     href="https://github.com/jacksondouglasdesouza"
+                     target="_blank"
+                     rel="noopener noreferrer"
+                     aria-label="Github"
+                     class="icon-link"
+                  >
+                     <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                     >
+                        <path
+                           d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
+                        />
+                     </svg>
+                  </a>
+               </div>
+            </div>
+            <!-- -->
+            <div class="footer-section footer-right">
+               <div class="lib-group">
+                  <p class="footer-title">Conheça minha Lib</p>
+
+                  <a
+                     href="https://www.npmjs.com/package/codymath"
+                     target="_blank"
+                     rel="noopener noreferrer"
+                     class="library-logo-link"
+                     title="CodyMath - Biblioteca Matemática"
+                  >
+                     <img
+                        src="../logoCodyMath.png"
+                        alt="CodyMath - Biblioteca Matemática"
+                        class="library-logo"
+                        width="200px"
+                        height="100%"
+                     />
+                  </a>
+               </div>
+            </div>
+         </div>
+      </footer>
+
+      <!-- -->
+      <button id="scrollToTop" class="scroll-to-top" title="Voltar ao topo">
+         <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M7 14l5-5 5 5z" />
+         </svg>
+      </button>
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
+      <script src="main.js"></script>
+   </body>
+</html>

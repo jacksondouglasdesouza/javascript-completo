@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="language" content="pt-BR" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta
+         http-equiv="Content-Security-Policy"
+         content="default-src 'self'; script-src 'self' 'nonce-7f3a9b2c5e8d1f4a' https://www.youtube.com https://www.googletagmanager.com https://www.google-analytics.com https://cdnjs.cloudflare.com; style-src 'self' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src https://fonts.gstatic.com data:; img-src 'self' data: https:; frame-src https://www.youtube.com; connect-src 'self' https://www.google-analytics.com https://www.googletagmanager.com https://cdnjs.cloudflare.com; frame-ancestors 'none'"
+      />
+      <meta name="referrer" content="strict-origin-when-cross-origin" />
+      <meta
+         http-equiv="Permissions-Policy"
+         content="camera=(), microphone=(), geolocation=(), payment=(), usb=(), magnetometer=(), gyroscope=(), accelerometer=()"
+      />
+      <meta
+         http-equiv="Strict-Transport-Security"
+         content="max-age=63072000; includeSubDomains; preload"
+      />
+      <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+      <link rel="preconnect" href="https://www.googletagmanager.com" />
+      <link rel="preconnect" href="https://www.google-analytics.com" />
+      <link rel="preconnect" href="https://www.youtube.com" />
+
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>
+         Projeto Prático 02 - Relógio Digital Online | JavaScript Completo
+      </title>
+
+      <meta name="robots" content="index, follow" />
+      <meta name="revisit-after" content="7 days" />
+      <meta
+         name="description"
+         content="Relógio Digital online e gratuito. Visualize a hora certa de Brasília em tempo real sincronizada com seu navegador. Projeto prático desenvolvido em JavaScript."
+      />
+      <meta
+         name="keywords"
+         content="relógio digital, hora certa, horário de brasília, javascript, frontend, curso javascript, Jackson Douglas de Souza"
+      />
+      <meta name="author" content="Jackson Douglas de Souza" />
+      <meta name="copyright" content="© 2025 Jackson Douglas de Souza" />
+
+      <link rel="canonical" href="[Adicionarei em seguida...]" />
+      <meta
+         name="google-site-verification"
+         content="Olz_lzfwqH30d4eQ-g-tAAhlupJK_ujt3cc85CvMHLc"
+      />
+      <meta property="og:type" content="website" />
+      <meta property="og:url" content="[Adicionarei em seguida...]" />
+
+      <meta property="og:site_name" content="JavaScript Completo" />
+      <meta
+         property="og:title"
+         content="Projeto Prático 02 - Relógio Digital Online | JavaScript Completo"
+      />
+      <meta
+         property="og:description"
+         content="Relógio Digital online e gratuito. Visualize a hora certa de Brasília em tempo real sincronizada com seu navegador. Projeto prático desenvolvido em JavaScript."
+      />
+      <meta property="og:locale" content="pt_BR" />
+      <meta property="og:image" content="[Adicionarei em seguida...]" />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
+      <meta
+         property="og:image:alt"
+         content="Relógio Digital Online em JavaScript"
+      />
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:site" content="@cursojscompleto" />
+      <meta
+         name="twitter:title"
+         content="Projeto Prático 02 - Relógio Digital Online | JavaScript Completo"
+      />
+      <meta
+         name="twitter:description"
+         content="Relógio Digital online e gratuito. Visualize a hora certa de Brasília em tempo real sincronizada com seu navegador. Projeto prático desenvolvido em JavaScript."
+      />
+      <meta name="twitter:image" content="[Adicionarei em seguida...]" />
+      <link
+         rel="icon"
+         type="image/png"
+         href="../favicon/favicon-96x96.png"
+         sizes="96x96"
+      />
+      <link rel="icon" type="image/svg+xml" href="../favicon/favicon.svg" />
+      <link rel="shortcut icon" href="../favicon/favicon.ico" />
+      <link
+         rel="apple-touch-icon"
+         sizes="180x180"
+         href="../favicon/apple-touch-icon.png"
+      />
+      <link rel="manifest" href="../favicon/site.webmanifest" />
+
+      <script
+         async
+         src="https://www.googletagmanager.com/gtag/js?id=G-QF33YD6QW9"
+      ></script>
+      <script nonce="7f3a9b2c5e8d1f4a">
+         window.dataLayer = window.dataLayer || [];
+         function gtag() {
+            dataLayer.push(arguments);
+         }
+         gtag("js", new Date());
+         gtag("config", "G-QF33YD6QW9");
+      </script>
+
+      <link rel="stylesheet" href="./css/style.css" />
+
+      <link
+         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      />
+
+      <link
+         href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css"
+         rel="stylesheet"
+      />
+
+      <script type="application/ld+json">
+         {
+            "@context": "https://schema.org",
+            "@type": "WebApplication",
+            "name": "Projeto Prático 02 - Relógio Digital Online",
+            "description": "Relógio Digital online e gratuito. Visualize a hora certa de Brasília em tempo real sincronizada com seu navegador.",
+            "url": "[Adicionarei em seguida...]",
+            "inLanguage": "pt-BR",
+            "author": {
+               "@type": "Person",
+               "name": "Jackson Douglas de Souza",
+               "url": "https://github.com/jacksondouglasdesouza"
+            },
+            "image": "[Adicionarei em seguida...]"
+         }
+      </script>
+   </head>
+
+   <body>
+      <header class="main-header">
+         <div class="header-container">
+            <div class="header-left">
+               <div class="logo-js">
+                  <a href="../">
+                     <img
+                        src="../logoJavascript.png"
+                        alt="JavaScript Logo - Voltar a home"
+                        width="50px"
+                        height="50px"
+                     />
+                  </a>
+               </div>
+            </div>
+
+            <nav class="hadeer-nav">
+               <a href="../" class="nav-link active">Home</a>
+               <!-- -->
+               <a
+                  href="https://eloquentjavascript.net/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="nav-link"
+                  aria-label="Abrir Livro Eloquent JavaScript em nova aba"
+               >
+                  <svg
+                     xmlns="http://www.w3.org/2000/svg"
+                     viewBox="0 0 24 24"
+                     fill="none"
+                     stroke="currentColor"
+                     stroke-width="2"
+                     stroke-linecap="round"
+                     stroke-linejoin="round"
+                     width="16"
+                     height="16"
+                     aria-hidden="true"
+                     class="nav-link-svg"
+                  >
+                     <path
+                        d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                     ></path>
+                     <polyline points="15 3 21 3 21 9"></polyline>
+                     <line x1="10" y1="14" x2="21" y2="3"></line>
+                  </svg>
+                  Livro
+               </a>
+               <!-- -->
+               <a
+                  href="https://github.com/jacksondouglasdesouza/javascript-completo"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="nav-link"
+                  aria-label="Abrir o Repositório da página no GitHub em nova aba"
+               >
+                  <svg
+                     xmlns="http://www.w3.org/2000/svg"
+                     viewBox="0 0 24 24"
+                     fill="none"
+                     stroke="currentColor"
+                     stroke-width="2"
+                     stroke-linecap="round"
+                     stroke-linejoin="round"
+                     width="16"
+                     height="16"
+                     class="nav-link-svg"
+                     aria-hidden="true"
+                  >
+                     <path
+                        d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                     ></path>
+                     <polyline points="15 3 21 3 21 9"></polyline>
+                     <line x1="10" y1="14" x2="21" y2="3"></line>
+                  </svg>
+                  Repositório
+               </a>
+            </nav>
+
+            <div class="header-right">
+               <a
+                  href="https://www.linkedin.com/in/jacksondouglasdsouza/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="icon-link-header"
+                  aria-label="Abre a página do LinkedIn do author da Página em outra aba"
+               >
+                  <svg
+                     xmlns="http://www.w3.org/2000/svg"
+                     viewBox="0 0 24 24"
+                     fill="currentColor"
+                  >
+                     <path
+                        d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452z"
+                     />
+                  </svg>
+               </a>
+               <a
+                  href="https://github.com/jacksondouglasdesouza"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="icon-link-header"
+                  aria-label="Abre a página do github do author da Página em outra aba"
+               >
+                  <svg
+                     xmlns="http://www.w3.org/2000/svg"
+                     viewBox="0 0 24 24"
+                     fill="currentColor"
+                  >
+                     <path
+                        d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
+                     />
+                  </svg>
+               </a>
+            </div>
+         </div>
+      </header>
+
+      <main>
+         <section class="section-title">
+            <h2>Relógio Digital Online</h2>
+         </section>
+
+         <!-- Relógio Digital -->
+         <div class="container">
+            <div class="container-relogio" id="relogio-container">
+               <h1>⏰ Hora Certa de Brasília</h1>
+               <p class="subtitle">Horário Oficial do Brasil em Tempo Real</p>
+               <div class="display-relogio">
+                  <div id="hora-brasilia" class="hora-principal">--:--:--</div>
+
+                  <div id="data-brasilia" class="data-principal">
+                     Carregando Data...
+                  </div>
+               </div>
+            </div>
+         </div>
+
+         <!-- -->
+
+         <!-- VÍDEO AULA -->
+         <div class="video-container">
+            <h3>🎥 Vídeo Aula - Criando um Relógio Digital em JavaScript</h3>
+            <div class="video-wrapper">
+               <iframe
+                  src="https://www.youtube.com/embed/u1RsVuBKHWs?si=17rZ6srX2FBf4HfZ"
+                  title="Criando um Relógio Digital em JavaScript"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  allowfullscreen
+               ></iframe>
+            </div>
+            <div class="video-credits">
+               <strong>📌 Créditos do Vídeo:</strong><br />
+               Todos os direitos reservados ao autor original do vídeo.<br />
+               Canal:
+               <a
+                  href="https://www.youtube.com/@GustavoNeitzke"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >@GustavoNeitzke</a
+               ><br />
+               Este material é utilizado exclusivamente para fins educacionais.
+            </div>
+         </div>
+
+         <article>
+            <figure>
+               <img
+                  src="./imgs/CriandoumRelogioDigitalemJavaScript.jpg"
+                  alt="Criando um Relógio Digital em JavaScript em JavaScript"
+                  width="600"
+               />
+               <figcaption>Criando um Relógio Digital em JavaScript</figcaption>
+            </figure>
+
+            <p class="texto-descricao">
+               Este projeto é um <strong>Relógio Digital</strong> desenvolvido
+               com <strong>HTML</strong>, <strong>CSS</strong> e
+               <strong>JavaScript</strong>. Ele sincroniza automaticamente com o
+               horário de Brasília, demonstrando o uso prático de manipulação de
+               data e hora no DOM.
+            </p>
+
+            <div class="download">
+               <h3>
+                  📥 Downloads dos Arquivos - Criando um Relógio Digital em
+                  JavaScript
+               </h3>
+
+               <p>
+                  <strong>Arquivo CSS:</strong>
+                  <a href="codigoRelogioDonwload/codigoRelogio.css" download>
+                     📥 Baixar CSS
+                  </a>
+               </p>
+
+               <p>
+                  <strong>Arquivo HTML:</strong>
+                  <a href="codigoRelogioDonwload/codigoRelogio.html" download>
+                     📥 Baixar HTML
+                  </a>
+               </p>
+
+               <p>
+                  <strong>Arquivo JavaScript:</strong>
+                  <a href="codigoRelogioDonwload/codigoRelogio.js" download>
+                     📥 Baixar JavaScript
+                  </a>
+               </p>
+            </div>
+
+            <pre><code class="language-javascript">
+// PROJETO PRÁTICO 02 - Criando um Relógio Digital em JavaScript
+// ============================================
+// Seleciona os elementos HTML onde vamos colocar a hora e a data
+const relogioDisplay = document.querySelector("#hora-brasilia");
+const dataDisplay = document.querySelector("#data-brasilia");
+const tituloDocumento = document.title;
+
+// Função que vai atualizar a hora e a data a cada segundo
+function atualizarHoraBrasilia() {
+   // Cria um objeto com a data e hora atual
+   const dataAtual = new Date();
+   
+   // Configura o fuso horário para Brasília
+   const opcoesFuso = {
+      timeZone: "America/Sao_Paulo",
+   };
+
+   // Opções para formatar a HORA (HH:MM:SS em formato 24h)
+   const opcoesHora = {
+      ...opcoesFuso,              // Copia as opções do fuso horário
+      hour: "2-digit",            // Hora com 2 dígitos (ex: 09)
+      minute: "2-digit",          // Minuto com 2 dígitos (ex: 05)
+      second: "2-digit",          // Segundo com 2 dígitos (ex: 03)
+      hour12: false,              // false = formato 24h, true = AM/PM
+   };
+
+   // Converte a hora para texto formatado (ex: "14:30:45")
+   const horaBrasilia = dataAtual.toLocaleTimeString("pt-BR", opcoesHora);
+
+   // Opções para formatar a DATA (dia, mês, ano, dia da semana)
+   const opcoesData = {
+      ...opcoesFuso,              // Copia as opções do fuso horário
+      weekday: "long",            // Dia da semana completo (ex: "terça-feira")
+      day: "numeric",             // Dia do mês (ex: 16)
+      month: "long",              // Mês completo (ex: "dezembro")
+      year: "numeric",            // Ano completo (ex: 2025)
+   };
+
+   // Converte a data para texto formatado (ex: "terça-feira, 16 de dezembro de 2025")
+   const dataFormatada = dataAtual.toLocaleDateString("pt-BR", opcoesData);
+
+   // Coloca a hora no elemento HTML (substitui o innerHTML)
+   relogioDisplay.innerHTML = horaBrasilia;
+   
+   // Coloca a data no elemento HTML (substitui o innerHTML)
+   dataDisplay.innerHTML = dataFormatada;
+
+   // Coloca a hora também no título da aba do navegador
+   document.title = `${horaBrasilia} - Hora certa`;
+}
+
+// Executa a função a cada 1000 milissegundos (1 segundo)
+setInterval(atualizarHoraBrasilia, 1000);
+
+// Executa a função uma vez imediatamente (pra não ficar em branco enquanto espera)
+atualizarHoraBrasilia();
+// FIM DO CÓDIGO</code></pre>
+         </article>
+      </main>
+
+      <!-- -->
+
+      <!-- Seção de Doação -->
+      <section class="donation-section">
+         <div class="donation-container">
+            <h2>Obrigado pelo seu apoio! 💙</h2>
+            <p>
+               Se este curso foi útil para você, considere fazer uma doação para
+               ajudar no desenvolvimento de mais conteúdo de qualidade.
+            </p>
+
+            <div class="donation-methods">
+               <!-- PayPal -->
+               <div class="donation-card">
+                  <div class="donation-icon">
+                     <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                           d="M20.067 8.478c.492.88.556 2.014.3 3.327-.74 3.806-3.276 5.12-6.514 5.12h-.5a.805.805 0 00-.794.68l-.04.22-.63 4.003-.028.15a.806.806 0 01-.795.68h-2.41a.595.595 0 01-.586-.72l1.27-8.054h.004c.06-.377.39-.656.78-.656h.5c2.28 0 4.06-.914 4.576-3.546.2-1.032.19-1.886-.24-2.53z"
+                        />
+                     </svg>
+                  </div>
+                  <h3>PayPal</h3>
+                  <a
+                     href="https://www.paypal.com/donate/?hosted_button_id=8XYHYQNR2E27J"
+                     target="_blank"
+                     rel="noopener noreferrer"
+                     class="donation-link"
+                     aria-label="Abre a página de doação do PayPal do author da Página em outra aba"
+                  >
+                     <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        width="16"
+                        height="16"
+                        class="nav-link-svg"
+                        aria-hidden="true"
+                     >
+                        <path
+                           d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                        ></path>
+                        <polyline points="15 3 21 3 21 9"></polyline>
+                        <line x1="10" y1="14" x2="21" y2="3"></line>
+                     </svg>
+                     Doe via PayPal</a
+                  >
+               </div>
+
+               <!-- Coinbase -->
+               <div class="donation-card">
+                  <div class="donation-icon">
+                     <svg viewBox="0 0 24 24" fill="currentColor">
+                        <circle
+                           cx="12"
+                           cy="12"
+                           r="10"
+                           stroke="currentColor"
+                           stroke-width="2"
+                           fill="none"
+                        />
+                        <path
+                           d="M12 7v10M7 12h10"
+                           stroke="currentColor"
+                           stroke-width="2"
+                        />
+                     </svg>
+                  </div>
+                  <h3>Coinbase</h3>
+                  <a
+                     href="https://commerce.coinbase.com/checkout/959b8db0-848e-4e3b-8620-3a24dab24baf"
+                     class="donation-link"
+                     target="_blank"
+                     rel="noopener noreferrer"
+                     aria-label="Abre a página de doação da Coinbase do author da Página em outra aba"
+                  >
+                     <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        width="16"
+                        height="16"
+                        class="nav-link-svg"
+                        aria-hidden="true"
+                     >
+                        <path
+                           d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                        ></path>
+                        <polyline points="15 3 21 3 21 9"></polyline>
+                        <line x1="10" y1="14" x2="21" y2="3"></line>
+                     </svg>
+                     Doe via Coinbase</a
+                  >
+               </div>
+
+               <!-- Bitcoin -->
+               <div class="donation-card">
+                  <div class="donation-icon">
+                     <svg viewBox="0 0 24 24" fill="currentColor">
+                        <circle cx="12" cy="12" r="10" />
+                        <text
+                           x="12"
+                           y="16"
+                           text-anchor="middle"
+                           fill="white"
+                           font-weight="bold"
+                           font-size="14"
+                        >
+                           ₿
+                        </text>
+                     </svg>
+                  </div>
+                  <h3>Bitcoin</h3>
+                  <div
+                     class="copy-container"
+                     data-endereco="bc1q3zu0nng6765ptpmr86jcfn68h6e62sda7382e3"
+                  >
+                     <code class="crypto-address"
+                        >bc1q3zu0nng6765ptpmr86jcfn68h6e62sda7382e3</code
+                     >
+                     <span class="copy-tooltip">Copiado!</span>
+                  </div>
+               </div>
+
+               <!-- Ethereum -->
+               <div class="donation-card">
+                  <div class="donation-icon">
+                     <svg viewBox="0 0 24 24" fill="currentColor">
+                        <polygon points="12,2 6,8 6,16 12,22 18,16 18,8" />
+                     </svg>
+                  </div>
+                  <h3>Ethereum</h3>
+                  <div
+                     class="copy-container"
+                     data-endereco="0xF7Eb1D45cDD527b11BC49416DDfA51AD38e26ca1"
+                  >
+                     <code class="crypto-address"
+                        >0xF7Eb1D45cDD527b11BC49416DDfA51AD38e26ca1</code
+                     >
+                     <span class="copy-tooltip">Copiado!</span>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <!-- -->
+
+      <footer>
+         <div class="footer-container">
+            <!-- Esquerda: Links da Biblioteca -->
+            <div class="footer-section footer-left">
+               <p class="footer-title">Recursos</p>
+               <a href="../"> Home </a>
+               <a
+                  href="https://eloquentjavascript.net/"
+                  target="_blank"
+                  class="nav-link"
+                  aria-label="Abrir Livro Eloquent JavaScript em nova aba"
+               >
+                  <svg
+                     xmlns="http://www.w3.org/2000/svg"
+                     viewBox="0 0 24 24"
+                     fill="none"
+                     stroke="currentColor"
+                     stroke-width="2"
+                     stroke-linecap="round"
+                     stroke-linejoin="round"
+                     width="16"
+                     height="16"
+                     class="nav-link-svg"
+                     aria-hidden="true"
+                  >
+                     <path
+                        d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                     ></path>
+                     <polyline points="15 3 21 3 21 9"></polyline>
+                     <line x1="10" y1="14" x2="21" y2="3"></line>
+                  </svg>
+                  Livro
+               </a>
+               <a
+                  href="https://github.com/jacksondouglasdesouza/javascript-completo"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="nav-link"
+                  aria-label="Abrir o Repositório da página no GitHub em nova aba"
+               >
+                  <svg
+                     xmlns="http://www.w3.org/2000/svg"
+                     viewBox="0 0 24 24"
+                     fill="none"
+                     stroke="currentColor"
+                     stroke-width="2"
+                     stroke-linecap="round"
+                     stroke-linejoin="round"
+                     width="16"
+                     height="16"
+                     class="nav-link-svg"
+                     aria-hidden="true"
+                  >
+                     <path
+                        d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                     ></path>
+                     <polyline points="15 3 21 3 21 9"></polyline>
+                     <line x1="10" y1="14" x2="21" y2="3"></line>
+                  </svg>
+                  Repositório
+               </a>
+            </div>
+            <!-- -->
+            <div class="footer-section footer-center">
+               <p>
+                  Desenvolvido com ❤️ por
+                  <a
+                     href="https://www.linkedin.com/in/jacksondouglasdsouza/"
+                     target="_blank"
+                     rel="noopener noreferrer"
+                     aria-label="Abre a página do LinkedIn do author da página"
+                  >
+                     <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        width="16"
+                        height="16"
+                        class="nav-link-svg"
+                        aria-hidden="true"
+                     >
+                        <path
+                           d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                        ></path>
+                        <polyline points="15 3 21 3 21 9"></polyline>
+                        <line x1="10" y1="14" x2="21" y2="3"></line>
+                     </svg>
+                     Jackson Douglas de Souza
+                  </a>
+               </p>
+
+               <p>Siga-me nas redes sociais</p>
+
+               <div class="social-icons">
+                  <a
+                     href="https://www.linkedin.com/in/jacksondouglasdsouza/"
+                     target="_blank"
+                     rel="noopener noreferrer"
+                     aria-label="LinkedIn"
+                     class="icon-link"
+                  >
+                     <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                     >
+                        <path
+                           d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452z"
+                        />
+                     </svg>
+                  </a>
+
+                  <a
+                     href="https://github.com/jacksondouglasdesouza"
+                     target="_blank"
+                     rel="noopener noreferrer"
+                     aria-label="Github"
+                     class="icon-link"
+                  >
+                     <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                     >
+                        <path
+                           d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
+                        />
+                     </svg>
+                  </a>
+               </div>
+            </div>
+            <!-- -->
+            <div class="footer-section footer-right">
+               <div class="lib-group">
+                  <p class="footer-title">Conheça minha Lib</p>
+
+                  <a
+                     href="https://www.npmjs.com/package/codymath"
+                     target="_blank"
+                     rel="noopener noreferrer"
+                     class="library-logo-link"
+                     title="CodyMath - Biblioteca Matemática"
+                  >
+                     <img
+                        src="../logoCodyMath.png"
+                        alt="CodyMath - Biblioteca Matemática"
+                        class="library-logo"
+                        width="200px"
+                        height="100%"
+                     />
+                  </a>
+               </div>
+            </div>
+         </div>
+      </footer>
+
+      <!-- -->
+      <button id="scrollToTop" class="scroll-to-top" title="Voltar ao topo">
+         <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M7 14l5-5 5 5z" />
+         </svg>
+      </button>
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
+      <script src="./js/main.js"></script>
+   </body>
+</html>
