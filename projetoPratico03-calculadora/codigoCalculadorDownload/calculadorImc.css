@@ -1,0 +1,780 @@
+/* CALCULADOR DE IMC - CONTAINER */
+
+.container {
+   background: linear-gradient(135deg, #2a2a2a, #323232);
+   border: 1px solid #3a3a3a;
+   border-radius: 20px;
+   padding: 50px;
+   width: 100%;
+   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+   margin: 30px auto;
+   transition: all 0.3s ease;
+}
+
+.container:hover {
+   transform: translateY(-5px);
+   box-shadow: 0 12px 40px rgba(117, 184, 250, 0.2);
+   border-color: #4a4a4a;
+}
+
+.container h1 {
+   color: #75b8fa;
+   text-align: center;
+   margin-bottom: 10px;
+   font-size: 2rem;
+   font-weight: 700;
+   text-shadow: 0 0 20px rgba(117, 184, 250, 0.3);
+}
+
+.container .subtitle {
+   text-align: center;
+   color: #999;
+   margin-bottom: 30px;
+   font-size: 0.95rem;
+   font-style: italic;
+}
+
+.info-indices {
+   background: rgba(15, 15, 15, 0.6);
+   border-left: 3px solid #75b8fa;
+   border-radius: 8px;
+   padding: 15px;
+   margin-bottom: 25px;
+   font-size: 0.85rem;
+   color: #888;
+   line-height: 1.8;
+   font-style: italic;
+   max-width: 70%;
+   margin: 0 auto;
+}
+
+.info-indices strong {
+   color: #75b8fa;
+   font-weight: 600;
+}
+
+.form-group-imc {
+   margin-bottom: 30px;
+   max-width: 70%;
+   margin: 20px auto;
+}
+
+.form-group-imc label {
+   display: block;
+   color: #75b8fa;
+   font-weight: 600;
+   margin-bottom: 8px;
+   font-size: 0.95rem;
+}
+
+.input-wrapper-imc {
+   display: flex;
+   gap: 10px;
+   align-items: center;
+}
+
+.input-imc {
+   flex: 1;
+   padding: 12px 15px;
+   background: #1a1a1a;
+   border: 2px solid #3a3a3a;
+   border-radius: 8px;
+   color: #75b8fa;
+   font-size: 1rem;
+   transition: all 0.3s ease;
+}
+
+.input-imc::placeholder {
+   color: #666;
+}
+
+.input-imc:focus {
+   outline: none;
+   border-color: #75b8fa;
+   box-shadow: 0 0 15px rgba(117, 184, 250, 0.3);
+   background: #1f1f1f;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+   -webkit-appearance: none;
+   margin: 0;
+}
+
+input[type="number"] {
+   -moz-appearance: textfield;
+}
+
+.unit-imc {
+   color: #999;
+   font-size: 0.9rem;
+   font-weight: 500;
+   min-width: 30px;
+   text-align: center;
+}
+
+.button-group-imc {
+   display: flex;
+   gap: 12px;
+   margin-top: 25px;
+   max-width: 70%;
+   margin: 0 auto;
+}
+
+.btn-imc {
+   flex: 1;
+   padding: 12px 20px;
+   border: none;
+   border-radius: 8px;
+   font-size: 0.95rem;
+   font-weight: 600;
+   cursor: pointer;
+   transition: all 0.3s ease;
+}
+
+.btn-calcular-imc {
+   background: linear-gradient(135deg, #75b8fa, #5a9fd4);
+   color: #0f0f0f;
+   box-shadow: 0 4px 15px rgba(117, 184, 250, 0.3);
+}
+
+.btn-calcular-imc:hover {
+   transform: translateY(-2px);
+   box-shadow: 0 6px 25px rgba(117, 184, 250, 0.5);
+}
+
+.btn-calcular-imc:active {
+   transform: translateY(0);
+}
+
+.btn-limpar-imc {
+   background: #3a3a3a;
+   color: #ccc;
+   border: 1px solid #4a4a4a;
+}
+
+.btn-limpar-imc:hover {
+   background: #4a4a4a;
+   color: #75b8fa;
+   box-shadow: 0 4px 15px rgba(117, 184, 250, 0.2);
+}
+
+.resultado-imc {
+   margin-top: 35px;
+   padding: 30px;
+   background: linear-gradient(135deg, #1f1f1f, #2a2a2a);
+   border: 2px solid #75b8fa;
+   border-radius: 15px;
+   text-align: center;
+   opacity: 0;
+   transform: translateY(20px);
+   transition: all 0.4s ease;
+   pointer-events: none;
+   display: none;
+   max-width: 70%;
+   margin: 50px auto;
+}
+
+.resultado-imc.ativo {
+   opacity: 1;
+   transform: translateY(0);
+   pointer-events: auto;
+   display: block;
+   box-shadow: 0 0 25px rgba(117, 184, 250, 0.3);
+}
+
+.imc-valor {
+   font-size: 4rem;
+   font-weight: 700;
+   color: #75b8fa;
+   text-shadow: 0 0 20px rgba(117, 184, 250, 0.3);
+   margin: 20px 0;
+}
+
+.imc-categoria {
+   font-size: 1.8rem;
+   font-weight: 600;
+   margin: 20px 0;
+   padding: 18px;
+   border-radius: 10px;
+   color: #fff;
+}
+
+.categoria-abaixo {
+   background: #1e40af;
+   color: #93c5fd;
+}
+
+.categoria-saudavel {
+   background: #15803d;
+   color: #86efac;
+}
+
+.categoria-sobrepeso {
+   background: #b45309;
+   color: #fcd34d;
+}
+
+.categoria-obeso {
+   background: #991b1b;
+   color: #fca5a5;
+}
+
+.imc-descricao {
+   color: #ccc;
+   line-height: 1.7;
+   font-size: 0.95rem;
+   margin: 20px 0;
+   padding: 15px;
+   background: rgba(15, 15, 15, 0.5);
+   border-left: 3px solid #75b8fa;
+   border-radius: 8px;
+}
+
+.info-detalhes-imc {
+   background: #1a1a1a;
+   padding: 15px;
+   border-radius: 8px;
+   border-left: 3px solid #75b8fa;
+   margin-top: 25px;
+   padding-top: 25px;
+   border-top: 1px solid #3a3a3a;
+}
+
+.detalhe-item-imc {
+   background: #1a1a1a;
+   padding: 15px;
+   border-radius: 8px;
+   border-left: 3px solid #75b8fa;
+   margin-top: 15px;
+}
+
+.detalhe-label-imc {
+   color: #75b8fa;
+   font-size: 0.8rem;
+   font-weight: 600;
+   text-transform: uppercase;
+   letter-spacing: 0.5px;
+}
+
+.detalhe-valor-imc {
+   color: #ccc;
+   font-size: 1.3rem;
+   font-weight: 500;
+   margin-top: 8px;
+}
+
+/* ---------- responsividade ------------ */
+
+@media (max-width: 768px) {
+   .container {
+      padding: 40px 25px;
+      border-radius: 15px;
+   }
+
+   .container h1 {
+      font-size: 1.8rem;
+   }
+
+   .container .subtitle {
+      font-size: 0.9rem;
+   }
+
+   .info-indices {
+      font-size: 0.8rem;
+      padding: 12px;
+      margin-bottom: 20px;
+   }
+
+   .form-group-imc {
+      margin-bottom: 18px;
+   }
+
+   .form-group-imc label {
+      font-size: 0.9rem;
+   }
+
+   .input-imc {
+      padding: 10px 12px;
+      font-size: 0.95rem;
+   }
+
+   .unit-imc {
+      font-size: 0.85rem;
+   }
+
+   .button-group-imc {
+      gap: 10px;
+      margin-top: 20px;
+   }
+
+   .btn-imc {
+      padding: 11px 18px;
+      font-size: 0.9rem;
+   }
+
+   .resultado-imc {
+      margin-top: 30px;
+      padding: 25px;
+   }
+
+   .imc-valor {
+      font-size: 3rem;
+      margin: 15px 0;
+   }
+
+   .imc-categoria {
+      font-size: 1.5rem;
+      padding: 15px;
+   }
+
+   .imc-descricao {
+      font-size: 0.9rem;
+      line-height: 1.6;
+      padding: 12px;
+   }
+
+   .info-detalhes-imc {
+      gap: 12px;
+      margin-top: 20px;
+      padding-top: 20px;
+   }
+
+   .detalhe-item-imc {
+      padding: 12px;
+   }
+
+   .detalhe-valor-imc {
+      font-size: 1.1rem;
+   }
+}
+
+/* ---------------------- */
+
+@media (max-width: 600px) {
+   .container {
+      padding: 30px 20px;
+      border-radius: 12px;
+      max-width: 100%;
+      margin: 20px auto;
+   }
+
+   .container h1 {
+      font-size: 1.5rem;
+      margin-bottom: 8px;
+   }
+
+   .container .subtitle {
+      font-size: 0.85rem;
+      margin-bottom: 20px;
+   }
+
+   .info-indices {
+      font-size: 0.75rem;
+      padding: 10px;
+      margin-bottom: 15px;
+      line-height: 1.6;
+   }
+
+   .form-group-imc {
+      margin-bottom: 15px;
+   }
+
+   .form-group-imc label {
+      font-size: 0.85rem;
+      margin-bottom: 6px;
+   }
+
+   .input-wrapper-imc {
+      gap: 8px;
+   }
+
+   .input-imc {
+      padding: 10px 12px;
+      font-size: 0.9rem;
+      border-radius: 6px;
+   }
+
+   .unit-imc {
+      font-size: 0.8rem;
+      min-width: 25px;
+   }
+
+   .button-group-imc {
+      flex-direction: column;
+      gap: 8px;
+      margin-top: 15px;
+   }
+
+   .btn-imc {
+      padding: 10px 15px;
+      font-size: 0.85rem;
+      border-radius: 6px;
+   }
+
+   .resultado-imc {
+      margin-top: 20px;
+      padding: 20px 15px;
+      border-radius: 10px;
+   }
+
+   .imc-valor {
+      font-size: 2.5rem;
+      margin: 12px 0;
+   }
+
+   .imc-categoria {
+      font-size: 1.3rem;
+      padding: 12px;
+      margin: 15px 0;
+   }
+
+   .imc-descricao {
+      font-size: 0.85rem;
+      line-height: 1.5;
+      padding: 10px;
+      margin: 15px 0;
+   }
+
+   .info-detalhes-imc {
+      grid-template-columns: 1fr;
+      gap: 10px;
+      margin-top: 15px;
+      padding-top: 15px;
+   }
+
+   .detalhe-item-imc {
+      padding: 10px;
+      border-radius: 6px;
+   }
+
+   .detalhe-label-imc {
+      font-size: 0.75rem;
+   }
+
+   .detalhe-valor-imc {
+      font-size: 1rem;
+      margin-top: 5px;
+   }
+}
+
+/* ---------------------- */
+
+@media (max-width: 400px) {
+   .container {
+      padding: 20px 15px;
+      border-radius: 10px;
+      max-width: 100%;
+   }
+
+   .container h1 {
+      font-size: 1.3rem;
+      margin-bottom: 6px;
+      text-shadow: 0 0 15px rgba(117, 184, 250, 0.2);
+   }
+
+   .container .subtitle {
+      font-size: 0.8rem;
+      margin-bottom: 15px;
+   }
+
+   .info-indices {
+      font-size: 0.7rem;
+      padding: 8px;
+      margin-bottom: 12px;
+      line-height: 1.5;
+   }
+
+   .form-group-imc {
+      margin-bottom: 12px;
+   }
+
+   .form-group-imc label {
+      font-size: 0.8rem;
+      margin-bottom: 5px;
+   }
+
+   .input-wrapper-imc {
+      gap: 6px;
+   }
+
+   .input-imc {
+      padding: 9px 10px;
+      font-size: 0.85rem;
+   }
+
+   .unit-imc {
+      font-size: 0.75rem;
+      min-width: 20px;
+   }
+
+   .button-group-imc {
+      gap: 6px;
+      margin-top: 12px;
+   }
+
+   .btn-imc {
+      padding: 9px 12px;
+      font-size: 0.8rem;
+      border-radius: 5px;
+   }
+
+   .resultado-imc {
+      margin-top: 15px;
+      padding: 15px 12px;
+      border-radius: 8px;
+   }
+
+   .imc-valor {
+      font-size: 2rem;
+      margin: 10px 0;
+   }
+
+   .imc-categoria {
+      font-size: 1.1rem;
+      padding: 10px;
+      margin: 12px 0;
+   }
+
+   .imc-descricao {
+      font-size: 0.8rem;
+      line-height: 1.4;
+      padding: 8px;
+      margin: 12px 0;
+   }
+
+   .info-detalhes-imc {
+      gap: 8px;
+      margin-top: 12px;
+      padding-top: 12px;
+   }
+
+   .detalhe-item-imc {
+      padding: 8px;
+      border-radius: 5px;
+   }
+
+   .detalhe-label-imc {
+      font-size: 0.7rem;
+   }
+
+   .detalhe-valor-imc {
+      font-size: 0.95rem;
+      margin-top: 4px;
+   }
+}
+
+/* ---------------------- */
+
+@media (max-width: 320px) {
+   .container {
+      padding: 15px 12px;
+   }
+
+   .container h1 {
+      font-size: 1.2rem;
+   }
+
+   .container .subtitle {
+      font-size: 0.75rem;
+   }
+
+   .info-indices {
+      font-size: 0.65rem;
+      padding: 6px;
+   }
+
+   .form-group-imc label {
+      font-size: 0.75rem;
+   }
+
+   .input-imc {
+      padding: 8px 8px;
+      font-size: 0.8rem;
+   }
+
+   .unit-imc {
+      font-size: 0.7rem;
+   }
+
+   .btn-imc {
+      padding: 8px 10px;
+      font-size: 0.75rem;
+   }
+
+   .imc-valor {
+      font-size: 1.8rem;
+   }
+
+   .imc-categoria {
+      font-size: 1rem;
+      padding: 8px;
+   }
+
+   .imc-descricao {
+      font-size: 0.75rem;
+   }
+
+   .detalhe-label-imc {
+      font-size: 0.65rem;
+   }
+
+   .detalhe-valor-imc {
+      font-size: 0.9rem;
+   }
+}
+
+/* ---------------------- */
+
+@media (max-width: 480px) {
+   .info-indices,
+   .form-group-imc,
+   .button-group-imc,
+   .resultado-imc {
+      max-width: 100%;
+      margin-left: 0;
+      margin-right: 0;
+   }
+
+   header {
+      padding: 30px 15px;
+   }
+
+   header h1 {
+      font-size: 1.6rem;
+      line-height: 1.3;
+   }
+
+   .input-wrapper-imc {
+      width: 100%;
+   }
+}
+
+/* ---------------------- */
+
+@media (max-width: 280px) {
+   main {
+      padding: 10px 5px;
+   }
+
+   .container {
+      padding: 15px 10px;
+      border-width: 1px;
+   }
+
+   .container h1 {
+      font-size: 1.1rem;
+   }
+
+   .info-indices {
+      font-size: 0.6rem;
+      padding: 8px;
+      border-left-width: 2px;
+   }
+
+   .input-wrapper-imc {
+      flex-wrap: wrap;
+   }
+
+   .unit-imc {
+      width: 100%;
+      text-align: left;
+      font-size: 0.7rem;
+      margin-top: 2px;
+   }
+
+   .button-group-imc {
+      flex-direction: column;
+      gap: 10px;
+   }
+
+   .btn-imc {
+      width: 100%;
+      padding: 8px;
+      font-size: 0.8rem;
+   }
+
+   .imc-valor {
+      font-size: 1.5rem;
+   }
+
+   .detalhe-valor-imc {
+      font-size: 0.9rem;
+   }
+}
+
+/* ---------------------- */
+
+@media (max-width: 280px) {
+   main {
+      padding: 5px;
+      width: 100%;
+      overflow-x: hidden;
+   }
+
+   .container {
+      padding: 15px 8px;
+      margin: 10px auto;
+      width: 100%;
+      border-radius: 10px;
+   }
+
+   .container h1 {
+      font-size: 1.3rem;
+      line-height: 1.2;
+   }
+
+   .container .subtitle {
+      font-size: 0.8rem;
+      margin-bottom: 15px;
+   }
+
+   .info-indices,
+   .form-group-imc,
+   .button-group-imc,
+   .resultado-imc {
+      max-width: 100%;
+      width: 100%;
+      margin-left: 0;
+      margin-right: 0;
+   }
+
+   .info-indices {
+      padding: 8px;
+      font-size: 0.7rem;
+      line-height: 1.4;
+   }
+
+   .input-wrapper-imc {
+      gap: 5px;
+   }
+
+   .input-imc {
+      padding: 8px;
+      font-size: 0.9rem;
+      width: 100%;
+   }
+
+   .unit-imc {
+      font-size: 0.75rem;
+      min-width: 15px;
+   }
+
+   .button-group-imc {
+      flex-direction: column;
+      gap: 8px;
+   }
+
+   .btn-imc {
+      width: 100%;
+      padding: 10px;
+   }
+
+   .imc-valor {
+      font-size: 2.5rem;
+   }
+
+   .imc-categoria {
+      font-size: 1.1rem;
+   }
+}

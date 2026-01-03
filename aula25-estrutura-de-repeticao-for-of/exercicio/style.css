@@ -1,0 +1,39 @@
+html {
+   font-size: 1rem;
+   color: #dedede;
+}
+
+body {
+   display: flex;
+   background-color: #570264;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+}
+
+.container {
+   max-width: 800px;
+   width: 100%;
+   text-align: center;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   gap: 20px;
+   border: 1px solid #0d021b;
+   border-radius: 15px;
+   padding: 40px 30px;
+   background-color: #000d01;
+}
+
+h1 {
+   margin: 50px 0;
+   font-size: 3rem;
+   text-align: center;
+}
+
+p {
+   font-size: 1.3rem;
+   text-align: center;
+   margin: 20px 0;
+}
