@@ -1,0 +1,952 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <header class="main-header">
+         <div class="header-container">
+            <div class="header-left">
+               <div class="logo-js">
+                  <a href="../">
+                     <img
+                        src="../logoJavascript.png"
+                        alt="JavaScript Logo - Voltar a home"
+                        width="50px"
+                        height="50px"
+                     />
+                  </a>
+               </div>
+            </div>
+
+            <nav class="hadeer-nav">
+               <a href="../" class="nav-link active">Home</a>
+               <!-- -->
+               <a
+                  href="https://eloquentjavascript.net/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="nav-link"
+                  aria-label="Abrir Livro Eloquent JavaScript em nova aba"
+               >
+                  <svg
+                     xmlns="http://www.w3.org/2000/svg"
+                     viewBox="0 0 24 24"
+                     fill="none"
+                     stroke="currentColor"
+                     stroke-width="2"
+                     stroke-linecap="round"
+                     stroke-linejoin="round"
+                     width="16"
+                     height="16"
+                     aria-hidden="true"
+                     class="nav-link-svg"
+                  >
+                     <path
+                        d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                     ></path>
+                     <polyline points="15 3 21 3 21 9"></polyline>
+                     <line x1="10" y1="14" x2="21" y2="3"></line>
+                  </svg>
+                  Livro
+               </a>
+               <!-- -->
+               <a
+                  href="https://github.com/jacksondouglasdesouza/javascript-completo"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="nav-link"
+                  aria-label="Abrir o Repositório da página no GitHub em nova aba"
+               >
+                  <svg
+                     xmlns="http://www.w3.org/2000/svg"
+                     viewBox="0 0 24 24"
+                     fill="none"
+                     stroke="currentColor"
+                     stroke-width="2"
+                     stroke-linecap="round"
+                     stroke-linejoin="round"
+                     width="16"
+                     height="16"
+                     class="nav-link-svg"
+                     aria-hidden="true"
+                  >
+                     <path
+                        d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                     ></path>
+                     <polyline points="15 3 21 3 21 9"></polyline>
+                     <line x1="10" y1="14" x2="21" y2="3"></line>
+                  </svg>
+                  Repositório
+               </a>
+            </nav>
+
+            <div class="header-right">
+               <a
+                  href="https://www.linkedin.com/in/jacksondouglasdsouza/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="icon-link-header"
+                  aria-label="Abre a página do LinkedIn do author da Página em outra aba"
+               >
+                  <svg
+                     xmlns="http://www.w3.org/2000/svg"
+                     viewBox="0 0 24 24"
+                     fill="currentColor"
+                  >
+                     <path
+                        d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452z"
+                     />
+                  </svg>
+               </a>
+               <a
+                  href="https://github.com/jacksondouglasdesouza"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="icon-link-header"
+                  aria-label="Abre a página do github do author da Página em outra aba"
+               >
+                  <svg
+                     xmlns="http://www.w3.org/2000/svg"
+                     viewBox="0 0 24 24"
+                     fill="currentColor"
+                  >
+                     <path
+                        d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
+                     />
+                  </svg>
+               </a>
+            </div>
+         </div>
+      </header>
+
+      <main>
+         <section class="section-title">
+            <h2>Switch Case em JavaScript</h2>
+         </section>
+
+         <!-- VÍDEO AULA -->
+         <div class="video-container">
+            <h3>🎥 Vídeo Aula - Switch Case em JavaScript</h3>
+            <div class="video-wrapper">
+               <iframe
+                  width="560"
+                  height="315"
+                  src="https://www.youtube.com/embed/PnhBwn9zii0?si=e8i-CAHEACuDFrWP"
+                  title="Vídeo Aula - Switch Case em JavaScript"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  allowfullscreen
+               ></iframe>
+            </div>
+            <div class="video-credits">
+               <strong>📌 Créditos do Vídeo:</strong><br />
+               Todos os direitos reservados ao autor original do vídeo.<br />
+               Canal:
+               <a
+                  href="https://www.youtube.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >@HashtagProgramacao</a
+               ><br />
+               Este material é utilizado exclusivamente para fins educacionais.
+            </div>
+         </div>
+
+         <article>
+            <figure>
+               <img
+                  src="./imgs/SwitchCaseemJavaScript.webp"
+                  alt="Switch Case em JavaScript"
+                  width="600"
+                  height="100%"
+               />
+               <figcaption>Switch Case em JavaScript</figcaption>
+            </figure>
+
+            <p>
+               <strong>Switch Case em JavaScript</strong> - A estrutura
+               switch/case é um mecanismo de controle de fluxo alternativo às
+               estruturas if/else, otimizado especificamente para comparações de
+               <strong>múltiplos valores discretos</strong>
+               contra uma única expressão. Enquanto condicionais if/else são
+               versáteis para lógicas complexas, o switch é mais elegante e
+               eficiente quando se precisa testar uma variável contra várias
+               opções específicas, tornando o código mais legível e estruturado.
+               A sintaxe fundamental envolve a palavra-chave
+               <strong>switch</strong> seguida de uma expressão (geralmente uma
+               variável), após a qual vêm blocos <strong>case</strong> que
+               definem valores específicos a serem comparados usando
+               <strong>igualdade estrita (===)</strong>. Quando uma
+               correspondência é encontrada, as instruções associadas àquele
+               case são executadas até que uma declaração
+               <strong>break</strong> seja encontrada, interrompendo a
+               sequência; sem o break, ocorre o fenômeno de
+               <strong>fall-through</strong>, onde a execução continua para o
+               próximo case independentemente de sua condição. O
+               <strong>case default</strong> funciona como um comportamento
+               padrão (fallback), executado quando nenhum dos casos anteriores
+               corresponde, semelhante ao else em estruturas condicionais. Os
+               conceitos principais incluem <strong>comparação com ===</strong>,
+               <strong>break statement</strong>,
+               <strong>fall-through behavior</strong>,
+               <strong>case default</strong>,
+               <strong>escopo e hoisting</strong>,
+               <strong>comparação com if/else</strong> e
+               <strong>otimização de decisões múltiplas</strong>, tornando-a uma
+               ferramenta indispensável para desenvolvimento limpo e eficiente
+               de lógicas multi-ramificadas.
+            </p>
+
+            <pre><code class="language-javascript">// --- 
+// ========================================
+// SWITCH CASE EM JAVASCRIPT
+// ========================================
+// Switch case é uma estrutura de controle de fluxo para comparar
+// uma única expressão contra múltiplos valores específicos
+// É mais limpa que múltiplos if/else quando há muitas opções
+
+// ========================================
+// SINTAXE BÁSICA
+// ========================================
+
+/*
+switch (expressão) {
+   case valor1:
+      // Executa se expressão === valor1
+      break; // Interrompe a execução
+   case valor2:
+      // Executa se expressão === valor2
+      break;
+   default:
+      // Executa se nenhuma das condições for verdadeira
+      // Funciona como um "else" final
+}
+*/
+
+console.log("=== EXEMPLO 1: Switch Simples ===\n");
+
+let numero = 2;
+
+switch (numero) {
+   case 1:
+      console.log("Você escolheu número 1");
+      break; // IMPORTANTE: break interrompe a execução
+   case 2:
+      console.log("Você escolheu número 2"); // Este será executado
+      break;
+   case 3:
+      console.log("Você escolheu número 3");
+      break;
+   default:
+      console.log("Número não encontrado");
+}
+
+console.log("\n");
+
+// ========================================
+// EXEMPLO 2: Seleção de Mês do Ano
+// ========================================
+
+console.log("=== EXEMPLO 2: Meses do Ano ===\n");
+
+// Simulando entrada do usuário (sem prompt para evitar interrupções)
+let entradaUsuario = 5; // Representa o mês de junho (0-11)
+
+// Validação: verifica se o número está no intervalo válido
+if (entradaUsuario < 0 || entradaUsuario > 11) {
+   console.log("Número inválido.");
+   console.log("Por favor, digite um número de 0 a 11.");
+} else {
+   // Array com os nomes dos meses
+   let mesesDoAno = [
+      "Janeiro",
+      "Fevereiro",
+      "Março",
+      "Abril",
+      "Maio",
+      "Junho",
+      "Julho",
+      "Agosto",
+      "Setembro",
+      "Outubro",
+      "Novembro",
+      "Dezembro",
+   ];
+
+   // Switch compara entradaUsuario contra cada case
+   switch (entradaUsuario) {
+      case 0:
+         console.log("Você escolheu o mês de", mesesDoAno[0]);
+         break;
+      case 1:
+         console.log("Você escolheu o mês de", mesesDoAno[1]);
+         break;
+      case 2:
+         console.log("Você escolheu o mês de", mesesDoAno[2]);
+         break;
+      case 3:
+         console.log("Você escolheu o mês de", mesesDoAno[3]);
+         break;
+      case 4:
+         console.log("Você escolheu o mês de", mesesDoAno[4]);
+         break;
+      case 5:
+         console.log("Você escolheu o mês de", mesesDoAno[5]);
+         break;
+      case 6:
+         console.log("Você escolheu o mês de", mesesDoAno[6]);
+         break;
+      case 7:
+         console.log("Você escolheu o mês de", mesesDoAno[7]);
+         break;
+      case 8:
+         console.log("Você escolheu o mês de", mesesDoAno[8]);
+         break;
+      case 9:
+         console.log("Você escolheu o mês de", mesesDoAno[9]);
+         break;
+      case 10:
+         console.log("Você escolheu o mês de", mesesDoAno[10]);
+         break;
+      case 11:
+         console.log("Você escolheu o mês de", mesesDoAno[11]);
+         break;
+      default:
+         console.log("Nenhum mês encontrado");
+   }
+}
+
+console.log("\n");
+
+// ========================================
+// EXEMPLO 3: Identificando Dia da Semana
+// ========================================
+
+console.log("=== EXEMPLO 3: Dia da Semana ===\n");
+
+// new Date() captura a data/hora atual
+const data = new Date();
+// getDay() retorna 0-6 (0 = domingo, 6 = sábado)
+const diaSemana = data.getDay();
+
+// Array com nomes dos dias
+const diaDaSemana = [
+   "Domingo",
+   "Segunda-feira",
+   "Terça-feira",
+   "Quarta-feira",
+   "Quinta-feira",
+   "Sexta-feira",
+   "Sábado",
+];
+
+// Switch compara o número do dia contra os cases
+switch (diaSemana) {
+   case 0:
+      console.log("Hoje é:", diaDaSemana[0]);
+      break;
+   case 1:
+      console.log("Hoje é:", diaDaSemana[1]);
+      break;
+   case 2:
+      console.log("Hoje é:", diaDaSemana[2]);
+      break;
+   case 3:
+      console.log("Hoje é:", diaDaSemana[3]);
+      break;
+   case 4:
+      console.log("Hoje é:", diaDaSemana[4]);
+      break;
+   case 5:
+      console.log("Hoje é:", diaDaSemana[5]);
+      break;
+   case 6:
+      console.log("Hoje é:", diaDaSemana[6]);
+      break;
+   default:
+      console.log("Nenhum dia da semana encontrado");
+}
+
+console.log("\n");
+
+// ========================================
+// EXEMPLO 4: Sistema de Sorteio de Prêmios
+// ========================================
+
+console.log("=== EXEMPLO 4: Sorteio de Prêmios ===\n");
+
+function listaDePremios() {
+   // Array com os prêmios disponíveis
+   const premios = [
+      "iPhone",
+      "Carro",
+      "Bicicleta",
+      "Moto Honda",
+      "Jet Ski",
+      "Caixa de Whisky",
+      "Jogo de Sala",
+      "Jogo de Cozinha",
+      "Jogo de Quarto",
+      "Jogo de Banheiro",
+      "Uma Casa",
+      "1 Milhão de Dólares",
+   ];
+
+   // Math.random() gera número de 0 a 0.999...
+   // Multiplicamos pela quantidade de prêmios
+   // Math.floor() arredonda para baixo (número inteiro)
+   const sorteio = Math.floor(Math.random() * premios.length);
+
+   console.log("Sorteando um prêmio...");
+   console.log("Número sorteado:", sorteio);
+
+   // Switch usa o número sorteado para escolher o prêmio
+   switch (sorteio) {
+      case 0:
+         console.log("🎁 Prêmio sorteado:", premios[0]);
+         break;
+      case 1:
+         console.log("🎁 Prêmio sorteado:", premios[1]);
+         break;
+      case 2:
+         console.log("🎁 Prêmio sorteado:", premios[2]);
+         break;
+      case 3:
+         console.log("🎁 Prêmio sorteado:", premios[3]);
+         break;
+      case 4:
+         console.log("🎁 Prêmio sorteado:", premios[4]);
+         break;
+      case 5:
+         console.log("🎁 Prêmio sorteado:", premios[5]);
+         break;
+      case 6:
+         console.log("🎁 Prêmio sorteado:", premios[6]);
+         break;
+      case 7:
+         console.log("🎁 Prêmio sorteado:", premios[7]);
+         break;
+      case 8:
+         console.log("🎁 Prêmio sorteado:", premios[8]);
+         break;
+      case 9:
+         console.log("🎁 Prêmio sorteado:", premios[9]);
+         break;
+      case 10:
+         console.log("🎁 Prêmio sorteado:", premios[10]);
+         break;
+      case 11:
+         console.log("🎁 Prêmio sorteado:", premios[11]);
+         break;
+      default:
+         console.log("Nenhum prêmio encontrado");
+   }
+}
+
+// Executando a função
+listaDePremios();
+
+console.log("\n");
+
+// ========================================
+// EXEMPLO 5: Fall-Through (Sem Break)
+// ========================================
+
+console.log("=== EXEMPLO 5: Fall-Through ===\n");
+
+let fruta = "maçã";
+
+console.log("Testando fall-through (sem break):\n");
+
+switch (fruta) {
+   case "maçã":
+      console.log("Você escolheu uma maçã");
+      // SEM break aqui! A execução continua para o próximo case
+   case "pera":
+      console.log("Você escolheu uma pera");
+      // Ainda sem break, continua...
+   case "uva":
+      console.log("Você escolheu uma uva");
+      break; // Aqui sim, interrompe!
+   case "banana":
+      console.log("Você escolheu uma banana");
+      break;
+   default:
+      console.log("Fruta não encontrada");
+}
+
+// Saída:
+// Você escolheu uma maçã
+// Você escolheu uma pera
+// Você escolheu uma uva
+// (Todos os três foram executados por causa do fall-through!)
+
+console.log("\n");
+
+// ========================================
+// EXEMPLO 6: Fall-Through Proposital (Útil)
+// ========================================
+
+console.log("=== EXEMPLO 6: Fall-Through Proposital ===\n");
+
+let tipoDiaSemana = 5; // 5 = sexta-feira (número)
+
+// Usa fall-through para agrupar cases com a mesma ação
+switch (tipoDiaSemana) {
+   case 1:
+   case 2:
+   case 3:
+   case 4:
+   case 5:
+      console.log("Dia útil - Precisa ir trabalhar");
+      break;
+   case 6:
+   case 0:
+      console.log("Fim de semana - Dia de descanso!");
+      break;
+   default:
+      console.log("Dia inválido");
+}
+
+console.log("\n");
+
+// ========================================
+// EXEMPLO 7: Switch com Strings
+// ========================================
+
+console.log("=== EXEMPLO 7: Switch com Strings ===\n");
+
+let comando = "START";
+
+switch (comando) {
+   case "START":
+      console.log("▶️ Sistema iniciado");
+      break;
+   case "STOP":
+      console.log("⏹️ Sistema parado");
+      break;
+   case "PAUSE":
+      console.log("⏸️ Sistema pausado");
+      break;
+   case "RESET":
+      console.log("🔄 Sistema reiniciado");
+      break;
+   default:
+      console.log("❌ Comando desconhecido");
+}
+
+console.log("\n");
+
+// ========================================
+// EXEMPLO 8: Switch com Expressões
+// ========================================
+
+console.log("=%= EXEMPLO 8: Switch com Expressões ===\n");
+
+let idade = 25;
+
+switch (true) {
+   // Switch pode avaliar expressões, não apenas valores!
+   case idade < 13:
+      console.log("Você é criança");
+      break;
+   case idade >= 13 && idade < 18:
+      console.log("Você é adolescente");
+      break;
+   case idade >= 18 && idade < 60:
+      console.log("Você é adulto");
+      break;
+   case idade >= 60:
+      console.log("Você é idoso");
+      break;
+   default:
+      console.log("Idade inválida");
+}
+
+console.log("\n");
+
+// ========================================
+// COMPARAÇÃO: IF/ELSE vs SWITCH
+// ========================================
+
+console.log("=== COMPARAÇÃO: IF/ELSE vs SWITCH ===\n");
+
+let mes = 7; // agosto
+
+// Usando IF/ELSE (mais verboso):
+console.log("Com IF/ELSE:");
+if (mes === 1) {
+   console.log("Janeiro");
+} else if (mes === 2) {
+   console.log("Fevereiro");
+} else if (mes === 7) {
+   console.log("Agosto"); // Será executado
+} else {
+   console.log("Outro mês");
+}
+
+// Usando SWITCH (mais limpo):
+console.log("\nCom SWITCH:");
+switch (mes) {
+   case 1:
+      console.log("Janeiro");
+      break;
+   case 2:
+      console.log("Fevereiro");
+      break;
+   case 7:
+      console.log("Agosto"); // Será executado
+      break;
+   default:
+      console.log("Outro mês");
+}
+
+console.log("\n");
+
+// ========================================
+// DICAS E BOAS PRÁTICAS
+// ========================================
+
+console.log("=== DICAS IMPORTANTES ===");
+console.log("✓ Sempre use BREAK para evitar fall-through acidental");
+console.log("✓ Use switch para comparar contra MÚLTIPLOS VALORES ESPECÍFICOS");
+console.log("✓ Use if/else para lógicas mais complexas ou intervalos");
+console.log("✓ Switch usa comparação ESTRITA (===)");
+console.log("✓ Fall-through pode ser útil para agrupar cases relacionados");
+console.log("✓ O case default deve ser o último (funciona como 'else')");
+console.log("✓ Switch é mais legível que múltiplos if/else");
+// FIM DO CÓDIGO</code></pre>
+         </article>
+      </main>
+
+      <!-- -->
+
+      <!-- Seção de Doação -->
+      <section class="donation-section">
+         <div class="donation-container">
+            <h2>Obrigado pelo seu apoio! 💙</h2>
+            <p>
+               Se este curso foi útil para você, considere fazer uma doação para
+               ajudar no desenvolvimento de mais conteúdo de qualidade.
+            </p>
+
+            <div class="donation-methods">
+               <!-- PayPal -->
+               <div class="donation-card">
+                  <div class="donation-icon">
+                     <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                           d="M20.067 8.478c.492.88.556 2.014.3 3.327-.74 3.806-3.276 5.12-6.514 5.12h-.5a.805.805 0 00-.794.68l-.04.22-.63 4.003-.028.15a.806.806 0 01-.795.68h-2.41a.595.595 0 01-.586-.72l1.27-8.054h.004c.06-.377.39-.656.78-.656h.5c2.28 0 4.06-.914 4.576-3.546.2-1.032.19-1.886-.24-2.53z"
+                        />
+                     </svg>
+                  </div>
+                  <h3>PayPal</h3>
+                  <a
+                     href="https://www.paypal.com/donate/?hosted_button_id=8XYHYQNR2E27J"
+                     target="_blank"
+                     rel="noopener noreferrer"
+                     class="donation-link"
+                     aria-label="Abre a página de doação do PayPal do author da Página em outra aba"
+                  >
+                     <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        width="16"
+                        height="16"
+                        class="nav-link-svg"
+                        aria-hidden="true"
+                     >
+                        <path
+                           d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                        ></path>
+                        <polyline points="15 3 21 3 21 9"></polyline>
+                        <line x1="10" y1="14" x2="21" y2="3"></line>
+                     </svg>
+                     Doe via PayPal</a
+                  >
+               </div>
+
+               <!-- Coinbase -->
+               <div class="donation-card">
+                  <div class="donation-icon">
+                     <svg viewBox="0 0 24 24" fill="currentColor">
+                        <circle
+                           cx="12"
+                           cy="12"
+                           r="10"
+                           stroke="currentColor"
+                           stroke-width="2"
+                           fill="none"
+                        />
+                        <path
+                           d="M12 7v10M7 12h10"
+                           stroke="currentColor"
+                           stroke-width="2"
+                        />
+                     </svg>
+                  </div>
+                  <h3>Coinbase</h3>
+                  <a
+                     href="https://commerce.coinbase.com/checkout/959b8db0-848e-4e3b-8620-3a24dab24baf"
+                     class="donation-link"
+                     target="_blank"
+                     rel="noopener noreferrer"
+                     aria-label="Abre a página de doação da Coinbase do author da Página em outra aba"
+                  >
+                     <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        width="16"
+                        height="16"
+                        class="nav-link-svg"
+                        aria-hidden="true"
+                     >
+                        <path
+                           d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                        ></path>
+                        <polyline points="15 3 21 3 21 9"></polyline>
+                        <line x1="10" y1="14" x2="21" y2="3"></line>
+                     </svg>
+                     Doe via Coinbase</a
+                  >
+               </div>
+
+               <!-- Bitcoin -->
+               <div class="donation-card">
+                  <div class="donation-icon">
+                     <svg viewBox="0 0 24 24" fill="currentColor">
+                        <circle cx="12" cy="12" r="10" />
+                        <text
+                           x="12"
+                           y="16"
+                           text-anchor="middle"
+                           fill="white"
+                           font-weight="bold"
+                           font-size="14"
+                        >
+                           ₿
+                        </text>
+                     </svg>
+                  </div>
+                  <h3>Bitcoin</h3>
+                  <div
+                     class="copy-container"
+                     data-endereco="bc1q3zu0nng6765ptpmr86jcfn68h6e62sda7382e3"
+                  >
+                     <code class="crypto-address"
+                        >bc1q3zu0nng6765ptpmr86jcfn68h6e62sda7382e3</code
+                     >
+                     <span class="copy-tooltip">Copiado!</span>
+                  </div>
+               </div>
+
+               <!-- Ethereum -->
+               <div class="donation-card">
+                  <div class="donation-icon">
+                     <svg viewBox="0 0 24 24" fill="currentColor">
+                        <polygon points="12,2 6,8 6,16 12,22 18,16 18,8" />
+                     </svg>
+                  </div>
+                  <h3>Ethereum</h3>
+                  <div
+                     class="copy-container"
+                     data-endereco="0xF7Eb1D45cDD527b11BC49416DDfA51AD38e26ca1"
+                  >
+                     <code class="crypto-address"
+                        >0xF7Eb1D45cDD527b11BC49416DDfA51AD38e26ca1</code
+                     >
+                     <span class="copy-tooltip">Copiado!</span>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <!-- -->
+
+      <footer>
+         <div class="footer-container">
+            <!-- Esquerda: Links da Biblioteca -->
+            <div class="footer-section footer-left">
+               <p class="footer-title">Recursos</p>
+               <a href="../"> Home </a>
+               <a
+                  href="https://eloquentjavascript.net/"
+                  target="_blank"
+                  class="nav-link"
+                  aria-label="Abrir Livro Eloquent JavaScript em nova aba"
+               >
+                  <svg
+                     xmlns="http://www.w3.org/2000/svg"
+                     viewBox="0 0 24 24"
+                     fill="none"
+                     stroke="currentColor"
+                     stroke-width="2"
+                     stroke-linecap="round"
+                     stroke-linejoin="round"
+                     width="16"
+                     height="16"
+                     class="nav-link-svg"
+                     aria-hidden="true"
+                  >
+                     <path
+                        d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                     ></path>
+                     <polyline points="15 3 21 3 21 9"></polyline>
+                     <line x1="10" y1="14" x2="21" y2="3"></line>
+                  </svg>
+                  Livro
+               </a>
+               <a
+                  href="https://github.com/jacksondouglasdesouza/javascript-completo"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="nav-link"
+                  aria-label="Abrir o Repositório da página no GitHub em nova aba"
+               >
+                  <svg
+                     xmlns="http://www.w3.org/2000/svg"
+                     viewBox="0 0 24 24"
+                     fill="none"
+                     stroke="currentColor"
+                     stroke-width="2"
+                     stroke-linecap="round"
+                     stroke-linejoin="round"
+                     width="16"
+                     height="16"
+                     class="nav-link-svg"
+                     aria-hidden="true"
+                  >
+                     <path
+                        d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                     ></path>
+                     <polyline points="15 3 21 3 21 9"></polyline>
+                     <line x1="10" y1="14" x2="21" y2="3"></line>
+                  </svg>
+                  Repositório
+               </a>
+            </div>
+            <!-- -->
+            <div class="footer-section footer-center">
+               <p>
+                  Desenvolvido com ❤️ por
+                  <a
+                     href="https://www.linkedin.com/in/jacksondouglasdsouza/"
+                     target="_blank"
+                     rel="noopener noreferrer"
+                     aria-label="Abre a página do LinkedIn do author da página"
+                  >
+                     <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        width="16"
+                        height="16"
+                        class="nav-link-svg"
+                        aria-hidden="true"
+                     >
+                        <path
+                           d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                        ></path>
+                        <polyline points="15 3 21 3 21 9"></polyline>
+                        <line x1="10" y1="14" x2="21" y2="3"></line>
+                     </svg>
+                     Jackson Douglas de Souza
+                  </a>
+               </p>
+
+               <p>Siga-me nas redes sociais</p>
+
+               <div class="social-icons">
+                  <a
+                     href="https://www.linkedin.com/in/jacksondouglasdsouza/"
+                     target="_blank"
+                     rel="noopener noreferrer"
+                     aria-label="LinkedIn"
+                     class="icon-link"
+                  >
+                     <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                     >
+                        <path
+                           d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452z"
+                        />
+                     </svg>
+                  </a>
+
+                  <a
+                     href="https://github.com/jacksondouglasdesouza"
+                     target="_blank"
+                     rel="noopener noreferrer"
+                     aria-label="Github"
+                     class="icon-link"
+                  >
+                     <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                     >
+                        <path
+                           d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
+                        />
+                     </svg>
+                  </a>
+               </div>
+            </div>
+            <!-- -->
+            <div class="footer-section footer-right">
+               <div class="lib-group">
+                  <p class="footer-title">Conheça minha Lib</p>
+
+                  <a
+                     href="https://www.npmjs.com/package/codymath"
+                     target="_blank"
+                     rel="noopener noreferrer"
+                     class="library-logo-link"
+                     title="CodyMath - Biblioteca Matemática"
+                  >
+                     <img
+                        src="../logoCodyMath.png"
+                        alt="CodyMath - Biblioteca Matemática"
+                        class="library-logo"
+                        width="200px"
+                        height="100%"
+                     />
+                  </a>
+               </div>
+            </div>
+         </div>
+      </footer>
+
+      <!-- -->
+      <button id="scrollToTop" class="scroll-to-top" title="Voltar ao topo">
+         <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M7 14l5-5 5 5z" />
+         </svg>
+      </button>
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
+      <script src="main.js"></script>
+   </body>
+</html>
