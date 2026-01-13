@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap");
+:root {
+   --primary-color: rgb(28, 29, 29);
+   --primary-color-darker: rgb(21, 21, 21);
+}
+
+* {
+   box-sizing: border-box;
+   outline: 0;
+}
+
+body {
+   margin: 0;
+   padding: 0;
+   background: var(--primary-color);
+   font-family: "Open sans", sans-serif;
+   font-size: 1.3em;
+   line-height: 1.5em;
+}
+
+.container {
+   display: flex;
+   flex-direction: column;
+   max-width: 640px;
+   margin: 50px auto;
+   background: #f6f6f6;
+   padding: 20px;
+   border-radius: 10px;
+   text-align: center;
+}
+
+.crt {
+   text-align: left;
+}
+
+.chk {
+   display: flex;
+   flex-direction: column;
+   font-size: 1rem;
+   text-align: left;
+   margin-bottom: 20px;
+}
+
+.senha-gerada {
+   font-weight: semibold;
+   font-size: 1.5rem;
+   padding: 10px;
+   margin-bottom: 20px;
+}
+
+button {
+   background: var(--primary-color);
+   color: #fff;
+   border: 0;
+   padding: 10px 15px;
+   font-size: 1rem;
+   border-radius: 5px;
+   cursor: pointer;
+   transition: background 0.3s;
+   margin-top: 20px;
+}
+
+button:hover {
+   background: var(--primary-color-darker);
+}
