@@ -1,1 +1,18 @@
-{"version":3,"file":"bundle.js","mappings":";;;;AAAA;AACA,SAASA,IAAIA,CAACC,CAAC,EAAEC,CAAC,EAAE;EACjB,OAAOD,CAAC,GAAGC,CAAC;AACf;AAEAC,OAAO,CAACC,GAAG,CAACJ,IAAI,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC;AACvBG,OAAO,CAACC,GAAG,CAACJ,IAAI,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC;AACvBG,OAAO,CAACC,GAAG,CAACJ,IAAI,CAAC,EAAE,EAAE,EAAE,CAAC,CAAC;AAEzB,SAASK,UAAUA,CAACC,CAAC,EAAEC,CAAC,EAAE;EACvB,OAAOD,CAAC,GAAGC,CAAC;AACf;AACAJ,OAAO,CAACC,GAAG,CAAC,KAAK,CAAC;AAClBD,OAAO,CAACC,GAAG,CAACC,UAAU,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC;AAC7BF,OAAO,CAACC,GAAG,CAACC,UAAU,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC;AAC7BF,OAAO,CAACC,GAAG,CAACC,UAAU,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC;;AAE7B,8B","sources":["webpack://aula02/./src/index.js"],"sourcesContent":["//import { randonNumber } from \"./modulo01.js\";\r\nfunction soma(a, b) {\r\n   return a + b;\r\n}\r\n\r\nconsole.log(soma(2, 3));\r\nconsole.log(soma(5, 7));\r\nconsole.log(soma(10, 15));\r\n\r\nfunction multiplica(x, y) {\r\n   return x * y;\r\n}\r\nconsole.log(\"---\");\r\nconsole.log(multiplica(4, 5));\r\nconsole.log(multiplica(6, 7));\r\nconsole.log(multiplica(8, 9));\r\n\r\n//console.log(randonNumber());\r\n"],"names":["soma","a","b","console","log","multiplica","x","y"],"ignoreList":[],"sourceRoot":""}
+{
+   "version": 3,
+   "file": "bundle.js",
+   "mappings": ";;;;;;;;;;;;;;;;UCAA;UACA;UACA;UACA;UACA",
+   "sources": [
+      "webpack://aula02/webpack/before-startup",
+      "webpack://aula02/webpack/startup",
+      "webpack://aula02/webpack/after-startup"
+   ],
+   "sourcesContent": [
+      "",
+      "// startup\n// Load entry module and return exports\n// This entry module doesn't tell about it's top-level declarations so it can't be inlined\nvar __webpack_exports__ = {};\n__webpack_modules__[\"./src/main.js\"]();\n",
+      ""
+   ],
+   "names": [],
+   "ignoreList": [],
+   "sourceRoot": ""
+}

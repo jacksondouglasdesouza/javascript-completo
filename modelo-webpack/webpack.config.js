@@ -1,7 +1,7 @@
-const path = require("path");
+const path = require("path"); // CommonJS
 
 module.exports = {
-   mode: "development",
+   mode: "production",
    entry: "./src/main.js",
    output: {
       path: path.resolve(__dirname, "public", "assets", "js"),
@@ -9,21 +9,19 @@ module.exports = {
    },
    module: {
       rules: [
-         // Regra do CSS (Primeira para garantir prioridade)
          {
-            test: /\.css$/,
-            use: ["style-loader", "css-loader"],
-         },
-         // Regra do Babel (Javascript)
-         {
-            test: /\.js$/,
             exclude: /node_modules/,
+            test: /\.js$/,
             use: {
                loader: "babel-loader",
                options: {
-                  presets: ["@babel/preset-env"],
+                  presets: ["@babel/env"],
                },
             },
+         },
+         {
+            test: /\.css$/,
+            use: ["style-loader", "css-loader"],
          },
       ],
    },
