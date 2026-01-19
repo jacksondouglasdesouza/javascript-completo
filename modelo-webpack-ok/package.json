@@ -13,11 +13,14 @@
    "license": "ISC",
    "type": "commonjs",
    "dependencies": {
+      "connect-flash": "^0.1.1",
+      "connect-mongo": "^6.0.0",
       "core-js": "^3.3.2",
       "css-loader": "^7.1.2",
       "dotenv": "^17.2.3",
       "ejs": "^4.0.1",
       "express": "^5.2.1",
+      "express-session": "^1.18.2",
       "mongoose": "^9.1.4",
       "regenerator-runtime": "^0.13.3",
       "style-loader": "^1.0.0"
