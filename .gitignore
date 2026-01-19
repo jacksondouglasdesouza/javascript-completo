@@ -1,5 +1,6 @@
 # --- Dependências do Node ---
 node_modules/
+.env
 
 # --- Arquivos de Sistema Operacional ---
 .DS_Store
